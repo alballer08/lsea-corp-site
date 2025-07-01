@@ -1,76 +1,149 @@
 
-import { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/components/AuthProvider';
+import { Shield, Users, Upload, Share2, Search, FileText } from 'lucide-react';
 
 const EmployeeAccess = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    if (!loading) {
+      if (user) {
+        navigate('/dashboard');
+      } else {
+        navigate('/login');
+      }
+    }
+  }, [user, loading, navigate]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-lg">Loading...</div>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-96">
-        <img
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-          alt="Employee Access"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute bottom-10 left-10">
-          <h1 className={`font-montserrat text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            Employee Access
+      <div className="relative h-96 bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative z-10 text-center text-white px-4">
+          <Shield className="w-16 h-16 mx-auto mb-4" />
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-montserrat">
+            Employee Access Portal
           </h1>
+          <p className="text-xl md:text-2xl opacity-90">
+            Secure file sharing and document management
+          </p>
         </div>
-      </section>
+      </div>
 
-      {/* Employee Access Content */}
-      <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-blue-50 rounded-lg p-12">
-            <h2 className="font-montserrat text-3xl font-bold text-gray-900 mb-6">
-              Secure File Sharing Portal
-            </h2>
-            <p className="font-arial text-lg text-gray-600 mb-8">
-              Access the employee file sharing portal with your provided credentials. This secure system allows authorized users to upload, manage, and share files with controlled access and expiring download links.
+      {/* Features Section */}
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 font-montserrat">
+            Portal Features
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our secure employee portal provides advanced file management capabilities 
+            with enterprise-grade security and user-friendly interface.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <Upload className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+              File Upload
+            </h3>
+            <p className="text-gray-600">
+              Securely upload and store files with automatic encryption and backup.
             </p>
-            
-            <div className="bg-yellow-100 border border-yellow-400 rounded-lg p-4 mb-8">
-              <p className="font-arial text-yellow-800">
-                <strong>Note:</strong> To enable the employee file sharing portal, this project needs to be connected to Supabase for secure authentication and file storage capabilities.
-              </p>
-            </div>
+          </div>
 
-            <p className="font-arial text-gray-600 mb-8">
-              Once Supabase is connected, employees will be able to:
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <Share2 className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+              Secure Sharing
+            </h3>
+            <p className="text-gray-600">
+              Generate expiring download links with customizable access control.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-montserrat text-xl font-semibold text-gray-900 mb-3">
-                  File Management
-                </h3>
-                <p className="font-arial text-gray-600">
-                  Upload, organize, and manage your files securely in the cloud
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="font-montserrat text-xl font-semibold text-gray-900 mb-3">
-                  Secure Sharing
-                </h3>
-                <p className="font-arial text-gray-600">
-                  Generate expiring download links with strict access control
-                </p>
-              </div>
-            </div>
+          </div>
 
-            <p className="font-arial text-gray-600">
-              For technical support or account access, please contact the IT department at it@lseacorp.com
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <FileText className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+              File Management
+            </h3>
+            <p className="text-gray-600">
+              Organize, preview, and manage your documents with an intuitive interface.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+              User Management
+            </h3>
+            <p className="text-gray-600">
+              Admin controls for user account creation and permission management.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <Search className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+              Advanced Search
+            </h3>
+            <p className="text-gray-600">
+              Quickly find documents and content across the entire platform.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6 text-center">
+            <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2 font-montserrat">
+              Enterprise Security
+            </h3>
+            <p className="text-gray-600">
+              Bank-level encryption and security measures to protect your data.
             </p>
           </div>
         </div>
-      </section>
+
+        {/* Access Information */}
+        <div className="mt-16 bg-blue-50 rounded-lg p-8">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 font-montserrat">
+              Access Information
+            </h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Employee accounts are created and managed by system administrators. 
+              If you need access to the portal, please contact your IT department 
+              or system administrator for credentials.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => navigate('/login')}
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+              >
+                Employee Login
+              </button>
+              <button
+                onClick={() => navigate('/contact')}
+                className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-200 font-medium"
+              >
+                Contact IT Support
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

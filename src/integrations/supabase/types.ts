@@ -9,7 +9,139 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      files: {
+        Row: {
+          content_type: string
+          created_at: string | null
+          file_size: number
+          filename: string
+          id: string
+          original_name: string
+          storage_path: string
+          user_id: string | null
+        }
+        Insert: {
+          content_type: string
+          created_at?: string | null
+          file_size: number
+          filename: string
+          id?: string
+          original_name: string
+          storage_path: string
+          user_id?: string | null
+        }
+        Update: {
+          content_type?: string
+          created_at?: string | null
+          file_size?: number
+          filename?: string
+          id?: string
+          original_name?: string
+          storage_path?: string
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "files_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      shared_links: {
+        Row: {
+          created_at: string | null
+          expires_at: string
+          file_id: string | null
+          id: string
+          token: string
+        }
+        Insert: {
+          created_at?: string | null
+          expires_at: string
+          file_id?: string | null
+          id?: string
+          token: string
+        }
+        Update: {
+          created_at?: string | null
+          expires_at?: string
+          file_id?: string | null
+          id?: string
+          token?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "shared_links_file_id_fkey"
+            columns: ["file_id"]
+            isOneToOne: false
+            referencedRelation: "files"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      users: {
+        Row: {
+          created_at: string | null
+          email: string
+          full_name: string | null
+          id: string
+          role: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          email: string
+          full_name?: string | null
+          id: string
+          role?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          email?: string
+          full_name?: string | null
+          id?: string
+          role?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      website_content: {
+        Row: {
+          content_type: string
+          created_at: string | null
+          description: string | null
+          heading: string | null
+          id: string
+          keywords: string[] | null
+          page_title: string
+          page_url: string
+        }
+        Insert: {
+          content_type: string
+          created_at?: string | null
+          description?: string | null
+          heading?: string | null
+          id?: string
+          keywords?: string[] | null
+          page_title: string
+          page_url: string
+        }
+        Update: {
+          content_type?: string
+          created_at?: string | null
+          description?: string | null
+          heading?: string | null
+          id?: string
+          keywords?: string[] | null
+          page_title?: string
+          page_url?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
