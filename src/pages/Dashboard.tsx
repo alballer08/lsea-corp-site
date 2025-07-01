@@ -73,7 +73,7 @@ const Dashboard = () => {
           <div className="flex justify-between items-center py-6">
             <div>
               <h1 className="text-2xl font-bold text-gray-900 font-montserrat">
-                Admin Portal
+                {userRole === 'admin' ? 'Admin Portal' : 'Employee Portal'}
               </h1>
               <p className="text-gray-600">Welcome back, {user?.email}</p>
             </div>
