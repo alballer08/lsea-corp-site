@@ -109,24 +109,32 @@ export const AdminPanel: React.FC = () => {
     setDeletingUserId(userId);
     
     try {
-      // Delete from the public.users table - this should work with our RLS policy
-      const { error: dbError } = await supabase
-        .from('users')
-        .delete()
-        .eq('id', userId);
-
-      if (dbError) {
-        console.error('Error deleting from users table:', dbError);
-        throw dbError;
+      // Get the current session to pass the auth token
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        throw new Error('No active session');
       }
 
-      // Note: We cannot delete from auth.users directly from the client side
-      // The foreign key constraint with CASCADE should handle this, but since
-      // it's not working as expected, we need a different approach
-      
+      // Call the Edge Function to delete the user
+      const { data, error } = await supabase.functions.invoke('delete-user', {
+        body: { userId },
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`
+        }
+      });
+
+      if (error) {
+        console.error('Error calling delete-user function:', error);
+        throw error;
+      }
+
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to delete user');
+      }
+
       toast({
         title: "User deleted successfully",
-        description: `${userEmail} has been removed from the system`,
+        description: `${userEmail} has been completely removed from the system`,
       });
 
       // Refresh the users list
@@ -135,7 +143,7 @@ export const AdminPanel: React.FC = () => {
       console.error('Error deleting user:', error);
       toast({
         title: "Failed to delete user",
-        description: error.message,
+        description: error.message || 'An unexpected error occurred',
         variant: "destructive",
       });
     } finally {
