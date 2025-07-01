@@ -4,21 +4,62 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for contacting us. We'll get back to you soon!",
-    });
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const contactData = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      console.log('Sending contact form data:', contactData);
+      
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: contactData,
+      });
+
+      if (error) {
+        console.error('Error sending email:', error);
+        throw error;
+      }
+
+      console.log('Email sent successfully:', data);
+      
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for contacting us. We'll get back to you soon!",
+      });
+
+      // Reset form
+      (e.target as HTMLFormElement).reset();
+      
+    } catch (error) {
+      console.error('Failed to send contact email:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -52,34 +93,34 @@ const Contact = () => {
                   <label htmlFor="name" className="font-arial block text-sm font-medium text-gray-700 mb-1">
                     Full Name
                   </label>
-                  <Input id="name" type="text" required className="font-arial" />
+                  <Input id="name" name="name" type="text" required className="font-arial" />
                 </div>
                 <div>
                   <label htmlFor="email" className="font-arial block text-sm font-medium text-gray-700 mb-1">
                     Email Address
                   </label>
-                  <Input id="email" type="email" required className="font-arial" />
+                  <Input id="email" name="email" type="email" required className="font-arial" />
                 </div>
                 <div>
                   <label htmlFor="phone" className="font-arial block text-sm font-medium text-gray-700 mb-1">
                     Phone Number
                   </label>
-                  <Input id="phone" type="tel" className="font-arial" />
+                  <Input id="phone" name="phone" type="tel" className="font-arial" />
                 </div>
                 <div>
                   <label htmlFor="subject" className="font-arial block text-sm font-medium text-gray-700 mb-1">
                     Subject
                   </label>
-                  <Input id="subject" type="text" required className="font-arial" />
+                  <Input id="subject" name="subject" type="text" required className="font-arial" />
                 </div>
                 <div>
                   <label htmlFor="message" className="font-arial block text-sm font-medium text-gray-700 mb-1">
                     Message
                   </label>
-                  <Textarea id="message" rows={6} required className="font-arial" />
+                  <Textarea id="message" name="message" rows={6} required className="font-arial" />
                 </div>
-                <Button type="submit" className="w-full font-arial">
-                  Send Message
+                <Button type="submit" disabled={isSubmitting} className="w-full font-arial">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </div>
