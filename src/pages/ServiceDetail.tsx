@@ -107,7 +107,7 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-96 overflow-hidden">
+      <section className="relative h-[500px] overflow-hidden">
         <img
           src={service.image}
           alt={service.title}
