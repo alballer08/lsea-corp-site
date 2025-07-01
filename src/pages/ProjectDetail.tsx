@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -86,7 +87,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-96 overflow-hidden">
+      <section className="relative h-[500px] overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
