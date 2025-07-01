@@ -10,16 +10,20 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Logo and Company Info */}
           <div className="md:col-span-1">
             <Link 
               to="/" 
               onClick={handleLinkClick}
-              className="flex items-center space-x-3 mb-4"
+              className="flex items-center space-x-3 mb-6"
             >
               <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
+                <img 
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 19h18v2H3v-2zm0-8h18v2H3v-2zm0-6v2h18V5H3z'/%3E%3C/svg%3E"
+                  alt="L"
+                  className="w-6 h-6"
+                />
               </div>
               <span className="text-xl font-bold font-montserrat">LSEA Corporation</span>
             </Link>
@@ -32,8 +36,8 @@ const Footer = () => {
 
           {/* Our Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 font-montserrat">Our Company</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-6 font-montserrat">Our Company</h3>
+            <ul className="space-y-3">
               <li>
                 <Link 
                   to="/about" 
@@ -93,24 +97,24 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 font-montserrat">Contact Information</h3>
-            <div className="space-y-3 text-gray-300">
+            <h3 className="text-lg font-semibold mb-6 font-montserrat">Contact Information</h3>
+            <div className="space-y-4 text-gray-300">
               <div>
-                <p className="font-medium">Main Office</p>
+                <p className="font-medium text-white">Main Office</p>
                 <p className="text-sm">123 Engineering Plaza</p>
                 <p className="text-sm">Suite 400</p>
                 <p className="text-sm">New York, NY 10001</p>
               </div>
               <div>
-                <p className="font-medium">Phone</p>
+                <p className="font-medium text-white">Phone</p>
                 <p className="text-sm">(555) 123-4567</p>
               </div>
               <div>
-                <p className="font-medium">Email</p>
+                <p className="font-medium text-white">Email</p>
                 <p className="text-sm">info@lseacorp.com</p>
               </div>
               <div>
-                <p className="font-medium">Business Hours</p>
+                <p className="font-medium text-white">Business Hours</p>
                 <p className="text-sm">Mon-Fri: 8:00 AM - 6:00 PM</p>
                 <p className="text-sm">Saturday: 9:00 AM - 2:00 PM</p>
               </div>
