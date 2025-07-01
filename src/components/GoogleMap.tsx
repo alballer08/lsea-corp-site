@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Button } from '@/components/ui/button';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -90,19 +89,6 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
   return (
     <div className="space-y-4">
       <div ref={mapRef} className="w-full h-96 rounded-lg shadow-lg" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-        {offices.map((office) => (
-          <Button
-            key={office.id}
-            variant="outline"
-            size="sm"
-            onClick={() => handleLocateOffice(office)}
-            className="text-left justify-start"
-          >
-            📍 {office.name}
-          </Button>
-        ))}
-      </div>
     </div>
   );
 };

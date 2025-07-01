@@ -58,12 +58,12 @@ const Offices = () => {
           />
 
           {/* Filter */}
-          <div className="mb-8 mt-12">
+          <div className="mb-8 mt-12 relative z-10">
             <Select value={selectedState} onValueChange={setSelectedState}>
-              <SelectTrigger className="w-48">
+              <SelectTrigger className="w-48 bg-white border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <SelectValue placeholder="Filter by state" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
                 <SelectItem value="all">All States</SelectItem>
                 {states.map(state => (
                   <SelectItem key={state} value={state}>{state}</SelectItem>

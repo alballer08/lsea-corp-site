@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Video Section */}
-      <section className="relative h-screen">
+      <section className="relative h-[70vh]">
         <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
         <video 
           className="w-full h-full object-cover"
