@@ -1,9 +1,10 @@
-
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ServiceDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -84,6 +85,14 @@ const ServiceDetail = () => {
   ];
 
   const service = services.find(s => s.id === id) || services[0];
+  const currentIndex = services.findIndex(s => s.id === id);
+  const prevService = currentIndex > 0 ? services[currentIndex - 1] : services[services.length - 1];
+  const nextService = currentIndex < services.length - 1 ? services[currentIndex + 1] : services[0];
+
+  const handleNavigation = (serviceId: string) => {
+    navigate(`/services/${serviceId}`);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className="min-h-screen">
@@ -100,6 +109,20 @@ const ServiceDetail = () => {
             {service.title}
           </h1>
         </div>
+        
+        {/* Navigation Arrows */}
+        <button
+          onClick={() => handleNavigation(prevService.id)}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={() => handleNavigation(nextService.id)}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
       </section>
 
       {/* Service Details */}
