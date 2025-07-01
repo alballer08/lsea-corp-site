@@ -69,12 +69,18 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
     // Expose locate function to parent component
     (window as any).mapLocateOffice = (office: Office) => {
-      leafletMap.setView([office.lat, office.lng], 15);
+      // Use flyTo for faster animation with shorter duration
+      leafletMap.flyTo([office.lat, office.lng], 15, {
+        duration: 0.8 // Reduced from default 2 seconds to 0.8 seconds
+      });
       
       // Find and open popup for the marker
       const marker = newMarkers.find((m, index) => offices[index].id === office.id);
       if (marker) {
-        marker.openPopup();
+        // Delay popup opening slightly to allow for smoother animation
+        setTimeout(() => {
+          marker.openPopup();
+        }, 400);
       }
       onLocateOffice(office);
     };
