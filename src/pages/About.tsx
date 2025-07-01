@@ -16,7 +16,7 @@ const About = () => {
       setTimeout(() => {
         setActiveSection(section);
         setAnimatingSection(null);
-      }, 300); // Increased from 150ms to 300ms for slower transition
+      }, 200);
     }
   };
 
@@ -74,12 +74,12 @@ const About = () => {
                 key={key}
                 variant={activeSection === key ? "default" : "outline"}
                 onClick={() => handleSectionChange(key)}
-                className={`font-arial transition-all duration-500 transform ${
+                className={`font-arial transition-all duration-200 transform ${
                   animatingSection === key 
-                    ? 'scale-105 shadow-lg' 
+                    ? 'opacity-80' 
                     : activeSection === key 
-                      ? 'scale-100' 
-                      : 'hover:scale-105 hover:shadow-md'
+                      ? 'opacity-100' 
+                      : 'hover:opacity-90 hover:-translate-y-[1px]'
                 }`}
               >
                 {section.title}
@@ -97,12 +97,12 @@ const About = () => {
               <img
                 src={sections[activeSection].image}
                 alt={sections[activeSection].title}
-                className={`w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-700 ${
+                className={`w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-400 ${
                   animatingSection ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
                 }`}
               />
             </div>
-            <div className={`space-y-6 transition-all duration-700 ${
+            <div className={`space-y-6 transition-all duration-400 ${
               animatingSection ? 'opacity-0 translate-x-4' : 'opacity-100 translate-x-0'
             }`}>
               <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-gray-900">

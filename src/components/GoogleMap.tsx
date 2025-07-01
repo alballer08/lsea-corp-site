@@ -37,12 +37,22 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
   useEffect(() => {
     if (!mapRef.current) return;
 
-    // Initialize map
-    const leafletMap = L.map(mapRef.current).setView([39.8283, -98.5795], 5);
+    // Initialize map with faster loading options
+    const leafletMap = L.map(mapRef.current, {
+      preferCanvas: true, // Use canvas for better performance
+      zoomAnimation: true,
+      fadeAnimation: true,
+      markerZoomAnimation: true
+    }).setView([39.8283, -98.5795], 5);
 
-    // Add OpenStreetMap tile layer
+    // Add OpenStreetMap tile layer with faster loading
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18,
+      tileSize: 256,
+      zoomOffset: 0,
+      updateWhenIdle: false, // Load tiles while panning
+      keepBuffer: 2 // Keep more tiles in memory
     }).addTo(leafletMap);
 
     setMap(leafletMap);
@@ -67,20 +77,15 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
     setMarkers(newMarkers);
 
-    // Expose locate function to parent component
+    // Expose locate function to parent component with faster animation
     (window as any).mapLocateOffice = (office: Office) => {
-      // Use flyTo for faster animation with shorter duration
-      leafletMap.flyTo([office.lat, office.lng], 15, {
-        duration: 0.8 // Reduced from default 2 seconds to 0.8 seconds
-      });
+      // Use setView for instant movement instead of flyTo
+      leafletMap.setView([office.lat, office.lng], 15);
       
-      // Find and open popup for the marker
+      // Find and open popup for the marker immediately
       const marker = newMarkers.find((m, index) => offices[index].id === office.id);
       if (marker) {
-        // Delay popup opening slightly to allow for smoother animation
-        setTimeout(() => {
-          marker.openPopup();
-        }, 400);
+        marker.openPopup();
       }
       onLocateOffice(office);
     };
