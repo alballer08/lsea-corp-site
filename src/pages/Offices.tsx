@@ -28,8 +28,11 @@ const Offices = () => {
   const states = [...new Set(offices.map(office => office.state))];
 
   const handleLocateOffice = (office: any) => {
-    // This will be handled by the GoogleMap component
     console.log('Locating office:', office.name);
+    // Call the global map locate function
+    if ((window as any).mapLocateOffice) {
+      (window as any).mapLocateOffice(office);
+    }
   };
 
   return (
@@ -58,12 +61,12 @@ const Offices = () => {
           />
 
           {/* Filter */}
-          <div className="mb-8 mt-12 relative z-10">
+          <div className="mb-8 mt-12">
             <Select value={selectedState} onValueChange={setSelectedState}>
               <SelectTrigger className="w-48 bg-white border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <SelectValue placeholder="Filter by state" />
               </SelectTrigger>
-              <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
+              <SelectContent className="bg-white border border-gray-300 shadow-lg">
                 <SelectItem value="all">All States</SelectItem>
                 {states.map(state => (
                   <SelectItem key={state} value={state}>{state}</SelectItem>

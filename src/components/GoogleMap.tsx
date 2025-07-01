@@ -58,6 +58,7 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
           <p style="margin: 5px 0; font-size: 14px;"><strong>City:</strong> ${office.city}, ${office.state}</p>
           <p style="margin: 5px 0; font-size: 14px;"><strong>Phone:</strong> ${office.phone}</p>
           <p style="margin: 5px 0; font-size: 14px;"><strong>Email:</strong> ${office.email}</p>
+          <button onclick="window.locateOffice(${office.id})" style="margin-top: 10px; padding: 8px 16px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">Locate on Map</button>
         </div>
       `;
       
@@ -67,24 +68,45 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
     setMarkers(newMarkers);
 
+    // Add global function for popup buttons
+    (window as any).locateOffice = (officeId: number) => {
+      const office = offices.find(o => o.id === officeId);
+      if (office && leafletMap) {
+        leafletMap.setView([office.lat, office.lng], 15);
+        const marker = newMarkers.find((m, index) => offices[index].id === office.id);
+        if (marker) {
+          marker.openPopup();
+        }
+        onLocateOffice(office);
+      }
+    };
+
     // Cleanup function
     return () => {
+      delete (window as any).locateOffice;
       leafletMap.remove();
     };
-  }, [offices]);
+  }, [offices, onLocateOffice]);
 
-  const handleLocateOffice = (office: Office) => {
-    if (map) {
-      map.setView([office.lat, office.lng], 15);
-      
-      // Find and open the marker popup
-      const marker = markers.find((m, index) => offices[index].id === office.id);
-      if (marker) {
-        marker.openPopup();
+  // Expose locate function to parent component
+  useEffect(() => {
+    (window as any).mapLocateOffice = (office: Office) => {
+      if (map) {
+        map.setView([office.lat, office.lng], 15);
+        
+        // Find and open the marker popup
+        const marker = markers.find((m, index) => offices[index].id === office.id);
+        if (marker) {
+          marker.openPopup();
+        }
       }
-    }
-    onLocateOffice(office);
-  };
+      onLocateOffice(office);
+    };
+    
+    return () => {
+      delete (window as any).mapLocateOffice;
+    };
+  }, [map, markers, offices, onLocateOffice]);
 
   return (
     <div className="space-y-4">

@@ -61,9 +61,9 @@ const Services = () => {
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
-      id: 11, 
-      title: 'Fire Safety Engineering', 
-      image: 'https://images.unsplash.com/photo-1554078875-e37cb8b0e27d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      id: 12, 
+      title: 'Geotechnical Engineering', 
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
   ];
 
