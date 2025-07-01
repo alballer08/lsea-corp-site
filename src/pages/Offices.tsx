@@ -29,10 +29,7 @@ const Offices = () => {
 
   const handleLocateOffice = (office: any) => {
     console.log('Locating office:', office.name);
-    // Call the global map locate function
-    if ((window as any).mapLocateOffice) {
-      (window as any).mapLocateOffice(office);
-    }
+    // The map component handles the actual location and scrolling
   };
 
   return (
@@ -101,7 +98,11 @@ const Offices = () => {
                 </div>
                 <Button 
                   className="w-full font-arial"
-                  onClick={() => handleLocateOffice(office)}
+                  onClick={() => {
+                    if ((window as any).mapLocateOffice) {
+                      (window as any).mapLocateOffice(office);
+                    }
+                  }}
                 >
                   Locate on Map
                 </Button>

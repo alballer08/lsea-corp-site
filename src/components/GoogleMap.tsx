@@ -35,29 +35,30 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
   const [markers, setMarkers] = useState<L.Marker[]>([]);
 
   useEffect(() => {
-    if (!mapRef.current) return;
+    if (!mapRef.current || map) return; // Prevent re-initialization
 
-    // Initialize map with faster loading options
+    // Initialize map with optimized settings
     const leafletMap = L.map(mapRef.current, {
-      preferCanvas: true, // Use canvas for better performance
-      zoomAnimation: true,
-      fadeAnimation: true,
-      markerZoomAnimation: true
+      preferCanvas: true,
+      zoomAnimation: false, // Disable animations for faster performance
+      fadeAnimation: false,
+      markerZoomAnimation: false,
+      zoomControl: true,
+      attributionControl: false // Remove attribution for cleaner look
     }).setView([39.8283, -98.5795], 5);
 
-    // Add OpenStreetMap tile layer with faster loading
+    // Add tile layer with optimized settings
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors',
       maxZoom: 18,
       tileSize: 256,
       zoomOffset: 0,
-      updateWhenIdle: false, // Load tiles while panning
-      keepBuffer: 2 // Keep more tiles in memory
+      updateWhenIdle: true, // Only update when idle for better performance
+      keepBuffer: 1 // Reduce buffer for faster loading
     }).addTo(leafletMap);
 
     setMap(leafletMap);
 
-    // Add markers for each office
+    // Add markers
     const newMarkers = offices.map((office) => {
       const marker = L.marker([office.lat, office.lng]).addTo(leafletMap);
       
@@ -77,25 +78,38 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
     setMarkers(newMarkers);
 
-    // Expose locate function to parent component with faster animation
+    // Set up locate function
     (window as any).mapLocateOffice = (office: Office) => {
-      // Use setView for instant movement instead of flyTo
+      // Scroll to map first
+      if (mapRef.current) {
+        mapRef.current.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      }
+      
+      // Use setView for instant positioning
       leafletMap.setView([office.lat, office.lng], 15);
       
-      // Find and open popup for the marker immediately
+      // Find and open popup
       const marker = newMarkers.find((m, index) => offices[index].id === office.id);
       if (marker) {
-        marker.openPopup();
+        // Small delay to ensure map has moved before opening popup
+        setTimeout(() => {
+          marker.openPopup();
+        }, 100);
       }
       onLocateOffice(office);
     };
 
     // Cleanup function
     return () => {
-      leafletMap.remove();
+      if (leafletMap) {
+        leafletMap.remove();
+      }
       delete (window as any).mapLocateOffice;
     };
-  }, [offices, onLocateOffice]);
+  }, []); // Remove dependencies to prevent re-initialization
 
   return (
     <div className="space-y-4">
