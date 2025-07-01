@@ -1,0 +1,57 @@
+
+LSEA Corporation Website Setup Guide
+====================================
+
+This setup file contains instructions to install all dependencies and run the LSEA Corporation website project.
+
+PREREQUISITES:
+- Node.js (version 16 or higher)
+- npm (comes with Node.js)
+
+INSTALLATION STEPS:
+
+1. Clone or download the project files to your local machine
+
+2. Open a terminal/command prompt and navigate to the project directory
+
+3. Install all project dependencies:
+   npm install
+
+4. Start the development server:
+   npm run dev
+
+5. Open your web browser and navigate to:
+   http://localhost:8080
+
+The website will now be running locally on your machine.
+
+AVAILABLE SCRIPTS:
+- npm run dev: Starts the development server
+- npm run build: Builds the project for production
+- npm run preview: Preview the production build locally
+
+FEATURES IMPLEMENTED:
+✅ Responsive design with mobile navigation
+✅ Professional styling with Montserrat and Arial fonts
+✅ Fade-in animations throughout the site
+✅ Complete page structure (Home, About, Services, Portfolio, etc.)
+✅ SEO-optimized meta tags
+✅ Interactive navigation and footer
+✅ Service and portfolio detail pages
+✅ Partner information pages
+✅ Contact form with toast notifications
+✅ Sitemap with full site structure
+
+FEATURES REQUIRING SUPABASE CONNECTION:
+⏳ User authentication system
+⏳ Admin account management
+⏳ File upload and storage
+⏳ Search functionality with SQL database
+⏳ Secure file sharing with expiring links
+⏳ Employee access portal
+
+TO ENABLE BACKEND FEATURES:
+Connect this project to Supabase using the green Supabase button in the Lovable interface, then request implementation of the backend features.
+
+SUPPORT:
+For technical assistance, contact: it@lseacorp.com
