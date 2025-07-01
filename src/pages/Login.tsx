@@ -13,7 +13,7 @@ const Login = () => {
 
   useEffect(() => {
     if (user) {
-      navigate('/employee-access');
+      navigate('/dashboard');
     }
   }, [user, navigate]);
 
@@ -35,7 +35,7 @@ const Login = () => {
           title: "Login Successful",
           description: "Welcome back!",
         });
-        navigate('/employee-access');
+        navigate('/dashboard');
       }
     } catch (error) {
       toast({
@@ -59,7 +59,7 @@ const Login = () => {
         </p>
         <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-md">
           <p className="text-sm text-blue-800 font-medium">Demo Admin Credentials:</p>
-          <p className="text-sm text-blue-700">Email: admin@lseacorp.com</p>
+          <p className="text-sm text-blue-700">Email: info@lseacorp.com</p>
           <p className="text-sm text-blue-700">Password: LSEAAdmin2024!Secure#</p>
         </div>
       </div>

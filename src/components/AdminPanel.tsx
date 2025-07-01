@@ -34,9 +34,18 @@ export const AdminPanel: React.FC = () => {
         .select('*')
         .order('created_at', { ascending: false });
 
-      if (error) throw error;
-      setUsers(data || []);
+      if (error) {
+        console.error('Error fetching users:', error);
+        toast({
+          title: "Error loading users",
+          description: "You may not have admin permissions",
+          variant: "destructive",
+        });
+      } else {
+        setUsers(data || []);
+      }
     } catch (error: any) {
+      console.error('Unexpected error:', error);
       toast({
         title: "Error loading users",
         description: error.message,
@@ -52,35 +61,37 @@ export const AdminPanel: React.FC = () => {
     
     try {
       // Create user in Supabase Auth
-      const { data: authData, error: authError } = await supabase.auth.admin.createUser({
+      const { data: authData, error: authError } = await supabase.auth.signUp({
         email: newUser.email,
         password: newUser.password,
-        email_confirm: true
       });
 
       if (authError) throw authError;
 
-      // Add user to our users table
-      const { error: dbError } = await supabase
-        .from('users')
-        .insert({
-          id: authData.user.id,
-          email: newUser.email,
-          full_name: newUser.full_name,
-          role: newUser.role
+      if (authData.user) {
+        // Add user to our users table
+        const { error: dbError } = await supabase
+          .from('users')
+          .insert({
+            id: authData.user.id,
+            email: newUser.email,
+            full_name: newUser.full_name,
+            role: newUser.role
+          });
+
+        if (dbError) throw dbError;
+
+        toast({
+          title: "User created successfully",
+          description: `${newUser.email} has been added`,
         });
 
-      if (dbError) throw dbError;
-
-      toast({
-        title: "User created successfully",
-        description: `${newUser.email} has been added`,
-      });
-
-      setNewUser({ email: '', password: '', full_name: '', role: 'user' });
-      setShowCreateForm(false);
-      fetchUsers();
+        setNewUser({ email: '', password: '', full_name: '', role: 'user' });
+        setShowCreateForm(false);
+        fetchUsers();
+      }
     } catch (error: any) {
+      console.error('Error creating user:', error);
       toast({
         title: "Failed to create user",
         description: error.message,
