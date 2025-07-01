@@ -74,15 +74,22 @@ const About = () => {
                 key={key}
                 variant={activeSection === key ? "default" : "outline"}
                 onClick={() => handleSectionChange(key)}
-                className={`font-arial transition-all duration-200 transform ${
+                className={`font-arial relative overflow-hidden group transition-all duration-300 transform ${
                   animatingSection === key 
-                    ? 'opacity-80' 
+                    ? 'scale-95 opacity-80' 
                     : activeSection === key 
-                      ? 'opacity-100' 
-                      : 'hover:opacity-90 hover:-translate-y-[1px]'
+                      ? 'scale-105 shadow-lg ring-2 ring-blue-200' 
+                      : 'hover:scale-102 hover:shadow-md hover:-translate-y-0.5'
+                } ${
+                  activeSection === key 
+                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white border-blue-600' 
+                    : 'bg-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100'
                 }`}
               >
-                {section.title}
+                <span className="relative z-10">{section.title}</span>
+                {activeSection !== key && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                )}
               </Button>
             ))}
           </div>

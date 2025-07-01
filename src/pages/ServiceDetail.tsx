@@ -7,6 +7,7 @@ const ServiceDetail = () => {
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
@@ -90,43 +91,55 @@ const ServiceDetail = () => {
   const prevService = currentIndex > 0 ? services[currentIndex - 1] : services[services.length - 1];
   const nextService = currentIndex < services.length - 1 ? services[currentIndex + 1] : services[0];
 
-  const handleNavigation = (serviceId: string) => {
+  const handleNavigation = (serviceId: string, direction: 'left' | 'right') => {
+    setSlideDirection(direction);
     setIsTransitioning(true);
     setTimeout(() => {
       navigate(`/services/${serviceId}`);
       window.scrollTo(0, 0);
-      setIsTransitioning(false);
-    }, 200);
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setSlideDirection(null);
+      }, 100);
+    }, 300);
   };
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-96">
+      <section className="relative h-96 overflow-hidden">
         <img
           src={service.image}
           alt={service.title}
-          className={`w-full h-full object-cover transition-all duration-300 ${isTransitioning ? 'opacity-80' : 'opacity-100'}`}
+          className={`w-full h-full object-cover transition-all duration-500 ${
+            slideDirection === 'left' 
+              ? '-translate-x-full opacity-0' 
+              : slideDirection === 'right' 
+                ? 'translate-x-full opacity-0' 
+                : 'translate-x-0 opacity-100'
+          }`}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="absolute bottom-10 left-10">
-          <h1 className={`font-montserrat text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h1 className={`font-montserrat text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${
+            isVisible && !isTransitioning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}>
             {service.title}
           </h1>
         </div>
         
         {/* Navigation Arrows */}
         <button
-          onClick={() => handleNavigation(prevService.id)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200 hover:translate-x-[-2px] active:translate-x-0"
+          onClick={() => handleNavigation(prevService.id, 'left')}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg group"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-6 h-6 transition-all duration-300 group-hover:-translate-x-1 group-active:scale-90" />
         </button>
         <button
-          onClick={() => handleNavigation(nextService.id)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200 hover:translate-x-[2px] active:translate-x-0"
+          onClick={() => handleNavigation(nextService.id, 'right')}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg group"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-6 h-6 transition-all duration-300 group-hover:translate-x-1 group-active:scale-90" />
         </button>
       </section>
 
