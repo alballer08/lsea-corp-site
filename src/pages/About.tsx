@@ -5,10 +5,21 @@ import { Button } from '@/components/ui/button';
 const About = () => {
   const [activeSection, setActiveSection] = useState('story');
   const [isVisible, setIsVisible] = useState(false);
+  const [animatingSection, setAnimatingSection] = useState<string | null>(null);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleSectionChange = (section: string) => {
+    if (section !== activeSection) {
+      setAnimatingSection(section);
+      setTimeout(() => {
+        setActiveSection(section);
+        setAnimatingSection(null);
+      }, 150);
+    }
+  };
 
   const sections = {
     story: {
@@ -63,8 +74,14 @@ const About = () => {
               <Button
                 key={key}
                 variant={activeSection === key ? "default" : "outline"}
-                onClick={() => setActiveSection(key)}
-                className="font-arial"
+                onClick={() => handleSectionChange(key)}
+                className={`font-arial transition-all duration-300 transform ${
+                  animatingSection === key 
+                    ? 'scale-105 shadow-lg' 
+                    : activeSection === key 
+                      ? 'scale-100' 
+                      : 'hover:scale-105 hover:shadow-md'
+                }`}
               >
                 {section.title}
               </Button>
@@ -81,10 +98,14 @@ const About = () => {
               <img
                 src={sections[activeSection].image}
                 alt={sections[activeSection].title}
-                className="w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-500"
+                className={`w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-500 ${
+                  animatingSection ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+                }`}
               />
             </div>
-            <div className="space-y-6">
+            <div className={`space-y-6 transition-all duration-500 ${
+              animatingSection ? 'opacity-0 translate-x-4' : 'opacity-100 translate-x-0'
+            }`}>
               <h2 className="font-montserrat text-3xl md:text-4xl font-bold text-gray-900">
                 {sections[activeSection].title}
               </h2>

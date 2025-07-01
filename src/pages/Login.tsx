@@ -57,6 +57,11 @@ const Login = () => {
         <p className="mt-2 text-center text-sm text-gray-600">
           Sign in to access your files and documents
         </p>
+        <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-md">
+          <p className="text-sm text-blue-800 font-medium">Demo Admin Credentials:</p>
+          <p className="text-sm text-blue-700">Email: admin@lseacorp.com</p>
+          <p className="text-sm text-blue-700">Password: LSEAAdmin2024!Secure#</p>
+        </div>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">

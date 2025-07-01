@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { GoogleMap } from '@/components/GoogleMap';
 
 const Offices = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,6 +27,11 @@ const Offices = () => {
 
   const states = [...new Set(offices.map(office => office.state))];
 
+  const handleLocateOffice = (office: any) => {
+    // This will be handled by the GoogleMap component
+    console.log('Locating office:', office.name);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -46,12 +52,13 @@ const Offices = () => {
       {/* Map Section */}
       <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center mb-12">
-            <p className="font-arial text-gray-600 text-xl">Interactive Map Placeholder</p>
-          </div>
+          <GoogleMap 
+            offices={offices} 
+            onLocateOffice={handleLocateOffice}
+          />
 
           {/* Filter */}
-          <div className="mb-8">
+          <div className="mb-8 mt-12">
             <Select value={selectedState} onValueChange={setSelectedState}>
               <SelectTrigger className="w-48">
                 <SelectValue placeholder="Filter by state" />
@@ -89,7 +96,10 @@ const Offices = () => {
                     <strong>Email:</strong> {office.email}
                   </p>
                 </div>
-                <Button className="w-full font-arial">
+                <Button 
+                  className="w-full font-arial"
+                  onClick={() => handleLocateOffice(office)}
+                >
                   Locate on Map
                 </Button>
               </div>

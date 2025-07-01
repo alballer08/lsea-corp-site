@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Company Info */}
           <div className="md:col-span-1">
             <Link 
@@ -91,40 +91,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 font-montserrat">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link 
-                  to="/terms-of-use" 
-                  onClick={handleLinkClick}
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Terms of Use
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/privacy-policy" 
-                  onClick={handleLinkClick}
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/employee-access" 
-                  onClick={handleLinkClick}
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  Employee Access
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Information */}
           <div>
             <h3 className="text-lg font-semibold mb-4 font-montserrat">Contact Information</h3>
@@ -172,6 +138,13 @@ const Footer = () => {
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
               >
                 Privacy Policy
+              </Link>
+              <Link 
+                to="/sitemap" 
+                onClick={handleLinkClick}
+                className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
+              >
+                Sitemap
               </Link>
               <Link 
                 to="/employee-access" 
