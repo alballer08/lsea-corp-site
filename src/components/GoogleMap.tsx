@@ -39,7 +39,7 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
       await loader.load();
 
-      const googleMap = new google.maps.Map(mapRef.current, {
+      const googleMap = new window.google.maps.Map(mapRef.current, {
         center: { lat: 39.8283, lng: -98.5795 },
         zoom: 5,
       });
@@ -48,13 +48,13 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
       // Add markers for each office
       const newMarkers = offices.map((office) => {
-        const marker = new google.maps.Marker({
+        const marker = new window.google.maps.Marker({
           position: { lat: office.lat, lng: office.lng },
           map: googleMap,
           title: office.name,
         });
 
-        const infoWindow = new google.maps.InfoWindow({
+        const infoWindow = new window.google.maps.InfoWindow({
           content: `
             <div style="padding: 10px; min-width: 200px;">
               <h3 style="margin: 0 0 10px 0; font-weight: bold; font-size: 16px;">${office.name}</h3>
@@ -84,7 +84,7 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
         // Find and show info window for the marker
         const marker = newMarkers.find((m, index) => offices[index].id === office.id);
         if (marker) {
-          const infoWindow = new google.maps.InfoWindow({
+          const infoWindow = new window.google.maps.InfoWindow({
             content: `
               <div style="padding: 10px; min-width: 200px;">
                 <h3 style="margin: 0 0 10px 0; font-weight: bold; font-size: 16px;">${office.name}</h3>
