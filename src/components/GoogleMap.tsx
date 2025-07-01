@@ -1,6 +1,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
 interface Office {
   id: number;
@@ -20,133 +22,70 @@ interface GoogleMapProps {
   apiKey?: string;
 }
 
-declare global {
-  interface Window {
-    google: any;
-    initMap: () => void;
-  }
-}
+// Fix for default markers in Leaflet
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
-export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice, apiKey }) => {
+export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice }) => {
   const mapRef = useRef<HTMLDivElement>(null);
-  const [map, setMap] = useState<any>(null);
-  const [markers, setMarkers] = useState<any[]>([]);
-  const [userApiKey, setUserApiKey] = useState(apiKey || '');
-  const [showApiInput, setShowApiInput] = useState(!apiKey);
+  const [map, setMap] = useState<L.Map | null>(null);
+  const [markers, setMarkers] = useState<L.Marker[]>([]);
 
-  const initializeMap = () => {
-    if (!mapRef.current || !window.google) return;
+  useEffect(() => {
+    if (!mapRef.current) return;
 
-    const googleMap = new window.google.maps.Map(mapRef.current, {
-      zoom: 5,
-      center: { lat: 39.8283, lng: -98.5795 }, // Center of USA
-      mapTypeId: 'roadmap',
-    });
+    // Initialize map
+    const leafletMap = L.map(mapRef.current).setView([39.8283, -98.5795], 5);
 
-    setMap(googleMap);
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(leafletMap);
+
+    setMap(leafletMap);
 
     // Add markers for each office
     const newMarkers = offices.map((office) => {
-      const marker = new window.google.maps.Marker({
-        position: { lat: office.lat, lng: office.lng },
-        map: googleMap,
-        title: office.name,
-      });
-
-      const infoWindow = new window.google.maps.InfoWindow({
-        content: `
-          <div style="padding: 10px;">
-            <h3 style="margin: 0 0 10px 0; font-weight: bold;">${office.name}</h3>
-            <p style="margin: 5px 0;"><strong>Address:</strong> ${office.address}</p>
-            <p style="margin: 5px 0;"><strong>City:</strong> ${office.city}, ${office.state}</p>
-            <p style="margin: 5px 0;"><strong>Phone:</strong> ${office.phone}</p>
-            <p style="margin: 5px 0;"><strong>Email:</strong> ${office.email}</p>
-          </div>
-        `,
-      });
-
-      marker.addListener('click', () => {
-        infoWindow.open(googleMap, marker);
-      });
-
+      const marker = L.marker([office.lat, office.lng]).addTo(leafletMap);
+      
+      const popupContent = `
+        <div style="padding: 10px; min-width: 200px;">
+          <h3 style="margin: 0 0 10px 0; font-weight: bold; font-size: 16px;">${office.name}</h3>
+          <p style="margin: 5px 0; font-size: 14px;"><strong>Address:</strong> ${office.address}</p>
+          <p style="margin: 5px 0; font-size: 14px;"><strong>City:</strong> ${office.city}, ${office.state}</p>
+          <p style="margin: 5px 0; font-size: 14px;"><strong>Phone:</strong> ${office.phone}</p>
+          <p style="margin: 5px 0; font-size: 14px;"><strong>Email:</strong> ${office.email}</p>
+        </div>
+      `;
+      
+      marker.bindPopup(popupContent);
       return marker;
     });
 
     setMarkers(newMarkers);
-  };
 
-  const loadGoogleMapsScript = () => {
-    if (window.google) {
-      initializeMap();
-      return;
-    }
-
-    window.initMap = initializeMap;
-    
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${userApiKey}&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
-  };
-
-  useEffect(() => {
-    if (userApiKey && !showApiInput) {
-      loadGoogleMapsScript();
-    }
-  }, [userApiKey, showApiInput]);
+    // Cleanup function
+    return () => {
+      leafletMap.remove();
+    };
+  }, [offices]);
 
   const handleLocateOffice = (office: Office) => {
     if (map) {
-      map.setCenter({ lat: office.lat, lng: office.lng });
-      map.setZoom(15);
+      map.setView([office.lat, office.lng], 15);
       
-      // Find and trigger the marker
+      // Find and open the marker popup
       const marker = markers.find((m, index) => offices[index].id === office.id);
       if (marker) {
-        window.google.maps.event.trigger(marker, 'click');
+        marker.openPopup();
       }
     }
     onLocateOffice(office);
   };
-
-  if (showApiInput) {
-    return (
-      <div className="bg-gray-100 h-96 rounded-lg flex flex-col items-center justify-center p-8">
-        <h3 className="font-montserrat text-xl font-semibold mb-4">Google Maps Integration</h3>
-        <p className="text-gray-600 mb-4 text-center">
-          To display the interactive map, please enter your Google Maps API key:
-        </p>
-        <div className="flex flex-col sm:flex-row gap-2 w-full max-w-md">
-          <input
-            type="text"
-            placeholder="Enter Google Maps API key"
-            value={userApiKey}
-            onChange={(e) => setUserApiKey(e.target.value)}
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <Button 
-            onClick={() => setShowApiInput(false)}
-            disabled={!userApiKey.trim()}
-            className="whitespace-nowrap"
-          >
-            Load Map
-          </Button>
-        </div>
-        <p className="text-sm text-gray-500 mt-2 text-center">
-          Get your API key at{' '}
-          <a 
-            href="https://console.cloud.google.com/apis/credentials" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            Google Cloud Console
-          </a>
-        </p>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-4">
