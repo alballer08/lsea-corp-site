@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +7,10 @@ const Portfolio = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   const projects = [
     { id: 1, title: 'Metro Bridge Project', image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
@@ -44,6 +47,7 @@ const Portfolio = () => {
               <Link
                 key={project.id}
                 to={`/portfolio/${project.id}`}
+                onClick={handleLinkClick}
                 className={`group relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${index < 4 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <img
@@ -63,6 +67,7 @@ const Portfolio = () => {
             {/* Filler Box */}
             <Link
               to="/portfolio/1"
+              onClick={handleLinkClick}
               className="col-span-1 md:col-span-2 lg:col-span-1 bg-green-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay hover:bg-green-700 transition-colors duration-300"
             >
               <div>

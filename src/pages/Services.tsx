@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +7,10 @@ const Services = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   const services = [
     { 
@@ -87,6 +90,7 @@ const Services = () => {
               <Link
                 key={service.id}
                 to={`/services/${service.id}`}
+                onClick={handleLinkClick}
                 className={`group relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${index < 6 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <img
@@ -106,6 +110,7 @@ const Services = () => {
             {/* Filler Box */}
             <Link
               to="/services/1"
+              onClick={handleLinkClick}
               className="col-span-1 md:col-span-2 lg:col-span-1 bg-blue-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay hover:bg-blue-700 transition-colors duration-300"
             >
               <div>
