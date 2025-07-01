@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { UserPlus, Users } from 'lucide-react';
+import { UserPlus, Users, Trash2 } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 
 interface User {
@@ -16,6 +16,7 @@ export const AdminPanel: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreateForm, setShowCreateForm] = useState(false);
+  const [deletingUserId, setDeletingUserId] = useState<string | null>(null);
   const [newUser, setNewUser] = useState({
     email: '',
     password: '',
@@ -97,6 +98,48 @@ export const AdminPanel: React.FC = () => {
         description: error.message,
         variant: "destructive",
       });
+    }
+  };
+
+  const deleteUser = async (userId: string, userEmail: string) => {
+    if (!confirm(`Are you sure you want to delete user ${userEmail}? This action cannot be undone.`)) {
+      return;
+    }
+
+    setDeletingUserId(userId);
+    
+    try {
+      // Delete from the public.users table first (this will cascade to auth.users)
+      const { error: dbError } = await supabase
+        .from('users')
+        .delete()
+        .eq('id', userId);
+
+      if (dbError) throw dbError;
+
+      // Also delete from auth.users using the admin API
+      const { error: authError } = await supabase.auth.admin.deleteUser(userId);
+      
+      if (authError) {
+        console.warn('Error deleting from auth.users (user may already be deleted):', authError);
+      }
+
+      toast({
+        title: "User deleted successfully",
+        description: `${userEmail} has been removed`,
+      });
+
+      // Refresh the users list
+      fetchUsers();
+    } catch (error: any) {
+      console.error('Error deleting user:', error);
+      toast({
+        title: "Failed to delete user",
+        description: error.message,
+        variant: "destructive",
+      });
+    } finally {
+      setDeletingUserId(null);
     }
   };
 
@@ -214,6 +257,18 @@ export const AdminPanel: React.FC = () => {
                   <span className="text-sm text-gray-500">
                     {new Date(user.created_at).toLocaleDateString()}
                   </span>
+                  <button
+                    onClick={() => deleteUser(user.id, user.email)}
+                    disabled={deletingUserId === user.id}
+                    className="ml-2 p-1 text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    title="Delete user"
+                  >
+                    {deletingUserId === user.id ? (
+                      <div className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                    ) : (
+                      <Trash2 className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
               </div>
             </div>
