@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Search } from 'lucide-react';
@@ -28,11 +29,11 @@ const Navbar = () => {
               onClick={handleLogoClick}
               className="flex items-center space-x-3 cursor-pointer"
             >
-              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
+              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center p-1">
                 <img 
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 19h18v2H3v-2zm0-8h18v2H3v-2zm0-6v2h18V5H3z'/%3E%3C/svg%3E"
-                  alt="L"
-                  className="w-5 h-5"
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&crop=center"
+                  alt="Justice Scale"
+                  className="w-6 h-6 object-contain filter brightness-0 invert"
                 />
               </div>
               <span className="text-xl font-bold text-gray-900 font-montserrat">LSEA Corporation</span>

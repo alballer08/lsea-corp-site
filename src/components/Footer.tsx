@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -18,11 +17,11 @@ const Footer = () => {
               onClick={handleLinkClick}
               className="flex items-center space-x-3 mb-6"
             >
-              <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center">
+              <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center p-1">
                 <img 
-                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/%3E%3C/svg%3E"
-                  alt="L"
-                  className="w-6 h-6"
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&crop=center"
+                  alt="Justice Scale"
+                  className="w-7 h-7 object-contain filter brightness-0 invert"
                 />
               </div>
               <span className="text-xl font-bold font-montserrat">LSEA Corporation</span>
