@@ -7,6 +7,7 @@ const ProjectDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -70,8 +71,12 @@ const ProjectDetail = () => {
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : projects[0];
 
   const handleNavigation = (projectId: string) => {
-    navigate(`/portfolio/${projectId}`);
-    window.scrollTo(0, 0);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      navigate(`/portfolio/${projectId}`);
+      window.scrollTo(0, 0);
+      setIsTransitioning(false);
+    }, 150);
   };
 
   return (
@@ -81,7 +86,7 @@ const ProjectDetail = () => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover transition-all duration-300 ${isTransitioning ? 'opacity-80 scale-105' : 'opacity-100 scale-100'}`}
         />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="absolute bottom-10 left-10">
@@ -93,13 +98,13 @@ const ProjectDetail = () => {
         {/* Navigation Arrows */}
         <button
           onClick={() => handleNavigation(prevProject.id)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={() => handleNavigation(nextProject.id)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-200 hover:scale-110 active:scale-95"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
