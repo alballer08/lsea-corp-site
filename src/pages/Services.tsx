@@ -60,11 +60,6 @@ const Services = () => {
       title: 'HVAC Design', 
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
-    { 
-      id: 12, 
-      title: 'Geotechnical Engineering', 
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
   ];
 
   return (
@@ -109,7 +104,10 @@ const Services = () => {
             ))}
             
             {/* Filler Box */}
-            <div className="col-span-1 md:col-span-2 lg:col-span-1 bg-blue-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay">
+            <Link
+              to="/services/1"
+              className="col-span-1 md:col-span-2 lg:col-span-1 bg-blue-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay hover:bg-blue-700 transition-colors duration-300"
+            >
               <div>
                 <h3 className="font-montserrat text-xl font-semibold text-white mb-4">
                   Comprehensive Engineering Solutions
@@ -117,11 +115,11 @@ const Services = () => {
                 <p className="font-arial text-white mb-6">
                   Read more about our complete range of professional engineering services.
                 </p>
-                <button className="font-arial bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+                <span className="font-arial bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-block">
                   Learn More
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

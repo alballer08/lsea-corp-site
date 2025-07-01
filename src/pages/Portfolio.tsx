@@ -61,7 +61,10 @@ const Portfolio = () => {
             ))}
             
             {/* Filler Box */}
-            <div className="col-span-1 md:col-span-2 lg:col-span-1 bg-green-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay">
+            <Link
+              to="/portfolio/1"
+              className="col-span-1 md:col-span-2 lg:col-span-1 bg-green-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay hover:bg-green-700 transition-colors duration-300"
+            >
               <div>
                 <h3 className="font-montserrat text-xl font-semibold text-white mb-4">
                   Exceptional Project Results
@@ -69,11 +72,11 @@ const Portfolio = () => {
                 <p className="font-arial text-white mb-6">
                   Read more about our comprehensive portfolio of successful engineering projects.
                 </p>
-                <button className="font-arial bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+                <span className="font-arial bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-block">
                   View All Projects
-                </button>
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
