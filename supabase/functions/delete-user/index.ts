@@ -25,7 +25,7 @@ Deno.serve(async (req) => {
       }
     );
 
-    // Create regular client to verify the requesting user is an admin
+    // Create regular client to verify the requesting user
     const supabaseClient = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
       Deno.env.get('SUPABASE_ANON_KEY') ?? ''
@@ -40,23 +40,29 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Set the auth header for the client
-    supabaseClient.auth.setSession({
-      access_token: authHeader.replace('Bearer ', ''),
-      refresh_token: ''
-    });
-
-    // Get the current user
-    const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
+    // Get the user from the JWT token
+    const jwt = authHeader.replace('Bearer ', '');
+    const { data: { user }, error: userError } = await supabaseClient.auth.getUser(jwt);
+    
     if (userError || !user) {
+      console.error('Auth error:', userError);
       return new Response(
         JSON.stringify({ error: 'Invalid authentication' }),
         { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       );
     }
 
-    // Check if the user is an admin
-    const { data: isAdmin } = await supabaseAdmin.rpc('is_admin', { user_id: user.id });
+    // Check if the user is an admin using the admin client
+    const { data: isAdmin, error: adminCheckError } = await supabaseAdmin.rpc('is_admin', { user_id: user.id });
+    
+    if (adminCheckError) {
+      console.error('Admin check error:', adminCheckError);
+      return new Response(
+        JSON.stringify({ error: 'Failed to verify admin status' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     if (!isAdmin) {
       return new Response(
         JSON.stringify({ error: 'Insufficient permissions' }),
