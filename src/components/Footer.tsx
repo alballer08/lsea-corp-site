@@ -17,14 +17,18 @@ const Footer = () => {
               onClick={handleLinkClick}
               className="flex items-center space-x-1 mb-6"
             >
-              <div className="w-9 h-9 bg-white rounded-sm flex items-center justify-center p-1">
+              <div className="w-9 h-9 flex items-center justify-center p-1" style={{ position: 'relative', zIndex: 10 }}>
                 <img 
                   src="/public/logo.png"
                   alt="Justice Scale"
                   className="w-full h-full object-contain"
                   style={{ 
                     filter: 'none',
-                    opacity: 1
+                    opacity: 1,
+                    position: 'relative',
+                    zIndex: 11,
+                    backgroundColor: 'transparent',
+                    backgroundBlendMode: 'normal'
                   }}
                 />
               </div>
