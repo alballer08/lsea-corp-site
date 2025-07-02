@@ -147,6 +147,17 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_shared_file_data: {
+        Args: { link_token: string }
+        Returns: {
+          file_id: string
+          filename: string
+          original_name: string
+          file_size: number
+          storage_path: string
+          expires_at: string
+        }[]
+      }
       is_admin: {
         Args: { user_id: string }
         Returns: boolean

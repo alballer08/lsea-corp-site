@@ -29,32 +29,24 @@ const SharedFile = () => {
   const fetchFileData = async () => {
     try {
       const { data, error } = await supabase
-        .from('shared_links')
-        .select(`
-          expires_at,
-          files (
-            id,
-            filename,
-            original_name,
-            file_size,
-            storage_path
-          )
-        `)
-        .eq('token', token)
-        .gt('expires_at', new Date().toISOString())
-        .single();
+        .rpc('get_shared_file_data', { link_token: token });
 
       if (error) throw error;
 
-      if (!data || !data.files) {
+      if (!data || data.length === 0) {
         setError('File not found or link has expired');
         return;
       }
 
+      const fileInfo = data[0];
       setFileData({
-        ...data.files,
-        expires_at: data.expires_at
-      } as SharedFileData);
+        id: fileInfo.file_id,
+        filename: fileInfo.filename,
+        original_name: fileInfo.original_name,
+        file_size: fileInfo.file_size,
+        storage_path: fileInfo.storage_path,
+        expires_at: fileInfo.expires_at
+      });
     } catch (error: any) {
       setError('File not found or link has expired');
     } finally {
