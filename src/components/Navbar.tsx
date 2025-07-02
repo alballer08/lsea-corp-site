@@ -27,14 +27,20 @@ const Navbar = () => {
             {/* Logo */}
             <div 
               onClick={handleLogoClick}
-              className="flex items-center space-x-2 cursor-pointer"
+              className="flex items-center space-x-1 cursor-pointer"
             >
-              <div className="w-8 h-8 bg-transparent rounded flex items-center justify-center p-1">
+              <div className="w-10 h-10 bg-transparent rounded flex items-center justify-center p-1">
                 <img 
                   src="/public/logo.png"
                   alt="Justice Scale"
-                  className="w-6 h-6 object-contain opacity-100"
-                  style={{ filter: 'none' }}
+                  className="w-8 h-8 object-contain"
+                  style={{ 
+                    filter: 'none',
+                    opacity: 1,
+                    mixBlendMode: 'normal',
+                    backgroundColor: 'transparent',
+                    color: 'initial'
+                  }}
                 />
               </div>
               <span className="text-xl font-bold text-gray-900 font-montserrat">LSEA Corporation</span>
