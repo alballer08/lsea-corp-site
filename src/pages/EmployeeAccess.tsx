@@ -8,15 +8,7 @@ const EmployeeAccess = () => {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!loading) {
-      if (user) {
-        navigate('/dashboard');
-      } else {
-        navigate('/login');
-      }
-    }
-  }, [user, loading, navigate]);
+  // Removed automatic navigation - let users choose to sign in manually
 
   if (loading) {
     return (
