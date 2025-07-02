@@ -17,11 +17,11 @@ const Footer = () => {
               onClick={handleLinkClick}
               className="flex items-center space-x-1 mb-6"
             >
-              <div className="w-10 h-16 flex items-center justify-center p-1" style={{ position: 'relative', zIndex: 10 }}>
+              <div className="w-12 h-18 flex items-center justify-center p-1" style={{ position: 'relative', zIndex: 10 }}>
                 <img 
                   src="/public/logo.png"
                   alt="LSEA Logo"
-                  className="w-10 h-16 object-contain"
+                  className="w-12 h-18 object-contain"
                   style={{ 
                     filter: 'none',
                     opacity: 1,
