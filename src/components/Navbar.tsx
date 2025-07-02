@@ -48,12 +48,12 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/about" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-arial">ABOUT</Link>
-              <Link to="/services" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-arial">SERVICES</Link>
-              <Link to="/portfolio" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-arial">PORTFOLIO</Link>
-              <Link to="/offices" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-arial">OFFICES</Link>
-              <Link to="/careers" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-arial">CAREERS</Link>
-              <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-arial">CONTACT</Link>
+              <Link to="/about" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">ABOUT</Link>
+              <Link to="/services" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">SERVICES</Link>
+              <Link to="/portfolio" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">PORTFOLIO</Link>
+              <Link to="/offices" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">OFFICES</Link>
+              <Link to="/careers" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">CAREERS</Link>
+              <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600  font-medium font-arial">CONTACT</Link>
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="text-gray-700 hover:text-blue-600"
