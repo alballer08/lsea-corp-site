@@ -29,9 +29,9 @@ const Navbar = () => {
               onClick={handleLogoClick}
               className="flex items-center space-x-3 cursor-pointer"
             >
-              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center p-1">
+              <div className="w-8 h-8 bg-transparent rounded flex items-center justify-center p-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&crop=center"
+                  src="/public/logo.png"
                   alt="Justice Scale"
                   className="w-6 h-6 object-contain filter brightness-0 invert border-0"
                 />

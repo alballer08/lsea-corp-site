@@ -17,9 +17,9 @@ const Footer = () => {
               onClick={handleLinkClick}
               className="flex items-center space-x-3 mb-6"
             >
-              <div className="w-10 h-10 bg-blue-600 rounded flex items-center justify-center p-1">
+              <div className="w-10 h-10 bg-transparent rounded flex items-center justify-center p-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&crop=center"
+                  src="/public/logo.png"
                   alt="Justice Scale"
                   className="w-7 h-7 object-contain filter brightness-0 invert border-0"
                 />
