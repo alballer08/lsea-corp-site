@@ -15,13 +15,14 @@ const Footer = () => {
             <Link 
               to="/" 
               onClick={handleLinkClick}
-              className="flex items-center space-x-3 mb-6"
+              className="flex items-center space-x-2 mb-6"
             >
               <div className="w-10 h-10 bg-transparent rounded flex items-center justify-center p-1">
                 <img 
                   src="/public/logo.png"
                   alt="Justice Scale"
-                  className="w-7 h-7 object-contain"
+                  className="w-7 h-7 object-contain opacity-100"
+                  style={{ filter: 'none' }}
                 />
               </div>
               <span className="text-xl font-bold font-montserrat">LSEA Corporation</span>
