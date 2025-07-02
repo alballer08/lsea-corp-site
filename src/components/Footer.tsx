@@ -17,11 +17,11 @@ const Footer = () => {
               onClick={handleLinkClick}
               className="flex items-center space-x-1 mb-6"
             >
-              <div className="w-12 h-15 flex items-center justify-center p-1" style={{ position: 'relative', zIndex: 10 }}>
+              <div className="w-13 h-20 flex items-center justify-center p-1" style={{ position: 'relative', zIndex: 10 }}>
                 <img 
                   src="/public/logo.png"
                   alt="LSEA Logo"
-                  className="w-full h-full object-contain"
+                  className="w-13 h-20 object-contain"
                   style={{ 
                     filter: 'none',
                     opacity: 1,
@@ -32,7 +32,7 @@ const Footer = () => {
                   }}
                 />
               </div>
-              <span className="text-xl font-bold font-montserrat">LSEA Corporation</span>
+              <span className="text-3xl font-medium font-montserrat">LSEA Corporation</span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading engineering solutions provider with decades of experience in structural, 
