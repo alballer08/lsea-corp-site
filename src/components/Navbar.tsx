@@ -33,7 +33,7 @@ const Navbar = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&crop=center"
                   alt="Justice Scale"
-                  className="w-6 h-6 object-contain filter brightness-0 invert"
+                  className="w-6 h-6 object-contain filter brightness-0 invert border-0"
                 />
               </div>
               <span className="text-xl font-bold text-gray-900 font-montserrat">LSEA Corporation</span>

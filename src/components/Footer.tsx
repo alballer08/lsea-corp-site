@@ -21,7 +21,7 @@ const Footer = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=100&h=100&fit=crop&crop=center"
                   alt="Justice Scale"
-                  className="w-7 h-7 object-contain filter brightness-0 invert"
+                  className="w-7 h-7 object-contain filter brightness-0 invert border-0"
                 />
               </div>
               <span className="text-xl font-bold font-montserrat">LSEA Corporation</span>

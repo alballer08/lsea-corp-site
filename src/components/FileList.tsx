@@ -121,12 +121,22 @@ export const FileList: React.FC = () => {
     if (!confirm(`Delete ${file.original_name}?`)) return;
 
     try {
+      // Delete from storage first
       const { error: storageError } = await supabase.storage
         .from('user-files')
         .remove([file.storage_path]);
 
       if (storageError) throw storageError;
 
+      // Delete any associated shared links
+      const { error: sharedLinksError } = await supabase
+        .from('shared_links')
+        .delete()
+        .eq('file_id', file.id);
+
+      if (sharedLinksError) throw sharedLinksError;
+
+      // Delete file record from database
       const { error: dbError } = await supabase
         .from('files')
         .delete()
@@ -138,7 +148,7 @@ export const FileList: React.FC = () => {
       
       toast({
         title: "File deleted",
-        description: `${file.original_name} has been deleted`,
+        description: `${file.original_name} and its shared links have been deleted`,
       });
     } catch (error: any) {
       toast({
