@@ -137,9 +137,9 @@ const Contact = () => {
                     Headquarters
                   </h3>
                   <p className="font-arial text-gray-600">
-                    123 Engineering Plaza<br />
-                    Suite 100<br />
-                    New York, NY 10001
+                    150 River Road<br />
+                    Suite E2<br />
+                    Montville, NJ 07045
                   </p>
                 </div>
 
@@ -148,8 +148,8 @@ const Contact = () => {
                     Phone
                   </h3>
                   <p className="font-arial text-gray-600">
-                    Main: (212) 555-0100<br />
-                    Toll-Free: (800) 555-LSEA
+                    Main: (973) 588-3122<br />
+                    Fax: (973) 588-3123
                   </p>
                 </div>
 
@@ -159,8 +159,7 @@ const Contact = () => {
                   </h3>
                   <p className="font-arial text-gray-600">
                     General: info@lseacorp.com<br />
-                    Projects: projects@lseacorp.com<br />
-                    Careers: careers@lseacorp.com
+                    Projects: kimlaw@lseacorp.com<br />
                   </p>
                 </div>
 
@@ -169,7 +168,7 @@ const Contact = () => {
                     Business Hours
                   </h3>
                   <p className="font-arial text-gray-600">
-                    Monday - Friday: 8:00 AM - 6:00 PM EST<br />
+                    Monday - Friday: 9:00 AM - 5:00 PM EST<br />
                     Saturday: 9:00 AM - 2:00 PM EST<br />
                     Sunday: Closed
                   </p>

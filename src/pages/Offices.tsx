@@ -13,12 +13,12 @@ const Offices = () => {
   }, []);
 
   const offices = [
-    { id: 1, name: 'New York Office', address: '123 Business Ave', city: 'New York', state: 'NY', phone: '(212) 555-0101', email: 'ny@lseacorp.com', lat: 40.7128, lng: -74.0060 },
-    { id: 2, name: 'Los Angeles Office', address: '456 Corporate Blvd', city: 'Los Angeles', state: 'CA', phone: '(213) 555-0102', email: 'la@lseacorp.com', lat: 34.0522, lng: -118.2437 },
-    { id: 3, name: 'Chicago Office', address: '789 Engineering St', city: 'Chicago', state: 'IL', phone: '(312) 555-0103', email: 'chicago@lseacorp.com', lat: 41.8781, lng: -87.6298 },
-    { id: 4, name: 'Houston Office', address: '321 Professional Way', city: 'Houston', state: 'TX', phone: '(713) 555-0104', email: 'houston@lseacorp.com', lat: 29.7604, lng: -95.3698 },
-    { id: 5, name: 'Atlanta Office', address: '654 Innovation Dr', city: 'Atlanta', state: 'GA', phone: '(404) 555-0105', email: 'atlanta@lseacorp.com', lat: 33.7490, lng: -84.3880 },
-    { id: 6, name: 'Seattle Office', address: '987 Technology Ln', city: 'Seattle', state: 'WA', phone: '(206) 555-0106', email: 'seattle@lseacorp.com', lat: 47.6062, lng: -122.3321 },
+    { id: 1, name: 'Montville, New Jersey Office', address: '150 River Road, Suite E2', city: 'New Jersey', state: 'NJ', phone: '(973) 588-3122', email: 'info@lseacorp.com', lat: 40.891025, lng: -74.370403 },
+    { id: 2, name: 'Cherry Hill, New Jersey Office', address: '1101 North Kings Highway, Suite 311', city: 'Cherry Hill', state: 'NJ', phone: '(856) 330-4613', email: 'info@lseacorp.com', lat: 39.920354, lng: -75.002733 },
+    { id: 3, name: 'New York Office', address: '1350 6th Avenue, West 55th Street, 3rd Floor', city: 'New York', state: 'NY', phone: '(973) 588-3123', email: 'info@lseacorp.com', lat: 40.763041, lng: -73.978132 },
+    { id: 4, name: 'Long Island, New York Office', address: '513 Valley Lane', city: 'Valley Stream', state: 'NY', phone: '(973) 588-3122', email: 'info@lseacorp.com', lat: 40.647811, lng: -73.721406 },
+    { id: 5, name: 'Pennsylvania Office', address: '228 Moore Street', city: 'Philadelphia', state: 'PA', phone: '(267) 273-4769', email: 'info@lseacorp.com', lat: 39.925500, lng: -75.150530 },
+    { id: 6, name: 'Connecticut Office', address: '120 Kane Street, Suite C8', city: 'West Hartford', state: 'CT', phone: '(203) 314 5770', email: 'info@lseacorp.com', lat: 41.751044, lng: -72.718931 },
   ];
 
   const filteredOffices = selectedState === 'all' 

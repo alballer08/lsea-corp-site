@@ -35,8 +35,7 @@ const Footer = () => {
               <span className="text-3xl font-medium font-montserrat">LSEA Corporation</span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Leading engineering solutions provider with decades of experience in structural, 
-              civil, mechanical, and electrical engineering. Committed to excellence and innovation 
+              Leading consulting firm with decades of experience in providing civil engineering, consulting, and inspection services to both public and private sectors. Committed to excellence and innovation 
               in every project we undertake.
             </p>
           </div>
@@ -109,13 +108,13 @@ const Footer = () => {
               <div className="space-y-3 text-gray-300">
                 <div>
                   <p className="font-medium text-white text-sm">Main Office</p>
-                  <p className="text-sm">123 Engineering Plaza</p>
-                  <p className="text-sm">Suite 400</p>
-                  <p className="text-sm">New York, NY 10001</p>
+                  <p className="text-sm">150 River Road</p>
+                  <p className="text-sm">Suite E2</p>
+                  <p className="text-sm">New Jersey, NJ 07045</p>
                 </div>
                 <div>
                   <p className="font-medium text-white text-sm">Phone</p>
-                  <p className="text-sm">(555) 123-4567</p>
+                  <p className="text-sm">(973) 588-3122</p>
                 </div>
                 <div>
                   <p className="font-medium text-white text-sm">Email</p>
@@ -123,7 +122,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="font-medium text-white text-sm">Business Hours</p>
-                  <p className="text-sm">Mon-Fri: 8:00 AM - 6:00 PM</p>
+                  <p className="text-sm">Mon-Fri: 9:00 AM - 5:00 PM</p>
                   <p className="text-sm">Saturday: 9:00 AM - 2:00 PM</p>
                 </div>
               </div>
@@ -135,7 +134,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 LSEA Corporation. All rights reserved.
+              © 2025 LSEA Corporation. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link 
