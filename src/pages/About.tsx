@@ -29,7 +29,7 @@ const About = () => {
     },
     mission: {
       title: 'Company Mission',
-      content: 'To deliver innovative engineering solutions that exceed client expectations while maintaining the highest standards of quality, safety, and environmental responsibility. We are committed to building lasting relationships through integrity, excellence, and continuous improvement.',
+      content: 'Our team is composed of highly qualified, skilled, and motivated professionals who bring a diverse range of expertise and experience to the table. Each member is dedicated to working collaboratively, drawing on their individual strengths to deliver exceptional service. We are united by a shared commitment to excellence, and we continuously strive to exceed expectations by maintaining the highest standards of quality in everything we do. Whether working directly with clients or supporting operations behind the scenes, our staff takes pride in ensuring that every aspect of our service is handled with care, professionalism, and attention to detail.',
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     expertise: {
