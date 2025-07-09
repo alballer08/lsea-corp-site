@@ -18,50 +18,71 @@ const ProjectDetail = () => {
     {
       id: '1',
       title: 'Metro Bridge Project',
-      description: 'A comprehensive infrastructure development project connecting urban areas with state-of-the-art bridge engineering.',
-      details: 'This major infrastructure project involved the design and construction of a modern bridge system that spans multiple waterways, connecting key urban districts. Our engineering team developed innovative solutions for complex geological challenges while ensuring minimal environmental impact.',
+      content: [
+        'A comprehensive infrastructure development project connecting urban areas with state-of-the-art bridge engineering. This major infrastructure project involved the design and construction of a modern bridge system that spans multiple waterways, connecting key urban districts.',
+        'Our engineering team developed innovative solutions for complex geological challenges while ensuring minimal environmental impact. The project required extensive soil analysis, seismic design considerations, and coordination with multiple transportation authorities.',
+        'The completed bridge system now serves thousands of commuters daily and has become a landmark structure in the metropolitan area. This project demonstrates our capability to deliver complex infrastructure solutions that balance functionality, safety, and aesthetic appeal.'
+      ],
       image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '2',
       title: 'Corporate Headquarters',
-      description: 'Modern corporate facility design featuring sustainable architecture and advanced building systems.',
-      details: 'Our team designed a cutting-edge corporate headquarters featuring sustainable building practices, advanced HVAC systems, and modern workspace design. The project achieved LEED Gold certification and serves as a model for future commercial developments.',
+      content: [
+        'Modern corporate facility design featuring sustainable architecture and advanced building systems. Our team designed a cutting-edge corporate headquarters featuring sustainable building practices, advanced HVAC systems, and modern workspace design.',
+        'The project achieved LEED Gold certification and serves as a model for future commercial developments. We integrated energy-efficient systems, natural lighting optimization, and advanced building automation to create a healthy and productive work environment.',
+        'The headquarters now houses over 1,000 employees and features flexible workspaces, state-of-the-art conference facilities, and a rooftop garden. This project showcases our ability to balance sustainability, functionality, and employee well-being in commercial design.'
+      ],
       image: 'https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '3',
       title: 'Industrial Complex',
-      description: 'Large-scale industrial facility with advanced manufacturing capabilities and environmental controls.',
-      details: 'A comprehensive industrial development project featuring advanced manufacturing facilities, environmental control systems, and efficient logistics infrastructure. Our engineering solutions optimized workflow while maintaining strict environmental compliance.',
+      content: [
+        'Large-scale industrial facility with advanced manufacturing capabilities and environmental controls. This comprehensive industrial development project features advanced manufacturing facilities, environmental control systems, and efficient logistics infrastructure.',
+        'Our engineering solutions optimized workflow while maintaining strict environmental compliance. We designed specialized ventilation systems, waste management processes, and safety protocols to ensure safe and efficient operations.',
+        'The completed complex now operates at full capacity with minimal environmental impact and serves as a model for sustainable industrial development. This project demonstrates our expertise in balancing industrial productivity with environmental responsibility.'
+      ],
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '4',
       title: 'Residential Development',
-      description: 'Sustainable residential community with integrated infrastructure and green building practices.',
-      details: 'This residential development project showcases our expertise in community planning, sustainable design, and integrated infrastructure. The project features energy-efficient homes, advanced water management systems, and community amenities.',
+      content: [
+        'Sustainable residential community with integrated infrastructure and green building practices. This residential development project showcases our expertise in community planning, sustainable design, and integrated infrastructure development.',
+        'The project features energy-efficient homes, advanced water management systems, and community amenities. We incorporated renewable energy systems, smart home technology, and sustainable building materials throughout the development.',
+        'The completed community now houses over 500 families and features parks, recreational facilities, and walking trails. This project demonstrates our commitment to creating sustainable, livable communities that enhance quality of life for residents.'
+      ],
       image: 'https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '5',
       title: 'Highway Infrastructure',
-      description: 'Major highway expansion project improving regional transportation connectivity.',
-      details: 'A large-scale transportation infrastructure project involving highway expansion, bridge construction, and traffic management systems. Our engineering solutions improved regional connectivity while minimizing construction impact on existing traffic flow.',
+      content: [
+        'Major highway expansion project improving regional transportation connectivity. This large-scale transportation infrastructure project involved highway expansion, bridge construction, and traffic management systems.',
+        'Our engineering solutions improved regional connectivity while minimizing construction impact on existing traffic flow. We developed phased construction plans and temporary traffic management systems to maintain traffic flow during construction.',
+        'The completed highway expansion now accommodates increased traffic volume and has reduced commute times for thousands of daily travelers. This project showcases our ability to deliver complex transportation infrastructure while maintaining public safety and minimizing disruption.'
+      ],
       image: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '6',
       title: 'Educational Facility',
-      description: 'State-of-the-art educational campus with modern learning environments and advanced technology integration.',
-      details: 'Our educational facility project combines innovative architectural design with advanced educational technology infrastructure. The campus features flexible learning spaces, sustainable building systems, and cutting-edge laboratory facilities.',
+      content: [
+        'State-of-the-art educational campus with modern learning environments and advanced technology integration. Our educational facility project combines innovative architectural design with advanced educational technology infrastructure.',
+        'The campus features flexible learning spaces, sustainable building systems, and cutting-edge laboratory facilities. We designed adaptable classrooms, advanced science laboratories, and technology-enhanced learning environments to support modern educational methods.',
+        'The completed campus now serves over 2,000 students and has become a model for educational facility design. This project demonstrates our ability to create learning environments that inspire innovation and support diverse educational programs.'
+      ],
       image: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '7',
       title: 'Medical Center',
-      description: 'Comprehensive healthcare facility with advanced medical technology and patient-centered design.',
-      details: 'A comprehensive medical center project featuring advanced healthcare technology, patient-centered design, and efficient clinical workflows. Our engineering solutions support critical medical operations while ensuring patient comfort and safety.',
+      content: [
+        'Comprehensive healthcare facility with advanced medical technology and patient-centered design. This comprehensive medical center project features advanced healthcare technology, patient-centered design, and efficient clinical workflows.',
+        'Our engineering solutions support critical medical operations while ensuring patient comfort and safety. We designed specialized HVAC systems, medical gas distribution, and advanced electrical systems to support critical care operations.',
+        'The completed medical center now provides comprehensive healthcare services to the community and has expanded access to specialized medical care. This project demonstrates our expertise in healthcare facility design and our commitment to improving community health outcomes.'
+      ],
       image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     }
   ];
@@ -131,12 +152,13 @@ const ProjectDetail = () => {
               <h2 className="font-montserrat text-3xl font-bold text-gray-900">
                 Project Overview
               </h2>
-              <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                {project.description}
-              </p>
-              <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                {project.details}
-              </p>
+              <div className="space-y-4">
+                {project.content.map((paragraph, index) => (
+                  <p key={index} className="font-arial text-lg text-gray-600 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
               <Link
                 to="/contact"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-arial font-semibold hover:bg-blue-700 transition-all duration-500"
