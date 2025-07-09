@@ -20,7 +20,7 @@ const Home = () => {
           loop
           playsInline
         >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <source src="/public/ce-mp4.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute bottom-10 left-10 z-20">
