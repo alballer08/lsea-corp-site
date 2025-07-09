@@ -61,9 +61,7 @@ const About = () => {
     partners: {
       title: 'Partners',
       content: [
-        'We work with industry-leading partners to expand our capabilities and provide comprehensive solutions to our clients. Our strategic partnerships enable us to offer specialized services and access to cutting-edge technologies that enhance our project delivery.',
-        'Our partner network includes technology companies, specialty contractors, research institutions, and other engineering firms that share our commitment to excellence. These relationships allow us to tackle complex projects that require diverse expertise and resources.',
-        'Through these collaborative relationships, we can offer our clients access to the latest innovations in engineering software, materials, and construction techniques. Our partners help us stay competitive and deliver superior results on projects of all sizes and complexity levels.'
+        'We work with industry-leading partners to expand our capabilities and provide comprehensive solutions to our clients. Our strategic partnerships enable us to offer specialized services and access to cutting-edge technologies that enhance our project delivery.'
       ],
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     }
