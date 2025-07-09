@@ -7,25 +7,6 @@ const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [animatingSection, setAnimatingSection] = useState<string | null>(null);
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const handleSectionChange = (section: string) => {
-    console.log('Switching to section:', section);
-    console.log('Current active section:', activeSection);
-    console.log('Section data:', sections[section]);
-    
-    if (section !== activeSection) {
-      setAnimatingSection(section);
-      setTimeout(() => {
-        setActiveSection(section);
-        setAnimatingSection(null);
-        console.log('Section switch completed to:', section);
-      }, 200);
-    }
-  };
-
   const sections = {
     story: {
       title: 'Our Story',
@@ -70,6 +51,25 @@ const About = () => {
         'Through these collaborative relationships, we can tackle larger, more complex projects while maintaining the personalized service and attention to detail that defines our approach to client relationships.'
       ],
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    }
+  };
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const handleSectionChange = (section: string) => {
+    console.log('Switching to section:', section);
+    console.log('Current active section:', activeSection);
+    console.log('Section data:', sections[section]);
+    
+    if (section !== activeSection) {
+      setAnimatingSection(section);
+      setTimeout(() => {
+        setActiveSection(section);
+        setAnimatingSection(null);
+        console.log('Section switch completed to:', section);
+      }, 200);
     }
   };
 
@@ -141,11 +141,20 @@ const About = () => {
                 {sections[activeSection].title}
               </h2>
               <div className="space-y-4">
-                {sections[activeSection].content.map((paragraph, index) => (
-                  <p key={index} className="font-arial text-lg text-gray-600 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
+                {console.log('Rendering content for:', activeSection)}
+                {console.log('Content value:', sections[activeSection]?.content)}
+                {console.log('Is content an array?', Array.isArray(sections[activeSection]?.content))}
+                {sections[activeSection]?.content && Array.isArray(sections[activeSection].content) ? 
+                  sections[activeSection].content.map((paragraph, index) => (
+                    <p key={index} className="font-arial text-lg text-gray-600 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  )) : (
+                    <p className="font-arial text-lg text-gray-600 leading-relaxed">
+                      Content not available
+                    </p>
+                  )
+                }
               </div>
               {activeSection === 'partners' && (
                 <div className="space-y-4">
