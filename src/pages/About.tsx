@@ -11,16 +11,6 @@ const About = () => {
     setIsVisible(true);
   }, []);
 
-  const handleSectionChange = (section: string) => {
-    if (section !== activeSection) {
-      setAnimatingSection(section);
-      setTimeout(() => {
-        setActiveSection(section);
-        setAnimatingSection(null);
-      }, 200);
-    }
-  };
-
   const sections = {
     story: {
       title: 'Our Story',
@@ -61,6 +51,16 @@ const About = () => {
         'Through these collaborative relationships, we can tackle larger, more complex projects while maintaining the personalized service and attention to detail that defines our approach to client relationships.'
       ],
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    }
+  };
+
+  const handleSectionChange = (section: string) => {
+    if (section !== activeSection) {
+      setAnimatingSection(section);
+      setTimeout(() => {
+        setActiveSection(section);
+        setAnimatingSection(null);
+      }, 200);
     }
   };
 
