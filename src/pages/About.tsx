@@ -12,11 +12,16 @@ const About = () => {
   }, []);
 
   const handleSectionChange = (section: string) => {
+    console.log('Switching to section:', section);
+    console.log('Current active section:', activeSection);
+    console.log('Section data:', sections[section]);
+    
     if (section !== activeSection) {
       setAnimatingSection(section);
       setTimeout(() => {
         setActiveSection(section);
         setAnimatingSection(null);
+        console.log('Section switch completed to:', section);
       }, 200);
     }
   };
