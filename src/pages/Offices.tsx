@@ -79,25 +79,25 @@ const Offices = () => {
                 key={office.id}
                 className={`bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
-                <h3 className="font-montserrat text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="font-montserrat text-2xl font-semibold text-gray-900 mb-6">
                   {office.name}
                 </h3>
-                <div className="space-y-2 mb-4 flex-grow">
-                  <p className="font-arial text-gray-600">
+                <div className="space-y-3 mb-6 flex-grow">
+                  <p className="font-arial text-lg text-gray-600">
                     <strong>Address:</strong> {office.address}
                   </p>
-                  <p className="font-arial text-gray-600">
+                  <p className="font-arial text-lg text-gray-600">
                     <strong>City:</strong> {office.city}, {office.state}
                   </p>
-                  <p className="font-arial text-gray-600">
+                  <p className="font-arial text-lg text-gray-600">
                     <strong>Phone:</strong> {office.phone}
                   </p>
-                  <p className="font-arial text-gray-600">
+                  <p className="font-arial text-lg text-gray-600">
                     <strong>Email:</strong> {office.email}
                   </p>
                 </div>
                 <Button 
-                  className="w-full font-arial mt-4"
+                  className="w-full font-arial text-lg py-3"
                   onClick={() => {
                     if ((window as any).mapLocateOffice) {
                       (window as any).mapLocateOffice(office);
