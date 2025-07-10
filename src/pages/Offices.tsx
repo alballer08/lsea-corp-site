@@ -77,12 +77,12 @@ const Offices = () => {
             {filteredOffices.map((office, index) => (
               <div
                 key={office.id}
-                className={`bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
+                className={`bg-white border border-gray-200 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <h3 className="font-montserrat text-xl font-semibold text-gray-900 mb-4">
                   {office.name}
                 </h3>
-                <div className="space-y-2 mb-4">
+                <div className="space-y-2 mb-4 flex-grow">
                   <p className="font-arial text-gray-600">
                     <strong>Address:</strong> {office.address}
                   </p>
@@ -97,7 +97,7 @@ const Offices = () => {
                   </p>
                 </div>
                 <Button 
-                  className="w-full font-arial"
+                  className="w-full font-arial mt-4"
                   onClick={() => {
                     if ((window as any).mapLocateOffice) {
                       (window as any).mapLocateOffice(office);
