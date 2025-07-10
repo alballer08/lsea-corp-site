@@ -45,7 +45,7 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
       markerZoomAnimation: false,
       zoomControl: true,
       attributionControl: false // Remove attribution for cleaner look
-    }).setView([39.8283, -98.5795], 5);
+    }).setView([40.7589, -73.9851], 7);
 
     // Add tile layer with optimized settings
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
