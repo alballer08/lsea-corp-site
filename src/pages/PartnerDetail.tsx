@@ -12,23 +12,23 @@ const PartnerDetail = () => {
 
   const partners = [
     {
-      id: 'techsolutions',
-      name: 'TechSolutions Inc.',
-      founded: '2015',
-      specialty: 'Engineering Software Solutions',
-      description: 'TechSolutions Inc. is our premier technology partner, providing cutting-edge software solutions for complex engineering projects.',
-      details: 'Founded in 2015, TechSolutions has become a leader in engineering software development. They specialize in CAD automation, structural analysis software, and project management platforms. Their innovative solutions have helped us streamline our design processes and improve project delivery times by up to 30%.',
-      services: ['CAD Automation', 'Structural Analysis Software', 'Project Management Platforms', 'Custom Engineering Applications'],
+      id: 'ybirdairways',
+      name: 'Y Bird Airways',
+      founded: '2017',
+      specialty: 'Drone Technology for 3D Modeling & Infrastrcture Inspection',
+      description: 'Y Bird Airways is a partner company to LSEA, providing inspection and assessment services using UAVs.',
+      details: 'As a pioneer in the use of drone technology for infrastructure analysis, Y Bird Airways leverages advanced UAV systems to capture high-resolution imagery and generate precise 3D models of buildings, bridges, and other critical infrastructure assets. These 3D renders offer a comprehensive view of structural conditions, enabling more accurate evaluations, efficient maintenance planning, and data-driven decision-making. Their innovative approach not only enhances safety and reduces the need for manual inspections but also ensures minimal disruption to ongoing operations.',
+      services: ['Aerial Infrastructure Inspections', '3D Mapping and Modeling', 'Thermal Imaging Surveys', 'Progress Monitoring and Documentation'],
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
-      id: 'buildcorp',
-      name: 'BuildCorp Partners',
-      founded: '2010',
-      specialty: 'Construction Management',
-      description: 'BuildCorp Partners brings extensive construction and project management expertise to our large-scale engineering projects.',
-      details: 'With over a decade of experience in construction management, BuildCorp Partners has been instrumental in the successful completion of our most challenging projects. Their expertise in logistics, safety management, and quality control ensures that our engineering designs are executed flawlessly in the field.',
-      services: ['Construction Management', 'Quality Control', 'Safety Management', 'Logistics Coordination'],
+      id: 'wowdesign',
+      name: 'WOW Design',
+      founded: '2019',
+      specialty: 'Architectural and Design Solutions',
+      description: 'WOW Design is a well-established architectural firm based in Hong Kong, with extensive experience delivering a wide range of architectural and design projects across both Hong Kong and mainland China.',
+      details: 'Known for their creative approach and commitment to quality, they have successfully contributed to residential, commercial, and public developments, blending innovative design with functional solutions tailored to the unique needs of each client and local context.',
+      services: ['Architectural Design and Planning', 'Interior Design', '3D Visualization and Rendering', 'Consultation'],
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     }
   ];
@@ -66,7 +66,7 @@ const PartnerDetail = () => {
             <div className="space-y-6">
               <div className="space-y-2">
                 <h2 className="font-montserrat text-3xl font-bold text-gray-900">
-                  About {partner.name}
+                  {partner.name}
                 </h2>
                 <p className="font-arial text-gray-600">
                   <strong>Founded:</strong> {partner.founded}

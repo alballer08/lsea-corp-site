@@ -19,8 +19,8 @@ const Sitemap = () => {
       name: 'About',
       url: '/about',
       children: [
-        { name: 'Partners - TechSolutions', url: '/partners/techsolutions' },
-        { name: 'Partners - BuildCorp', url: '/partners/buildcorp' }
+        { name: 'Partners - Y Bird Airways', url: '/partners/ybirdairways' },
+        { name: 'Partners - WOW Design', url: '/partners/wowdesign' }
       ]
     },
     {

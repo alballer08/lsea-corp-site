@@ -57,7 +57,6 @@ const About = () => {
         'At LSEA Corporation, our success is built on the expertise and dedication of our experienced staff. With a multidisciplinary team of professionals in civil, structural, mechanical, and electrical engineering, we deliver innovative, practical solutions tailored to each client’s needs. From feasibility studies to final design, we manage projects of all sizes and complexity with a commitment to quality, budget, and schedule.',
         'We invest heavily in continued education, training, licensing, and certifications to ensure our staff remains at the forefront of industry standards and technology. This ongoing development enables us to deliver high-performance solutions that meet today’s engineering challenges.',
         'LSEA is proud to be certified as a Minority Business Enterprise (MBE), Disadvantaged Business Enterprise (DBE), and Small Business Enterprise (SBE) with over 20 public agencies, including:',
-        'MBE: Port Authority of NY & NJ, NJDOT, NJ Transit, NYS Dept. of Economic Development, NJ Turnpike Authority, NYCSCA, and more DBE: NJDOT, NYSDOT, NJ Transit, MTA (NYC Transit, LIRR, Metro-North, Bridges & Tunnels) SBE: NJDOT, NJ Turnpike Authority, Delaware River Port Authority',
         'At LSEA, we combine technical excellence with personal commitment—ensuring every project is completed to the highest standards of safety, sustainability, and client satisfaction.'
       ],
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
@@ -65,7 +64,7 @@ const About = () => {
     partners: {
       title: 'Partners',
       content: [
-        'We work with industry-leading partners to expand our capabilities and provide comprehensive solutions to our clients. Our strategic partnerships enable us to offer specialized services and access to cutting-edge technologies that enhance our project delivery.'
+        'We work with industry-established partners to expand our capabilities and provide comprehensive solutions to our clients. Our strategic partnerships enable us to offer specialized services and access to cutting-edge technologies that enhance our project delivery.'
       ],
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     }
@@ -165,17 +164,17 @@ const About = () => {
               {activeSection === 'partners' && (
                 <div className="space-y-4">
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-montserrat text-xl font-semibold mb-2">TechSolutions Inc.</h3>
-                    <p className="font-arial text-gray-600 mb-4">Leading technology partner providing innovative software solutions for engineering projects.</p>
+                    <h3 className="font-montserrat text-xl font-semibold mb-2">Y Bird Airways</h3>
+                    <p className="font-arial text-gray-600 mb-4">Leading technology partner providing advanced drone-based imaging and 3D modeling solutions for infrastructure inspection and engineering projects.</p>
                     <Button asChild>
-                      <a href="/partners/techsolutions" className="font-arial">Learn about the partner</a>
+                      <a href="/partners/ybirdairways" className="font-arial">Learn about the partner</a>
                     </Button>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-montserrat text-xl font-semibold mb-2">BuildCorp Partners</h3>
-                    <p className="font-arial text-gray-600 mb-4">Construction and project management expertise for large-scale engineering projects.</p>
+                    <h3 className="font-montserrat text-xl font-semibold mb-2">WOW Design</h3>
+                    <p className="font-arial text-gray-600 mb-4">Trusted architectural firm involved in countless architectural and design projects. </p>
                     <Button asChild>
-                      <a href="/partners/buildcorp" className="font-arial">Learn about the partner</a>
+                      <a href="/partners/wowdesign" className="font-arial">Learn about the partner</a>
                     </Button>
                   </div>
                 </div>
