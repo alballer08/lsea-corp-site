@@ -25,36 +25,40 @@ const About = () => {
     story: {
       title: 'Our Story',
       content: [
-        'Founded with a vision to provide exceptional engineering services, LSEA Corporation has grown from a small team of dedicated professionals to a leading engineering firm. Our journey spans decades of innovation, client satisfaction, and continuous growth in the engineering industry.',
-        'Since our establishment, we have successfully completed hundreds of projects ranging from small-scale residential developments to large infrastructure installations. Each project has contributed to our extensive knowledge base and refined our approach to engineering excellence.',
-        'Today, LSEA Corporation stands as a testament to what can be achieved through dedication, expertise, and unwavering commitment to quality. We continue to expand our capabilities while maintaining the personal touch and attention to detail that has defined our company from the beginning.'
+        'LSEA Corporation is a multi-discipline consulting firm established in 2001 with a vision to provide exceptional engineering and consulting services to both public and private sector clients. Founded by a small team of dedicated professionals, our company has steadily grown through a commitment to quality, innovation, and client satisfaction.',
+        'We offer a comprehensive range of services, including bridge inspection, evaluation, and design; building inspection and design; highway and traffic engineering; property management; relocation and land acquisition services; construction management and monitoring; environmental engineering; and site planning and engineering. Each project we undertake is approached with technical rigor, attention to detail, and a focus on long-term value.',
+        'Since our founding, we have successfully completed hundreds of projects—from small-scale residential developments to large infrastructure installations. These projects have contributed to a deep and diverse knowledge base that informs our approach to engineering excellence.',
+        'Today, LSEA Corporation continues to expand its capabilities while maintaining the personalized service and high standards that have defined us from the beginning.'
       ],
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     mission: {
       title: 'Company Mission',
       content: [
-        'To deliver innovative engineering solutions that exceed client expectations while maintaining the highest standards of quality, safety, and environmental responsibility. We are committed to building lasting relationships through integrity, excellence, and continuous improvement.',
-        'Our mission extends beyond mere project completion to creating sustainable, efficient, and safe engineering solutions that benefit communities and the environment. We believe that responsible engineering practices are essential for building a better future for generations to come.',
-        'Through collaborative partnerships with our clients, we strive to understand their unique challenges and deliver tailored solutions that not only meet immediate needs but also provide long-term value. Our success is measured by the success of our clients and the positive impact our work has on society.'
+        'At LSEA Corporation, our mission is to deliver innovative engineering solutions that exceed client expectations while upholding the highest standards of quality, safety, and environmental responsibility. We are committed to creating sustainable, efficient, and safe outcomes that positively impact communities and contribute to a better future.',
+        'We believe that successful engineering goes beyond project completion—it’s about building lasting relationships through integrity, excellence, and continuous improvement. Through close collaboration with our clients, we work to understand their unique challenges and deliver tailored solutions that provide both immediate results and long-term value.',
+        'Our dedicated team of highly qualified and motivated professionals is the foundation of our success. By combining technical expertise with personalized service, we are able to match the capabilities of larger firms while maintaining the responsiveness and attention to detail that define our approach.',
+        'At LSEA, our success is measured by the success of our clients and the meaningful contributions our work makes to society.'
       ],
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     expertise: {
       title: 'Technical Expertise',
       content: [
-        'Our multidisciplinary team brings together expertise in structural, civil, mechanical, and electrical engineering. We leverage cutting-edge technology and proven methodologies to deliver solutions that are both innovative and practical.',
-        'With decades of combined experience, our engineers have developed specialized knowledge in areas including seismic design, sustainable building practices, advanced materials, and complex system integration. We stay at the forefront of technological advancement through continuous learning and professional development.',
-        'Our comprehensive approach to engineering ensures that all aspects of a project are considered from the initial design phase through final implementation. This holistic perspective allows us to identify potential challenges early and develop solutions that optimize performance, efficiency, and cost-effectiveness.'
+        'LSEA Corporation offers a multidisciplinary team with expertise in civil and structural engineering. With decades of combined experience, our principals, project managers, engineers, and officers are equipped to manage projects of various sizes and complexities. From preliminary studies to final design, we provide the technical support and insight needed to complement our clients’ in-house teams and deliver fully integrated solutions.',
+        'Our engineers bring specialized knowledge in seismic design, sustainable building practices, advanced materials, and complex system integration. We leverage cutting-edge technology and proven methodologies to develop solutions that are both innovative and practical.',
+        'At LSEA, we take a comprehensive, holistic approach to engineering—considering every aspect of a project from concept through implementation. This perspective allows us to identify challenges early, streamline project delivery, and optimize performance, efficiency, and cost-effectiveness. Through continuous learning and professional development, our team remains at the forefront of industry advancement, ensuring our clients benefit from the latest in engineering innovation.'
       ],
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     commitment: {
       title: 'Total Commitment and Qualifications',
       content: [
-        'Every team member at LSEA holds the highest industry certifications and continues their professional development. Our commitment to excellence is reflected in our track record of successful projects and satisfied clients across multiple industries.',
-        'We maintain strict quality control standards throughout every phase of our work, from initial concept development through final project delivery. Our quality assurance processes ensure that all deliverables meet or exceed industry standards and client expectations.',
-        'Our professional certifications include Professional Engineer (PE) licenses, LEED accreditation, and specialized certifications in various engineering disciplines. We actively participate in continuing education programs and industry conferences to stay current with emerging trends and technologies.'
+        'At LSEA Corporation, our success is built on the expertise and dedication of our experienced staff. With a multidisciplinary team of professionals in civil, structural, mechanical, and electrical engineering, we deliver innovative, practical solutions tailored to each client’s needs. From feasibility studies to final design, we manage projects of all sizes and complexity with a commitment to quality, budget, and schedule.',
+        'We invest heavily in continued education, training, licensing, and certifications to ensure our staff remains at the forefront of industry standards and technology. This ongoing development enables us to deliver high-performance solutions that meet today’s engineering challenges.',
+        'LSEA is proud to be certified as a Minority Business Enterprise (MBE), Disadvantaged Business Enterprise (DBE), and Small Business Enterprise (SBE) with over 20 public agencies, including:',
+        'MBE: Port Authority of NY & NJ, NJDOT, NJ Transit, NYS Dept. of Economic Development, NJ Turnpike Authority, NYCSCA, and more DBE: NJDOT, NYSDOT, NJ Transit, MTA (NYC Transit, LIRR, Metro-North, Bridges & Tunnels) SBE: NJDOT, NJ Turnpike Authority, Delaware River Port Authority',
+        'At LSEA, we combine technical excellence with personal commitment—ensuring every project is completed to the highest standards of safety, sustainability, and client satisfaction.'
       ],
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },

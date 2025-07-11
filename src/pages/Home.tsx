@@ -85,7 +85,7 @@ const Home = () => {
                 Our Offices
               </h2>
               <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                With strategically located offices across multiple states, we're positioned to serve clients nationwide. Our regional presence allows us to understand local regulations, market conditions, and community needs while maintaining the consistency and quality standards that define LSEA Corporation.
+                With strategically located offices across multiple states, we're positioned to serve clients wherever their needs arise. Our regional presence allows us to understand local regulations, infrastructure requirements, and construction standards while maintaining the consistency and quality standards that define LSEA Corporation.
               </p>
             </div>
             <div className="relative">
