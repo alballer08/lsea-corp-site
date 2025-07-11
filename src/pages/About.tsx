@@ -123,15 +123,6 @@ const About = () => {
       <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in-delay' : 'opacity-0'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <img
-                src={sections[activeSection].image}
-                alt={sections[activeSection].title}
-                className={`w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-400 ${
-                  animatingSection ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-                }`}
-              />
-            </div>
             <div className={`space-y-6 transition-all duration-400 ${
               animatingSection ? 'opacity-0 translate-x-4' : 'opacity-100 translate-x-0'
             }`}>
@@ -139,11 +130,37 @@ const About = () => {
                 {sections[activeSection].title}
               </h2>
               <div className="space-y-4">
-                {sections[activeSection].content.map((paragraph, index) => (
-                  <p key={index} className="font-arial text-lg text-gray-600 leading-relaxed">
-                    {paragraph}
-                  </p>
-                ))}
+                {sections[activeSection].content.map((paragraph, index) => {
+                  // Special handling for commitment section with certifications
+                  if (activeSection === 'commitment' && index === 2) {
+                    return (
+                      <div key={index} className="space-y-2">
+                        <p className="font-arial text-lg text-gray-600 leading-relaxed">
+                          LSEA is proud to be certified as a Minority Business Enterprise (MBE), Disadvantaged Business Enterprise (DBE), and Small Business Enterprise (SBE) with over 20 public agencies, including:
+                        </p>
+                        <ul className="font-arial text-lg text-gray-600 leading-relaxed ml-4 space-y-1">
+                          <li className="flex items-start">
+                            <span className="text-blue-600 mr-2">•</span>
+                            <span><strong>MBE:</strong> Port Authority of NY & NJ, NJDOT, NJ Transit, NYS Dept. of Economic Development, NJ Turnpike Authority, NYCSCA, and more</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-blue-600 mr-2">•</span>
+                            <span><strong>DBE:</strong> NJDOT, NYSDOT, NJ Transit, MTA (NYC Transit, LIRR, Metro-North, Bridges & Tunnels)</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="text-blue-600 mr-2">•</span>
+                            <span><strong>SBE:</strong> NJDOT, NJ Turnpike Authority, Delaware River Port Authority</span>
+                          </li>
+                        </ul>
+                      </div>
+                    );
+                  }
+                  return (
+                    <p key={index} className="font-arial text-lg text-gray-600 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  );
+                })}
               </div>
               {activeSection === 'partners' && (
                 <div className="space-y-4">
@@ -163,6 +180,15 @@ const About = () => {
                   </div>
                 </div>
               )}
+            </div>
+            <div className="relative">
+              <img
+                src={sections[activeSection].image}
+                alt={sections[activeSection].title}
+                className={`w-full h-96 object-cover rounded-lg shadow-lg transition-all duration-400 ${
+                  animatingSection ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+                }`}
+              />
             </div>
           </div>
         </div>
