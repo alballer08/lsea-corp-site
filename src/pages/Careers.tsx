@@ -16,35 +16,64 @@ const Careers = () => {
       title: 'Construction Inspectors',
       location: 'Montville, NJ',
       type: 'Full-time',
-      requirements: '3+ years experience, NICET Levels I - IV Certified, ACI concrete technician, SAT asphalt pavement construction certification, NJDOT/NYSDOT/NJTA experience preferred'
+      requirements: [
+        '3+ years experience',
+        'NICET Levels I - IV Certified',
+        'ACI concrete technician',
+        'SAT asphalt pavement construction certification',
+        'NJDOT/NYSDOT/NJTA experience preferred'
+      ]
     },
     {
       id: 2,
       title: 'CADD Technician',
       location: 'Montville, NJ',
       type: 'Full-time',
-      requirements: 'Experience in MicroStation and AutoCAD, NJDOT/NYSDOT/NJTA experience preferred'
+      requirements: [
+        'Experience in MicroStation and AutoCAD',
+        'NJDOT/NYSDOT/NJTA experience preferred'
+      ]
     },
     {
       id: 3,
       title: 'Building & Bridge Engineer ',
       location: 'NJ/NY',
       type: 'Full-time',
-      requirements: 'BSCE, 5+ years of experience in Bridge or Building Design and Rehab, Familiarity with AASHTO, ACI & Steel manual, NJDOT/NYSDOT/PANYNJ/NJTA experience preferred, P.E. in the State of NY/NJ/PA preferred'
+      requirements: [
+        'BSCE',
+        '5+ years of experience in Bridge or Building Design and Rehab',
+        'Familiarity with AASHTO, ACI & Steel manual',
+        'NJDOT/NYSDOT/PANYNJ/NJTA experience preferred',
+        'P.E. in the State of NY/NJ/PA preferred'
+      ]
     },
     {
       id: 4,
       title: 'Bridge Inspection Team Leaders & Assistant Team Leaders',
       location: 'NJ/NY',
       type: 'Full-time',
-      requirements: 'BSc in Civil Engineering, P. E. in the State of NY/NJ/PA/CT Preferred , 5+ years of NYDOT/NJDOT/PANYNJ Bridge Inspection experience preferred, NHI/NYSDOT Training certificates are Preferred (130055, 130053, 130087, and 130078), New Graduate will be considered for the Assistant Team Leader Positions'
+      requirements: [
+        'BSc in Civil Engineering',
+        'P. E. in the State of NY/NJ/PA/CT Preferred',
+        '5+ years of NYDOT/NJDOT/PANYNJ Bridge Inspection experience preferred',
+        'NHI/NYSDOT Training certificates are Preferred (130055, 130053, 130087, and 130078)',
+        'New Graduate will be considered for the Assistant Team Leader Positions'
+      ]
     },
     {
       id: 5,
       title: 'Structural Engineer',
       location: 'Montville, NJ',
       type: 'Full-time',
-      requirements: 'BSc in Structural Engineering or Civil Engineering (Required), 3+ years of NJDOT/PANYNJ Bridge Inspection experience preferred, Analysis for innovative material implementation on civil engineering structures, Guideline development for self-healing concrete application, Effect of self-healing concrete study on structures ability, Test protocol development, and load rate analysis for new material in structures, Bridge inspection , load rate analysis and technical report writing'
+      requirements: [
+        'BSc in Structural Engineering or Civil Engineering (Required)',
+        '3+ years of NJDOT/PANYNJ Bridge Inspection experience preferred',
+        'Analysis for innovative material implementation on civil engineering structures',
+        'Guideline development for self-healing concrete application',
+        'Effect of self-healing concrete study on structures ability',
+        'Test protocol development, and load rate analysis for new material in structures',
+        'Bridge inspection, load rate analysis and technical report writing'
+      ]
     }
   ];
 
@@ -93,9 +122,17 @@ const Careers = () => {
                       <span className="font-arial">📍 {job.location}</span>
                       <span className="font-arial">💼 {job.type}</span>
                     </div>
-                    <p className="font-arial text-gray-600">
-                      <strong>Requirements:</strong> {job.requirements}
-                    </p>
+                    <div className="font-arial text-gray-600">
+                      <strong>Requirements:</strong>
+                      <ul className="mt-2 ml-4 space-y-1">
+                        {job.requirements.map((req, reqIndex) => (
+                          <li key={reqIndex} className="flex items-start">
+                            <span className="text-gray-900 mr-2">•</span>
+                            <span>{req}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                   <div className="mt-4 md:mt-0 md:ml-6">
                     <Button asChild>

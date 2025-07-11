@@ -88,10 +88,10 @@ const PartnerDetail = () => {
                 </h3>
                 <ul className="space-y-2">
                   {partner.services.map((service, index) => (
-                    <li key={index} className="font-arial text-gray-600 flex items-center">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                      {service}
-                    </li>
+                     <li key={index} className="font-arial text-gray-600 flex items-center">
+                       <div className="w-2 h-2 bg-gray-900 rounded-full mr-3"></div>
+                       {service}
+                     </li>
                   ))}
                 </ul>
               </div>
