@@ -13,38 +13,38 @@ const Careers = () => {
   const jobListings = [
     {
       id: 1,
-      title: 'Senior Structural Engineer',
-      location: 'New York, NY',
+      title: 'Construction Inspectors',
+      location: 'Montville, NJ',
       type: 'Full-time',
-      requirements: 'PE License, 5+ years experience, AutoCAD proficiency'
+      requirements: '3+ years experience, NICET Levels I - IV Certified, ACI concrete technician, SAT asphalt pavement construction certification, NJDOT/NYSDOT/NJTA experience preferred'
     },
     {
       id: 2,
-      title: 'Civil Engineering Project Manager',
-      location: 'Los Angeles, CA',
+      title: 'CADD Technician',
+      location: 'Montville, NJ',
       type: 'Full-time',
-      requirements: 'PMP Certification, 7+ years experience, team leadership'
+      requirements: 'Experience in MicroStation and AutoCAD, NJDOT/NYSDOT/NJTA experience preferred'
     },
     {
       id: 3,
-      title: 'Environmental Engineer',
-      location: 'Chicago, IL',
+      title: 'Building & Bridge Engineer ',
+      location: 'NJ/NY',
       type: 'Full-time',
-      requirements: 'Environmental Engineering degree, 3+ years experience'
+      requirements: 'BSCE, 5+ years of experience in Bridge or Building Design and Rehab, Familiarity with AASHTO, ACI & Steel manual, NJDOT/NYSDOT/PANYNJ/NJTA experience preferred, P.E. in the State of NY/NJ/PA preferred'
     },
     {
       id: 4,
-      title: 'Electrical Systems Designer',
-      location: 'Houston, TX',
+      title: 'Bridge Inspection Team Leaders & Assistant Team Leaders',
+      location: 'NJ/NY',
       type: 'Full-time',
-      requirements: 'EE degree, 4+ years experience, power systems knowledge'
+      requirements: 'BSc in Civil Engineering, P. E. in the State of NY/NJ/PA/CT Preferred , 5+ years of NYDOT/NJDOT/PANYNJ Bridge Inspection experience preferred, NHI/NYSDOT Training certificates are Preferred (130055, 130053, 130087, and 130078), New Graduate will be considered for the Assistant Team Leader Positions'
     },
     {
       id: 5,
-      title: 'Junior Mechanical Engineer',
-      location: 'Atlanta, GA',
+      title: 'Structural Engineer',
+      location: 'Montville, NJ',
       type: 'Full-time',
-      requirements: 'ME degree, 1-2 years experience, HVAC systems knowledge'
+      requirements: 'BSc in Structural Engineering or Civil Engineering (Required), 3+ years of NJDOT/PANYNJ Bridge Inspection experience preferred, Analysis for innovative material implementation on civil engineering structures, Guideline development for self-healing concrete application, Effect of self-healing concrete study on structures ability, Test protocol development, and load rate analysis for new material in structures, Bridge inspection , load rate analysis and technical report writing'
     }
   ];
 
