@@ -61,13 +61,6 @@ const About = () => {
       ],
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
-    partners: {
-      title: 'Partners',
-      content: [
-        'We work with industry-established partners to expand our capabilities and provide comprehensive solutions to our clients. Our strategic partnerships enable us to offer specialized services and access to cutting-edge technologies that enhance our project delivery.'
-      ],
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    }
   };
 
   return (
@@ -161,24 +154,6 @@ const About = () => {
                   );
                 })}
               </div>
-              {activeSection === 'partners' && (
-                <div className="space-y-4">
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-montserrat text-xl font-semibold mb-2">Y Bird Airways</h3>
-                    <p className="font-arial text-gray-600 mb-4">Leading technology partner providing advanced drone-based imaging and 3D modeling solutions for infrastructure inspection and engineering projects.</p>
-                    <Button asChild>
-                      <a href="/partners/ybirdairways" className="font-arial">Learn about the partner</a>
-                    </Button>
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-montserrat text-xl font-semibold mb-2">WOW Design</h3>
-                    <p className="font-arial text-gray-600 mb-4">Trusted architectural firm involved in countless architectural and design projects. </p>
-                    <Button asChild>
-                      <a href="/partners/wowdesign" className="font-arial">Learn about the partner</a>
-                    </Button>
-                  </div>
-                </div>
-              )}
             </div>
             <div className="relative">
               <img
