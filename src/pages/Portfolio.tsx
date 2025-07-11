@@ -1,9 +1,12 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -22,6 +25,21 @@ const Portfolio = () => {
     { id: 6, title: 'Educational Facility', image: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
     { id: 7, title: 'Medical Center', image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
   ];
+
+  const projectsPerPage = 4;
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const currentProjects = projects.slice(
+    currentPage * projectsPerPage,
+    (currentPage + 1) * projectsPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
 
   return (
     <div className="min-h-screen">
@@ -44,12 +62,12 @@ const Portfolio = () => {
       <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+            {currentProjects.map((project, index) => (
               <Link
                 key={project.id}
                 to={`/portfolio/${project.id}`}
                 onClick={handleLinkClick}
-                className={`group relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${index < 4 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
+                className={`group relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${index < 2 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <img
                   src={project.image}
@@ -64,26 +82,51 @@ const Portfolio = () => {
                 </div>
               </Link>
             ))}
-            
-            {/* Filler Box */}
-            <Link
-              to="/portfolio/1"
-              onClick={handleLinkClick}
-              className="col-span-1 md:col-span-2 lg:col-span-1 bg-green-600 rounded-lg p-8 flex items-center justify-center text-center animate-fade-in-delay hover:bg-green-700 transition-colors duration-300"
-            >
-              <div>
-                <h3 className="font-montserrat text-xl font-semibold text-white mb-4">
-                  Exceptional Project Results
-                </h3>
-                <p className="font-arial text-white mb-6">
-                  Read more about our comprehensive portfolio of successful engineering projects.
-                </p>
-                <span className="font-arial bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-block">
-                  View All Projects
-                </span>
-              </div>
-            </Link>
           </div>
+
+          {/* Navigation Arrows */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center space-x-6 mt-12">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={prevPage}
+                className="rounded-full hover:bg-gray-100 transition-colors"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </Button>
+              
+              <div className="flex space-x-2">
+                {Array.from({ length: totalPages }, (_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentPage(i)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      i === currentPage ? 'bg-green-600' : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={nextPage}
+                className="rounded-full hover:bg-gray-100 transition-colors"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </Button>
+            </div>
+          )}
+
+          {/* Page Indicator */}
+          {totalPages > 1 && (
+            <div className="text-center mt-6">
+              <p className="font-arial text-gray-500">
+                Page {currentPage + 1} of {totalPages}
+              </p>
+            </div>
+          )}
         </div>
       </section>
     </div>

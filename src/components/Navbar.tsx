@@ -51,6 +51,7 @@ const Navbar = () => {
               <Link to="/about" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">ABOUT</Link>
               <Link to="/services" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">SERVICES</Link>
               <Link to="/portfolio" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">PORTFOLIO</Link>
+              <Link to="/partners" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">PARTNERS</Link>
               <Link to="/offices" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">OFFICES</Link>
               <Link to="/careers" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">CAREERS</Link>
               <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600  font-medium font-arial">CONTACT</Link>
@@ -86,6 +87,7 @@ const Navbar = () => {
                 <Link to="/about" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">About</Link>
                 <Link to="/services" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Services</Link>
                 <Link to="/portfolio" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Portfolio</Link>
+                <Link to="/partners" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Partners</Link>
                 <Link to="/offices" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Offices</Link>
                 <Link to="/careers" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Careers</Link>
                 <Link to="/contact" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Contact</Link>
