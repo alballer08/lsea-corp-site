@@ -138,18 +138,18 @@ const About = () => {
                           LSEA is proud to be certified as a Minority Business Enterprise (MBE), Disadvantaged Business Enterprise (DBE), and Small Business Enterprise (SBE) with over 20 public agencies, including:
                         </p>
                         <ul className="font-arial text-lg text-gray-600 leading-relaxed ml-4 space-y-1">
-                          <li className="flex items-start">
-                            <span className="text-blue-600 mr-2">•</span>
-                            <span><strong>MBE:</strong> Port Authority of NY & NJ, NJDOT, NJ Transit, NYS Dept. of Economic Development, NJ Turnpike Authority, NYCSCA, and more</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="text-blue-600 mr-2">•</span>
-                            <span><strong>DBE:</strong> NJDOT, NYSDOT, NJ Transit, MTA (NYC Transit, LIRR, Metro-North, Bridges & Tunnels)</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="text-blue-600 mr-2">•</span>
-                            <span><strong>SBE:</strong> NJDOT, NJ Turnpike Authority, Delaware River Port Authority</span>
-                          </li>
+                           <li className="flex items-start">
+                             <span className="text-gray-900 mr-2">•</span>
+                             <span><strong>MBE:</strong> Port Authority of NY & NJ, NJDOT, NJ Transit, NYS Dept. of Economic Development, NJ Turnpike Authority, NYCSCA, and more</span>
+                           </li>
+                           <li className="flex items-start">
+                             <span className="text-gray-900 mr-2">•</span>
+                             <span><strong>DBE:</strong> NJDOT, NYSDOT, NJ Transit, MTA (NYC Transit, LIRR, Metro-North, Bridges & Tunnels)</span>
+                           </li>
+                           <li className="flex items-start">
+                             <span className="text-gray-900 mr-2">•</span>
+                             <span><strong>SBE:</strong> NJDOT, NJ Turnpike Authority, Delaware River Port Authority</span>
+                           </li>
                         </ul>
                       </div>
                     );
