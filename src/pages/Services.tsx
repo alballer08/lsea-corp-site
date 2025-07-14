@@ -64,16 +64,6 @@ const Services = () => {
       title: 'HVAC Design', 
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
-    { 
-      id: 11, 
-      title: 'Building Inspection', 
-      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
-    { 
-      id: 12, 
-      title: 'Code Compliance', 
-      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
-    },
   ];
 
   return (
@@ -117,6 +107,24 @@ const Services = () => {
                 </div>
               </Link>
             ))}
+            {/* Check out our services placeholder */}
+            <Link
+              to={`/services/1`}
+              onClick={handleLinkClick}
+              className="group relative h-56 sm:h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-blue-600 to-blue-800 animate-fade-in-delay"
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="font-montserrat text-lg sm:text-xl font-semibold mb-2">
+                    Check Out Our Services
+                  </h3>
+                  <p className="font-arial text-sm opacity-90">
+                    Discover more about what we offer
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

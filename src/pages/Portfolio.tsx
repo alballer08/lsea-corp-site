@@ -21,11 +21,6 @@ const Portfolio = () => {
     { id: 5, title: 'Highway Infrastructure', image: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
     { id: 6, title: 'Educational Facility', image: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
     { id: 7, title: 'Medical Center', image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
-    { id: 8, title: 'Transportation Hub', image: 'https://images.unsplash.com/photo-1474164301059-d5d69c95e1b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
-    { id: 9, title: 'Retail Complex', image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
-    { id: 10, title: 'Water Treatment Plant', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
-    { id: 11, title: 'Sports Complex', image: 'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
-    { id: 12, title: 'Mixed-Use Development', image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
   ];
 
   return (
@@ -69,6 +64,24 @@ const Portfolio = () => {
                 </div>
               </Link>
             ))}
+            {/* Check out our portfolio placeholder */}
+            <Link
+              to={`/portfolio/1`}
+              onClick={handleLinkClick}
+              className="group relative h-56 sm:h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-green-600 to-green-800 animate-fade-in-delay"
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center text-white px-4">
+                  <h3 className="font-montserrat text-lg sm:text-xl font-semibold mb-2">
+                    Check Out Our Portfolio
+                  </h3>
+                  <p className="font-arial text-sm opacity-90">
+                    Explore our completed projects
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
