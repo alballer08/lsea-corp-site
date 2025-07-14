@@ -157,14 +157,14 @@ const Clients = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-gray-900 font-montserrat group-hover:text-blue-600 transition-colors">
+                      <h3 className="text-base font-bold text-gray-900 font-montserrat group-hover:text-blue-600 transition-colors">
                         {client.name}
                       </h3>
                       <span className="text-sm text-gray-500">{client.industry}</span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 font-arial line-clamp-3">
+                  <p className="text-sm text-gray-600 mb-4 font-arial line-clamp-3">
                     {client.description}
                   </p>
                   

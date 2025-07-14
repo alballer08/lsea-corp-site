@@ -25,7 +25,7 @@ const partners = [
 
 const Partners = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 2;
+  const itemsPerPage = 1;
   const totalPages = Math.ceil(partners.length / itemsPerPage);
 
   const nextSlide = () => {
@@ -80,7 +80,7 @@ const Partners = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
             {getCurrentPartners().map((partner) => (
               <Link
                 key={partner.id}
@@ -103,7 +103,7 @@ const Partners = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 font-montserrat">
+                      <h3 className="text-base font-bold text-gray-900 mb-2 font-montserrat">
                         {partner.name}
                       </h3>
                       <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
@@ -113,7 +113,7 @@ const Partners = () => {
                     <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
                   </div>
                   
-                  <p className="text-gray-600 mb-4 font-arial">
+                  <p className="text-sm text-gray-600 mb-4 font-arial">
                     {partner.description}
                   </p>
                   
