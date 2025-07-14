@@ -64,6 +64,16 @@ const Services = () => {
       title: 'HVAC Design', 
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
+    { 
+      id: 11, 
+      title: 'Building Inspection', 
+      image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+    },
+    { 
+      id: 12, 
+      title: 'Code Compliance', 
+      image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+    },
   ];
 
   return (
@@ -86,13 +96,13 @@ const Services = () => {
       {/* Services Grid */}
       <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {services.map((service, index) => (
               <Link
                 key={service.id}
                 to={`/services/${service.id}`}
                 onClick={handleLinkClick}
-                className={`group relative h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
+                className={`group relative h-56 sm:h-64 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <img
                   src={service.image}
@@ -100,8 +110,8 @@ const Services = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="font-montserrat text-xl font-semibold text-white">
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="font-montserrat text-lg sm:text-xl font-semibold text-white leading-tight">
                     {service.title}
                   </h3>
                 </div>
