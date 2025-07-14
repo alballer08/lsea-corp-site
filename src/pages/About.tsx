@@ -26,7 +26,7 @@ const About = () => {
       title: 'Our Story',
       content: [
         'LSEA Corporation is a multi-discipline consulting firm established in 2001 with a vision to provide exceptional engineering and consulting services to both public and private sector clients. Founded by a small team of dedicated professionals, our company has steadily grown through a commitment to quality, innovation, and client satisfaction.',
-        'We offer a comprehensive range of services, including bridge inspection, evaluation, and design; building inspection and design; highway and traffic engineering; property management; relocation and land acquisition services; construction management and monitoring; environmental engineering; and site planning and engineering. Each project we undertake is approached with technical rigor, attention to detail, and a focus on long-term value.',
+        'We offer a comprehensive range of services, including bridge inspection, bridge design and rehabilitation, building assessment, building design and rehabilitation, architecture, MEP engineering, site and highway engineering, land surveying, structural assessment and design, and traffic engineering.  Each project we undertake is approached with technical rigor, attention to detail, and a focus on long-term value.',
         'Since our founding, we have successfully completed hundreds of projects—from small-scale residential developments to large infrastructure installations. These projects have contributed to a deep and diverse knowledge base that informs our approach to engineering excellence.',
         'Today, LSEA Corporation continues to expand its capabilities while maintaining the personalized service and high standards that have defined us from the beginning.'
       ],
@@ -45,7 +45,7 @@ const About = () => {
     expertise: {
       title: 'Technical Expertise',
       content: [
-        'LSEA Corporation offers a multidisciplinary team with expertise in civil and structural engineering. With decades of combined experience, our principals, project managers, engineers, and officers are equipped to manage projects of various sizes and complexities. From preliminary studies to final design, we provide the technical support and insight needed to complement our clients’ in-house teams and deliver fully integrated solutions.',
+        'LSEA Corporation offers a multidisciplinary team with expertise in civil and structural engineering. With decades of combined experience, our principals, project managers, and engineers are equipped to manage projects of various sizes and complexities. From preliminary studies to final design, we provide the technical support and insight needed to complement our clients’ in-house teams and deliver fully integrated solutions.',
         'Our engineers bring specialized knowledge in seismic design, sustainable building practices, advanced materials, and complex system integration. We leverage cutting-edge technology and proven methodologies to develop solutions that are both innovative and practical.',
         'At LSEA, we take a comprehensive, holistic approach to engineering—considering every aspect of a project from concept through implementation. This perspective allows us to identify challenges early, streamline project delivery, and optimize performance, efficiency, and cost-effectiveness. Through continuous learning and professional development, our team remains at the forefront of industry advancement, ensuring our clients benefit from the latest in engineering innovation.'
       ],
