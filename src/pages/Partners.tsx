@@ -89,7 +89,15 @@ const Partners = () => {
                         {partner.industry}
                       </span>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={handleLinkClick}
+                      className="text-gray-400 hover:text-blue-600 transition-colors"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
                   </div>
                   
                   <p className="text-gray-600 mb-4 font-arial line-clamp-3 leading-relaxed">
@@ -105,16 +113,6 @@ const Partners = () => {
                         {service}
                       </span>
                     ))}
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <Link
-                      to={`/partners/${partner.id}`}
-                      onClick={handleLinkClick}
-                      className="text-blue-600 hover:text-blue-800 font-medium font-arial text-sm transition-colors"
-                    >
-                      Learn More →
-                    </Link>
                   </div>
                 </div>
               </div>

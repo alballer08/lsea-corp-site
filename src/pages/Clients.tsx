@@ -167,24 +167,20 @@ const Clients = () => {
                         {client.industry}
                       </span>
                     </div>
-                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
-                  </div>
-                  
-                  <p className="text-gray-600 mb-4 font-arial line-clamp-3 leading-relaxed">
-                    {client.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between">
                     <a
                       href={client.website}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={handleLinkClick}
-                      className="text-blue-600 hover:text-blue-800 font-medium font-arial text-sm transition-colors"
+                      className="text-gray-400 hover:text-blue-600 transition-colors"
                     >
-                      Visit Website →
+                      <ExternalLink className="w-5 h-5" />
                     </a>
                   </div>
+                  
+                  <p className="text-gray-600 mb-4 font-arial line-clamp-3 leading-relaxed">
+                    {client.description}
+                  </p>
                 </div>
               </div>
             ))}
