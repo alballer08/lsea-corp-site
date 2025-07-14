@@ -56,6 +56,15 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
       keepBuffer: 1 // Reduce buffer for faster loading
     }).addTo(leafletMap);
 
+    // Set z-index for map controls to be below navbar
+    const mapContainer = leafletMap.getContainer();
+    if (mapContainer) {
+      const controls = mapContainer.querySelectorAll('.leaflet-control-zoom');
+      controls.forEach((control) => {
+        (control as HTMLElement).style.zIndex = '999';
+      });
+    }
+
     setMap(leafletMap);
 
     // Add markers
