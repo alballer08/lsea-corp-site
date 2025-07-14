@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -5,7 +6,7 @@ import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 const Clients = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 1;
+  const itemsPerPage = 3;
 
   useEffect(() => {
     setIsVisible(true);
@@ -20,7 +21,12 @@ const Clients = () => {
   };
 
   const getCurrentClients = () => {
-    return [clients[currentIndex]];
+    const result = [];
+    for (let i = 0; i < itemsPerPage; i++) {
+      const index = (currentIndex + i) % clients.length;
+      result.push(clients[index]);
+    }
+    return result;
   };
 
   const handleLinkClick = () => {
@@ -136,11 +142,11 @@ const Clients = () => {
             </button>
           </div>
 
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getCurrentClients().map((client, index) => (
               <div
                 key={client.id}
-                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 max-w-md mx-auto ${index < 1 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
+                className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
                   <img
@@ -169,13 +175,15 @@ const Clients = () => {
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <Link
-                      to={`/clients/${client.id}`}
+                    <a
+                      href={client.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={handleLinkClick}
                       className="text-blue-600 hover:text-blue-800 font-medium font-arial text-sm transition-colors"
                     >
-                      Learn More →
-                    </Link>
+                      Visit Website →
+                    </a>
                   </div>
                 </div>
               </div>
