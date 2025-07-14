@@ -57,13 +57,26 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
     }).addTo(leafletMap);
 
     // Set z-index for map controls to be below navbar
-    const mapContainer = leafletMap.getContainer();
-    if (mapContainer) {
-      const controls = mapContainer.querySelectorAll('.leaflet-control-zoom');
-      controls.forEach((control) => {
-        (control as HTMLElement).style.zIndex = '999';
-      });
-    }
+    setTimeout(() => {
+      const mapContainer = leafletMap.getContainer();
+      if (mapContainer) {
+        // Target all leaflet controls
+        const allControls = mapContainer.querySelectorAll('.leaflet-control');
+        allControls.forEach((control) => {
+          (control as HTMLElement).style.zIndex = '999';
+        });
+        
+        // Also add CSS rule for leaflet controls
+        const style = document.createElement('style');
+        style.textContent = `
+          .leaflet-control-zoom,
+          .leaflet-control {
+            z-index: 999 !important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }, 100);
 
     setMap(leafletMap);
 
