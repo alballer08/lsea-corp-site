@@ -36,9 +36,9 @@ const Clients = () => {
   const clients = [
     {
       id: 1,
-      name: 'Port Authority of NY & NJ',
+      name: 'The Port Authority of New York and New Jersey',
       industry: 'Transportation',
-      description: 'Leading transportation authority managing airports, bridges, tunnels, and seaports in the New York-New Jersey region.',
+      description: 'Bistate agency managing transportation infrastructure, including airports, bridges, tunnels, ports, and World Trade Center.',
       image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       website: 'https://www.panynj.gov/'
     },
@@ -46,49 +46,49 @@ const Clients = () => {
       id: 2,
       name: 'New Jersey Department of Transportation',
       industry: 'Government',
-      description: 'State agency responsible for transportation issues and policy in New Jersey, including highways, public transit, and aviation.',
+      description: 'State agency overseeing New Jersey’s transportation systems, including planning, engineering, maintenance, and transit.',
       image: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       website: 'https://www.state.nj.us/transportation/'
     },
     {
       id: 3,
-      name: 'New York State Department of Transportation',
+      name: 'New Jersey Turnpike Authority',
       industry: 'Government',
-      description: 'State agency responsible for the development and operation of highways, railroads, mass transit systems, ports, and aviation facilities.',
+      description: 'Agency managing New Jersey Turnpike and GSP, overseeing toll collection, maintenance, and roadway improvements.',
       image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://www.dot.ny.gov/'
+      website: 'https://www.thruway.ny.gov/index.shtml?'
     },
     {
       id: 4,
       name: 'NJ Transit',
       industry: 'Transportation',
-      description: 'Public transportation corporation serving the greater New York metropolitan area.',
+      description: 'Public transportation agency operating buses, trains, and light rail across New Jersey and into New York.',
       image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       website: 'https://www.njtransit.com/'
     },
     {
       id: 5,
-      name: 'Metropolitan Transportation Authority',
+      name: 'Delaware River Port Authority',
       industry: 'Transportation',
-      description: 'Public benefit corporation responsible for public transportation in the New York City metropolitan area.',
+      description: 'Bistate agency managing bridges and public transit between New Jersey and Pennsylvania across the Delaware River.',
       image: 'https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://www.mta.info/'
+      website: 'https://www.drpa.org/'
     },
     {
       id: 6,
-      name: 'New Jersey Turnpike Authority',
+      name: 'Counties and Municipalities',
       industry: 'Transportation',
-      description: 'State agency responsible for maintaining and operating the New Jersey Turnpike and Garden State Parkway.',
+      description: 'Local governments managing roads, traffic, planning, and transportation services within specific counties and municipalities in NJ.',
       image: 'https://images.unsplash.com/photo-1558618047-6c0c2e7c5c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://www.state.nj.us/turnpike/'
+      website: 'https://www.nj.gov/nj/gov/county/'
     },
     {
       id: 7,
-      name: 'Delaware River Port Authority',
+      name: 'HUD/Housing Authorities',
       industry: 'Transportation',
-      description: 'Bi-state agency that operates four major bridges connecting Pennsylvania and New Jersey.',
+      description: 'Agencies providing affordable housing, community development, and assistance programs to low-income residents.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://www.drpa.org/'
+      website: 'https://www.hud.gov/contactus/public-housing-contacts'
     }
   ];
 

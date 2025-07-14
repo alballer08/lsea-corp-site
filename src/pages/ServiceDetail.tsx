@@ -18,9 +18,9 @@ const ServiceDetail = () => {
       id: '1',
       title: 'Bridge Inspection',
       content: [
-        'Comprehensive structural design and analysis services for buildings, bridges, and infrastructure projects. Our structural engineering team provides innovative solutions for complex building challenges using state-of-the-art analysis software and proven engineering principles.',
-        'We specialize in seismic design, load analysis, foundation engineering, and structural rehabilitation. Our expertise spans from residential buildings to large-scale commercial and industrial projects, including high-rise buildings, bridges, and specialized structures.',
-        'Our structural engineers are licensed professionals with extensive experience in various building codes and standards. We work closely with architects, contractors, and clients to ensure that all structural elements are safe, efficient, and cost-effective while meeting all regulatory requirements.'
+        'LSEA can provide evaluation, inspection, and rating services on a wide variety of highway and railroad for both the private and public sectors. LSEA has the experience in the evaluation, inspection, and rating of structures ranging in size from single-span bridges to major bridges. LSEA has experience in the inspection of a wide variety of materials including steel, concrete, prestressed concrete, and timber.',
+        'Our NHI certified Team Leaders are familiar with the NBIS and various clients\' inspection procedures and requirements. We specialize in a variety of structures, including railroad bridges, short-span bridges, major bridges, culverts, sign structures, pedestrian bridges, and utility bridges. ',
+        'Our experienced staff also can perform and/or implement several types of evaluation programs including non-destructive testing, load testing and rating, and fracture and fatigue analysis. '
       ],
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -28,9 +28,9 @@ const ServiceDetail = () => {
       id: '2',
       title: 'Bridge Design and Rehabilitation',
       content: [
-        'Infrastructure development and site engineering solutions for public and private sector projects. Our civil engineering services encompass site development, transportation engineering, water resources, and municipal infrastructure development.',
-        'We work closely with communities and developers to create sustainable, efficient infrastructure solutions that serve growing populations. Our team has experience with roadway design, drainage systems, utilities planning, and environmental impact mitigation.',
-        'Our civil engineers are well-versed in local regulations and permitting processes, ensuring that all projects comply with municipal requirements and environmental standards. We provide comprehensive solutions from initial site analysis through final construction support.'
+        'LSEA can provide complete bridge rehabilitation and replacement design services for a variety of highway and railroad bridges from the conceptual stage through to the final design stage for both the private and public sectors, using innovative concepts and the latest technology in the field of bridge design.',
+        'LSEA has the experience in the design of all types of bridges using a wide variety of materials including steel, concrete, prestressed concrete and timber. We have experience with a wide range of bridge types, including short-span bridges, multi-span bridges, railroad bridges, timber bridges, straight and curved girders, culverts, arch bridges, and truss bridges.',
+        'Our staff is experienced in all phases of bridge and roadway design, including feasibility studies and reports, initial scoping phases, evaluation of alternative solutions, structural analysis and design, reconstruction and rehabilitation design, seismic analysis and design, and foundation studies and reports.'
       ],
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -48,9 +48,9 @@ const ServiceDetail = () => {
       id: '4',
       title: 'Building Design and Rehabilitation',
       content: [
-        'Complete electrical system design and power distribution solutions for all project types. From power distribution and lighting design to fire alarm systems and telecommunications infrastructure, our electrical engineers deliver safe, efficient, and code-compliant solutions.',
-        'Our electrical engineering services include load calculations, panel schedules, lighting design, emergency power systems, and low-voltage systems integration. We ensure all electrical installations meet National Electrical Code requirements and local utility standards.',
-        'We work with the latest electrical design software and stay current with emerging technologies such as LED lighting, smart building systems, and renewable energy integration. Our team provides comprehensive electrical solutions from concept through commissioning and maintenance planning.'
+        'LSEA can provide complete architectural and engineering services for a variety of commercial/industrial buildings for a variety of clients, which includes, but is not limited to: warehouses, stadiums, office buildings, multi-family apartments and condominiums, hospitals, laboratories, schools, churches, and residential complexes (HUD housing)',
+        'Our design teams are dedicated to providing practical, functional and cost-effective designs for any size project and/or solutions for particular problems. LSEA can provide architectural and engineering services for new construction, rehabilitation and repair projects.',
+        'LSEA has preformed numerous architectural and engineering design services for various clients throughout the State of New Jersey and New York. Our design teams provide the following services: Feasibility Studies, Diagnostic Studies, Maintenance Planning, Structural Design/Renovations/Repair/Upgrading, Site Planning and Design, Landscaping Design, Lighting Design, Electrical System Design , Mechanical System Design, and Security System Design'
       ],
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -58,9 +58,7 @@ const ServiceDetail = () => {
       id: '5',
       title: 'Architecture',
       content: [
-        'Sustainable environmental solutions and compliance consulting for responsible development. Our environmental engineering services include environmental impact assessments, remediation planning, water treatment design, and sustainability consulting.',
-        'We ensure projects meet environmental standards and regulations through comprehensive analysis and planning. Our team has expertise in air quality management, water resources protection, waste management, and environmental monitoring systems.',
-        'Our environmental engineers work closely with regulatory agencies and provide clients with practical solutions that balance development needs with environmental protection. We offer ongoing environmental compliance support and monitoring services to ensure long-term sustainability.'
+        'LSEA has provided architectural design and consulting services to clients throughout the Tri-state area. The projects we have been involved with include, but are not limited to: Residential - Single and Multi-Family, Commercial - Low Rise to High Rise Building, Industrial - Warehouses, Hangar Buildings, Storage, Shopping Center, Stadium, Plaza, Apartment complex, and Churches/Religious Buildings/Libraries'
       ],
       image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -68,9 +66,7 @@ const ServiceDetail = () => {
       id: '6',
       title: 'MEP Engineering',
       content: [
-        'Comprehensive project management services ensuring on-time and on-budget delivery. Our certified project managers coordinate all aspects of engineering projects, from initial planning through final delivery, ensuring quality, timeline adherence, and budget control.',
-        'We utilize proven project management methodologies and tools to track progress, manage resources, and communicate effectively with all stakeholders. Our project managers have extensive experience in construction administration, contract management, and risk mitigation.',
-        'Our project management approach emphasizes clear communication, proactive problem-solving, and continuous quality improvement. We provide regular progress reports, schedule updates, and budget tracking to keep clients informed throughout the project lifecycle.'
+        'LSEA has provided MEP Engineering Services to various state agencies, local municipalities, and private sectors. Our specialties include the following services: HVAC Upgrade and Replacement, Emergency Generator Design, Fire Protection/Sprinkler/Standpipe System Design, Energy Audit, Electrical System Upgrade, Solar Power Design, Boiler/Chiller Design, Lighting Design, Lightening Protection System, Underground Feeder Distribution, Switchgears/CT Cabinets, High and Low Tension Power Distribution System, Transformer Design, Domestic Hot Water, Building and Plumbing Piping Distribution System, and Elevator and Escalator Design.'
       ],
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -78,9 +74,9 @@ const ServiceDetail = () => {
       id: '7',
       title: 'Site and Highway Engineering',
       content: [
-        'Expert engineering consulting and advisory services for complex technical challenges. Our consulting team provides specialized expertise in engineering analysis, feasibility studies, technical reviews, and expert witness services.',
-        'We support clients with independent technical evaluations, peer reviews, and specialized analysis for challenging engineering problems. Our consultants have deep expertise in various engineering disciplines and can provide objective assessments and recommendations.',
-        'Our consulting services include failure analysis, design optimization, regulatory compliance consulting, and technical due diligence. We work with clients to identify cost-effective solutions and provide expert testimony when required for legal proceedings.'
+        'LSEA has carried out many highway projects in the New York and New Jersey State areas, managing the construction or reconstruction of different segments of highways, the design and construction assistance for complex interchanges and safety assembles connected to this important sector of the states infrastructure.',
+        'The company’s technical team is of highly professional qualification and by using the most advanced technology in highway design has obtain a high rate of proficiency reflected in the quality, term delivery and budget cap of the project.',
+        'LSEA has provided Site and Highway Engineering services to various state agencies, local municipalities, and private sectors. Our services include the following services: Planning for future traffic flows, Design of highway intersections/interchanges, Geometric alignment and design, Highway pavement materials and design, Structural design of pavement thickness, and Pavement maintenance.'
       ],
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -88,9 +84,7 @@ const ServiceDetail = () => {
       id: '8',
       title: 'Land Surveying',
       content: [
-        'Comprehensive quality control and assurance programs for engineering projects. Our quality assurance team implements rigorous testing, inspection, and verification procedures to ensure all engineering work meets the highest standards.',
-        'We maintain strict quality control standards throughout every phase of project development, from initial design through final delivery. Our QA processes include design reviews, material testing, construction inspection, and performance verification.',
-        'Our quality assurance professionals are trained in industry best practices and use advanced testing equipment to verify compliance with specifications and standards. We provide detailed documentation and reporting to ensure full traceability and accountability.'
+        'LSEA has been providing Land Surveying services for our public and private clients in the Engineering, Transportation, and Construction industries in the following areas: Transportation Design Surveys, Right-of-Way Surveys, Property Surveys, Construction Layout Surveys, Subdivision Surveys, ALTA/ACSM Land Title Surveys, Topographic Surveys, Environmental Surveys, and Mapping Control Surveys.',
       ],
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -108,9 +102,7 @@ const ServiceDetail = () => {
       id: '10',
       title: 'Traffic Engineering',
       content: [
-        'Advanced HVAC system design and energy efficiency optimization for all building types. Our HVAC specialists design efficient heating, ventilation, and air conditioning systems that optimize energy consumption while maintaining optimal indoor air quality.',
-        'We provide comprehensive HVAC design services including load calculations, equipment selection, ductwork design, and controls integration. Our designs focus on energy efficiency, occupant comfort, and long-term reliability while meeting all applicable codes and standards.',
-        'Our HVAC engineers use advanced modeling software to optimize system performance and energy efficiency. We stay current with the latest HVAC technologies and can integrate renewable energy systems, smart controls, and advanced filtration systems into our designs.'
+        'Most of the bridges that LSEA has provided the design and construction engineering supporting services, for new or replacement of them included traffic engineering studies, milling and resurfacing of adjacent roadways, eventually necessary temporary detours layout and the design of new gas and water lines carried within the structures.'
       ],
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     }
