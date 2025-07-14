@@ -66,9 +66,13 @@ const Partners = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {partners.map((partner, index) => (
-              <div
+              <a
                 key={partner.id}
-                className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
+                href={partner.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleLinkClick}
+                className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 cursor-pointer block ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
                   <img
@@ -89,15 +93,7 @@ const Partners = () => {
                         {partner.industry}
                       </span>
                     </div>
-                    <a
-                      href={partner.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={handleLinkClick}
-                      className="text-gray-400 hover:text-blue-600 transition-colors"
-                    >
-                      <ExternalLink className="w-5 h-5" />
-                    </a>
+                    <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
                   </div>
                   
                   <p className="text-gray-600 mb-4 font-arial line-clamp-3 leading-relaxed">
@@ -115,7 +111,7 @@ const Partners = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
