@@ -20,24 +20,6 @@ const partners = [
     website: 'https://wowdesign.com',
     industry: 'Design & Marketing',
     services: ['Brand Identity', 'Web Design', 'Digital Marketing']
-  },
-  {
-    id: 'tech-solutions',
-    name: 'Tech Solutions Inc',
-    description: 'Technology consulting firm providing enterprise software solutions and digital transformation services.',
-    image: '/placeholder.svg',
-    website: 'https://techsolutions.com',
-    industry: 'Technology',
-    services: ['Software Development', 'Cloud Migration', 'IT Consulting']
-  },
-  {
-    id: 'green-energy',
-    name: 'Green Energy Partners',
-    description: 'Renewable energy solutions provider focusing on sustainable power generation and energy efficiency.',
-    image: '/placeholder.svg',
-    website: 'https://greenenergy.com',
-    industry: 'Energy',
-    services: ['Solar Solutions', 'Wind Energy', 'Energy Consulting']
   }
 ];
 
@@ -62,7 +44,7 @@ const Partners = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Full Width Image */}
-      <section className="relative h-96 bg-cover bg-center" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'}}>
+      <section className="relative h-[600px] bg-cover bg-center" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'}}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white">
@@ -149,25 +131,6 @@ const Partners = () => {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 font-montserrat">
-            Interested in Partnering with Us?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            We're always looking for innovative partnerships that create value for our clients and drive industry growth.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Get in Touch
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
         </div>
       </section>
     </div>

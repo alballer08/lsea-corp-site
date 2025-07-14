@@ -62,13 +62,23 @@ const clients = [
     projectType: 'E-commerce Platform',
     results: '150% sales growth',
     year: '2021'
+  },
+  {
+    id: 'aerospace-dynamics',
+    name: 'Aerospace Dynamics',
+    industry: 'Aerospace',
+    description: 'Advanced aerospace engineering company specializing in satellite technology and space exploration systems.',
+    logo: '/placeholder.svg',
+    projectType: 'Mission Critical Systems',
+    results: '100% mission success rate',
+    year: '2022'
   }
 ];
 
 const Clients = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(clients.length / itemsPerPage);
+  const itemsPerPage = 1;
+  const totalPages = clients.length;
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % totalPages);
@@ -79,14 +89,13 @@ const Clients = () => {
   };
 
   const getCurrentClients = () => {
-    const start = currentIndex * itemsPerPage;
-    return clients.slice(start, start + itemsPerPage);
+    return [clients[currentIndex]];
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Full Width Image */}
-      <section className="relative h-96 bg-cover bg-center" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'}}>
+      <section className="relative h-[600px] bg-cover bg-center" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'}}>
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white">
@@ -131,12 +140,12 @@ const Clients = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex justify-center">
             {getCurrentClients().map((client) => (
               <Link
                 key={client.id}
                 to={`/clients/${client.id}`}
-                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group max-w-md mx-auto"
               >
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -182,25 +191,6 @@ const Clients = () => {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 font-montserrat">
-            Ready to Join Our Success Stories?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help your organization achieve its goals and drive meaningful results.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Start Your Project
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
         </div>
       </section>
     </div>
