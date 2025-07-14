@@ -16,52 +16,52 @@ const Services = () => {
   const services = [
     { 
       id: 1, 
-      title: 'Structural Engineering', 
+      title: 'Bridge Inspection', 
       image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 2, 
-      title: 'Civil Engineering', 
+      title: 'Bridge Design and Rehabilitation', 
       image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 3, 
-      title: 'Mechanical Systems', 
+      title: 'Building Assessment', 
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 4, 
-      title: 'Electrical Engineering', 
+      title: 'Building Design and Rehabilitation', 
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 5, 
-      title: 'Environmental Engineering', 
+      title: 'Architecture', 
       image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 6, 
-      title: 'Project Management', 
+      title: 'MEP Engineering',
       image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 7, 
-      title: 'Consulting Services', 
+      title: 'Site and Highway Engineering', 
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 8, 
-      title: 'Quality Assurance', 
+      title: 'Land Surveying', 
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 9, 
-      title: 'Safety Engineering', 
+      title: 'Structural Assessment and Design', 
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
     { 
       id: 10, 
-      title: 'HVAC Design', 
+      title: 'Traffic Engineering', 
       image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
     },
   ];
