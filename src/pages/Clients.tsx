@@ -1,13 +1,31 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Clients = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 3;
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + itemsPerPage) % clients.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - itemsPerPage + clients.length) % clients.length);
+  };
+
+  const getCurrentClients = () => {
+    const endIndex = currentIndex + itemsPerPage;
+    if (endIndex <= clients.length) {
+      return clients.slice(currentIndex, endIndex);
+    }
+    return [...clients.slice(currentIndex), ...clients.slice(0, endIndex - clients.length)];
+  };
 
   const handleLinkClick = () => {
     window.scrollTo(0, 0);
@@ -111,8 +129,27 @@ const Clients = () => {
             </p>
           </div>
 
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center mb-8 space-x-4">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <span className="text-gray-600">
+              {Math.floor(currentIndex / itemsPerPage) + 1} of {Math.ceil(clients.length / itemsPerPage)}
+            </span>
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clients.map((client, index) => (
+            {getCurrentClients().map((client, index) => (
               <div
                 key={client.id}
                 className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
