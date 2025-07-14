@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const partners = [
   {
@@ -42,27 +42,64 @@ const partners = [
 ];
 
 const Partners = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 2;
+  const totalPages = Math.ceil(partners.length / itemsPerPage);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const getCurrentPartners = () => {
+    const start = currentIndex * itemsPerPage;
+    return partners.slice(start, start + itemsPerPage);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      {/* Hero Section with Full Width Image */}
+      <section className="relative h-96 bg-cover bg-center" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative h-full flex items-center justify-center">
+          <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Our Partners
             </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto">
               We collaborate with industry leaders to deliver exceptional results and drive innovation together.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Partners Grid */}
+      {/* Partners Grid with Navigation */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center mb-8 space-x-4">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <span className="text-gray-600">
+              {currentIndex + 1} of {totalPages}
+            </span>
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {partners.map((partner) => (
+            {getCurrentPartners().map((partner) => (
               <Link
                 key={partner.id}
                 to={`/partners/${partner.id}`}

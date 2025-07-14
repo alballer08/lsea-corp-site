@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Users, TrendingUp, ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const clients = [
   {
@@ -66,46 +66,41 @@ const clients = [
 ];
 
 const Clients = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 3;
+  const totalPages = Math.ceil(clients.length / itemsPerPage);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const getCurrentClients = () => {
+    const start = currentIndex * itemsPerPage;
+    return clients.slice(start, start + itemsPerPage);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      {/* Hero Section with Full Width Image */}
+      <section className="relative h-96 bg-cover bg-center" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'}}>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="relative h-full flex items-center justify-center">
+          <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
               Our Clients
             </h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto">
               Trusted by industry leaders across various sectors to deliver innovative solutions and exceptional results.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
-              <Building2 className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">200+</h3>
-              <p className="text-gray-600">Enterprise Clients</p>
-            </div>
-            <div className="p-6">
-              <Users className="w-12 h-12 text-green-600 mx-auto mb-4" />
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">50+</h3>
-              <p className="text-gray-600">Industries Served</p>
-            </div>
-            <div className="p-6">
-              <TrendingUp className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">95%</h3>
-              <p className="text-gray-600">Client Satisfaction</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Clients Grid */}
+      {/* Clients Grid with Navigation */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -117,8 +112,27 @@ const Clients = () => {
             </p>
           </div>
 
+          {/* Navigation Controls */}
+          <div className="flex justify-center items-center mb-8 space-x-4">
+            <button
+              onClick={prevSlide}
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <span className="text-gray-600">
+              {currentIndex + 1} of {totalPages}
+            </span>
+            <button
+              onClick={nextSlide}
+              className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {clients.map((client) => (
+            {getCurrentClients().map((client) => (
               <Link
                 key={client.id}
                 to={`/clients/${client.id}`}
@@ -161,8 +175,8 @@ const Clients = () => {
                   </div>
                   
                   <div className="mt-4 flex items-center text-blue-600 group-hover:text-blue-800 transition-colors">
-                    <span className="text-sm font-medium">View Case Study</span>
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <span className="text-xs font-medium">View Case Study</span>
+                    <ArrowRight className="ml-2 w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
