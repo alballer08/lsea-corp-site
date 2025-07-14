@@ -18,10 +18,7 @@ const Sitemap = () => {
     {
       name: 'About',
       url: '/about',
-      children: [
-        { name: 'Partners - Y Bird Airways', url: '/partners/ybirdairways' },
-        { name: 'Partners - WOW Design', url: '/partners/wowdesign' }
-      ]
+      children: []
     },
     {
       name: 'Services',
@@ -52,6 +49,23 @@ const Sitemap = () => {
       ]
     },
     {
+      name: 'Partners',
+      url: '/partners',
+      children: [
+        { name: 'Y Bird Airways', url: '/partners/ybirdairways' },
+        { name: 'WOW Design', url: '/partners/wowdesign' }
+      ]
+    },
+    {
+      name: 'Clients',
+      url: '/clients',
+      children: [
+        { name: 'Tech Innovations Inc.', url: '/clients/tech-innovations' },
+        { name: 'Green Energy Solutions', url: '/clients/green-energy' },
+        { name: 'Urban Development Corp.', url: '/clients/urban-development' }
+      ]
+    },
+    {
       name: 'Offices',
       url: '/offices',
       children: []
@@ -67,6 +81,14 @@ const Sitemap = () => {
       children: []
     },
     {
+      name: 'Employee Access',
+      url: '/employee-access',
+      children: [
+        { name: 'Login', url: '/login' },
+        { name: 'Dashboard', url: '/dashboard' }
+      ]
+    },
+    {
       name: 'Legal',
       url: '#',
       children: [
@@ -75,9 +97,11 @@ const Sitemap = () => {
       ]
     },
     {
-      name: 'Employee Access',
-      url: '/employee-access',
-      children: []
+      name: 'Site Information',
+      url: '#',
+      children: [
+        { name: 'Sitemap', url: '/sitemap' }
+      ]
     }
   ];
 
