@@ -5,26 +5,22 @@ import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 const Clients = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
+  const itemsPerPage = 1;
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + itemsPerPage) % clients.length);
+    setCurrentIndex((prev) => (prev + 1) % clients.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - itemsPerPage + clients.length) % clients.length);
+    setCurrentIndex((prev) => (prev - 1 + clients.length) % clients.length);
   };
 
   const getCurrentClients = () => {
-    const endIndex = currentIndex + itemsPerPage;
-    if (endIndex <= clients.length) {
-      return clients.slice(currentIndex, endIndex);
-    }
-    return [...clients.slice(currentIndex), ...clients.slice(0, endIndex - clients.length)];
+    return [clients[currentIndex]];
   };
 
   const handleLinkClick = () => {
@@ -87,14 +83,6 @@ const Clients = () => {
       description: 'Bi-state agency that operates four major bridges connecting Pennsylvania and New Jersey.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
       website: 'https://www.drpa.org/'
-    },
-    {
-      id: 8,
-      name: 'Connecticut Department of Transportation',
-      industry: 'Government',
-      description: 'State agency responsible for the development and operation of highways, railways, and other transportation infrastructure.',
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://portal.ct.gov/dot'
     }
   ];
 
@@ -138,7 +126,7 @@ const Clients = () => {
               <ChevronLeft className="w-6 h-6" />
             </button>
             <span className="text-gray-600">
-              {Math.floor(currentIndex / itemsPerPage) + 1} of {Math.ceil(clients.length / itemsPerPage)}
+              {currentIndex + 1} of {clients.length}
             </span>
             <button
               onClick={nextSlide}
@@ -148,11 +136,11 @@ const Clients = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex justify-center">
             {getCurrentClients().map((client, index) => (
               <div
                 key={client.id}
-                className={`group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 ${index < 3 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
+                className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 max-w-md mx-auto ${index < 1 ? 'animate-fade-in' : 'animate-fade-in-delay'}`}
               >
                 <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
                   <img

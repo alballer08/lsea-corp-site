@@ -31,24 +31,6 @@ const Partners = () => {
       website: 'https://wowdesign.com',
       industry: 'Design & Marketing',
       services: ['Brand Identity', 'Web Design', 'Digital Marketing']
-    },
-    {
-      id: 3,
-      name: 'TechFlow Solutions',
-      description: 'Advanced technology consulting firm providing enterprise software solutions and digital transformation services.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://techflowsolutions.com',
-      industry: 'Technology',
-      services: ['Software Development', 'Cloud Solutions', 'IT Consulting']
-    },
-    {
-      id: 4,
-      name: 'BuildRight Construction',
-      description: 'Premier construction company specializing in commercial and industrial projects with a focus on sustainable building practices.',
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-      website: 'https://buildrightconstruction.com',
-      industry: 'Construction',
-      services: ['Commercial Construction', 'Project Management', 'Sustainable Building']
     }
   ];
 
