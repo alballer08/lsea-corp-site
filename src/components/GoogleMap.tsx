@@ -56,22 +56,21 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
       keepBuffer: 1 // Reduce buffer for faster loading
     }).addTo(leafletMap);
 
-    // Set z-index for map controls to be below navbar
+    // Set z-index for entire map container to be below navbar
     setTimeout(() => {
       const mapContainer = leafletMap.getContainer();
       if (mapContainer) {
-        // Target all leaflet controls
-        const allControls = mapContainer.querySelectorAll('.leaflet-control');
-        allControls.forEach((control) => {
-          (control as HTMLElement).style.zIndex = '999';
-        });
+        // Set z-index on the entire map container
+        mapContainer.style.zIndex = '500';
         
-        // Also add CSS rule for leaflet controls
+        // Add global CSS rule to ensure all leaflet elements respect lower z-index
         const style = document.createElement('style');
         style.textContent = `
+          .leaflet-container,
+          .leaflet-control-container,
           .leaflet-control-zoom,
           .leaflet-control {
-            z-index: 999 !important;
+            z-index: 500 !important;
           }
         `;
         document.head.appendChild(style);
@@ -135,7 +134,7 @@ export const GoogleMap: React.FC<GoogleMapProps> = ({ offices, onLocateOffice })
 
   return (
     <div className="space-y-4">
-      <div ref={mapRef} className="w-full h-96 rounded-lg shadow-lg" />
+      <div ref={mapRef} className="w-full h-96 rounded-lg shadow-lg relative z-[500]" />
     </div>
   );
 };
