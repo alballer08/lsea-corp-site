@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X, Search } from 'lucide-react';
 import { SearchModal } from './SearchModal';
 
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLinkClick = () => {
     setIsOpen(false);
@@ -48,13 +49,12 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link to="/about" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">ABOUT</Link>
-              <Link to="/services" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">SERVICES</Link>
-              <Link to="/portfolio" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">PORTFOLIO</Link>
-              <Link to="/partners" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">PARTNERS</Link>
-              <Link to="/offices" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">OFFICES</Link>
-              <Link to="/careers" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600 font-medium font-arial">CAREERS</Link>
-              <Link to="/contact" onClick={handleLinkClick} className="text-gray-700 hover:text-blue-600  font-medium font-arial">CONTACT</Link>
+              <Link to="/about" onClick={handleLinkClick} className={`relative font-medium font-arial transition-colors duration-200 ${location.pathname === '/about' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>ABOUT</Link>
+              <Link to="/services" onClick={handleLinkClick} className={`relative font-medium font-arial transition-colors duration-200 ${location.pathname === '/services' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>SERVICES</Link>
+              <Link to="/portfolio" onClick={handleLinkClick} className={`relative font-medium font-arial transition-colors duration-200 ${location.pathname === '/portfolio' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>PORTFOLIO</Link>
+              <Link to="/offices" onClick={handleLinkClick} className={`relative font-medium font-arial transition-colors duration-200 ${location.pathname === '/offices' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>OFFICES</Link>
+              <Link to="/careers" onClick={handleLinkClick} className={`relative font-medium font-arial transition-colors duration-200 ${location.pathname === '/careers' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>CAREERS</Link>
+              <Link to="/contact" onClick={handleLinkClick} className={`relative font-medium font-arial transition-colors duration-200 ${location.pathname === '/contact' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>CONTACT</Link>
               <button
                 onClick={() => setIsSearchOpen(true)}
                 className="text-gray-700 hover:text-blue-600"
@@ -87,7 +87,6 @@ const Navbar = () => {
                 <Link to="/about" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">About</Link>
                 <Link to="/services" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Services</Link>
                 <Link to="/portfolio" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Portfolio</Link>
-                <Link to="/partners" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Partners</Link>
                 <Link to="/offices" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Offices</Link>
                 <Link to="/careers" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Careers</Link>
                 <Link to="/contact" onClick={handleLinkClick} className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-arial">Contact</Link>

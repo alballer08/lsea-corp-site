@@ -1,12 +1,9 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
     setIsVisible(true);
@@ -69,21 +66,6 @@ const Services = () => {
     },
   ];
 
-  const servicesPerPage = 6;
-  const totalPages = Math.ceil(services.length / servicesPerPage);
-  const currentServices = services.slice(
-    currentPage * servicesPerPage,
-    (currentPage + 1) * servicesPerPage
-  );
-
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -105,7 +87,7 @@ const Services = () => {
       <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentServices.map((service, index) => (
+            {services.map((service, index) => (
               <Link
                 key={service.id}
                 to={`/services/${service.id}`}
@@ -126,50 +108,6 @@ const Services = () => {
               </Link>
             ))}
           </div>
-
-          {/* Navigation Arrows */}
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center space-x-6 mt-12">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={prevPage}
-                className="rounded-full hover:bg-gray-100 transition-colors"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              
-              <div className="flex space-x-2">
-                {Array.from({ length: totalPages }, (_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setCurrentPage(i)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      i === currentPage ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={nextPage}
-                className="rounded-full hover:bg-gray-100 transition-colors"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
-            </div>
-          )}
-
-          {/* Page Indicator */}
-          {totalPages > 1 && (
-            <div className="text-center mt-6">
-              <p className="font-arial text-gray-500">
-                Page {currentPage + 1} of {totalPages}
-              </p>
-            </div>
-          )}
         </div>
       </section>
     </div>

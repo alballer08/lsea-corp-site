@@ -11,7 +11,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
-import Partners from "./pages/Partners";
 import Offices from "./pages/Offices";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
@@ -47,7 +46,7 @@ const App = () => (
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/portfolio/:id" element={<ProjectDetail />} />
                 <Route path="/offices" element={<Offices />} />
-                <Route path="/partners" element={<Partners />} />
+                
                 <Route path="/partners/:id" element={<PartnerDetail />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/contact" element={<Contact />} />
