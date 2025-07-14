@@ -80,7 +80,7 @@ const Careers = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[70vh]">
         <img
           src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
           alt="Careers at LSEA"
