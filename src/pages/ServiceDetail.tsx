@@ -47,12 +47,11 @@ const ServiceDetail = () => {
       id: '3',
       title: 'Building Assessment',
       content: [
-        { type: 'text', text: 'Advanced mechanical system design and optimization for commercial and industrial applications. Our mechanical engineering team specializes in:' },
-        { type: 'list', items: ['HVAC systems', 'Piping design', 'Equipment selection', 'Energy efficiency optimization'] },
-        { type: 'text', text: 'We provide comprehensive solutions for building mechanical systems that ensure comfort, efficiency, and reliability. Our expertise includes:' },
-        { type: 'list', items: ['Heating and cooling load calculations', 'Ductwork design', 'Equipment sizing', 'System integration with building automation systems'] },
-        { type: 'text', text: 'Our mechanical engineers stay current with the latest technologies and energy-efficient solutions, helping clients reduce operating costs while maintaining optimal indoor environmental conditions. We provide:' },
-        { type: 'list', items: ['Detailed system specifications', 'Installation support', 'Commissioning services'] }
+        { type: 'text', text: 'LSEA delivers comprehensive inspection services for both industrial/commercial buildings and residential homes.' },
+        { type: 'text', text: 'We inspect and assess a wide range of facilities including warehouses, offices, stadiums, hospitals, labs, schools, churches, multi-family housing, and more. Our licensed engineers, with extensive experience in NJ and NY, follow NABIE standards and offer:' },
+        { type: 'list', items: ['Comprehensive & Future Needs Assessments', 'Condition Inspections', 'ADA Compliance & UPCS Inspections', 'HUD GPNA & RAD PCA', 'Electrical & Mechanical System Evaluations', 'Emergency Damage Assessments'] },
+        { type: 'text', text: 'LSEA provides full inspection, evaluation, and design services for residential properties. Our licensed structural engineers are well-versed in NJ/NY codes and national standards. Services include:' },
+        { type: 'list', items: ['Pre-purchase & Seller Home Inspections', 'Structural & Mechanical Consultations', 'Lead, Mold, Asbestos Testing', 'Expert Witness Testimony', 'Pre-construction Plan Reviews & On-site Inspections'] },
       ] as ContentItem[],
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
@@ -110,13 +109,10 @@ const ServiceDetail = () => {
       id: '9',
       title: 'Structural Assessment and Design',
       content: [
-        { type: 'text', text: 'Comprehensive safety analysis and risk assessment for engineering projects. Our safety engineering team conducts thorough risk assessments, develops safety protocols, and ensures all projects comply with OSHA and industry safety standards.' },
-        { type: 'text', text: 'We provide safety consulting services including:' },
-        { type: 'list', items: ['Hazard identification', 'Risk analysis', 'Safety training', 'Emergency response planning'] },
-        { type: 'text', text: 'Our safety engineers work proactively to identify potential hazards and develop mitigation strategies before they become problems.' },
-        { type: 'text', text: 'Our safety programs are tailored to specific project requirements and include:' },
-        { type: 'list', items: ['Regular safety audits', 'Training programs', 'Incident investigation services'] },
-        { type: 'text', text: 'We help clients maintain excellent safety records while ensuring regulatory compliance and protecting workers and the public.' }
+        { type: 'text', text: 'LSEA’s inspection teams are licensed professional engineers with extensive experience across New Jersey and New York. We follow NABIE standards to deliver detailed assessments and valuable insights into building conditions.' },
+        { type: 'list', items: ['Needs & Condition Assessments (Current & Future)', 'HUD GPNA & RAD PCA', 'ADA Compliance & UPCS/HQS Inspections', 'Electrical, Mechanical & Structural Evaluations', 'Emergency Damage Inspections','Safety & Security Audits','Drone-Assisted Inspections'] },
+        { type: 'text', text: 'Our engineers ensure safety programs meet required standards through detailed audits and on-site evaluations, serving state agencies, municipalities, and private clients.' },
+        { type: 'text', text: 'In partnership with Y Bird Airways, we use drone technology to capture high-resolution images and 3D models, allowing safe, efficient inspection of hard-to-reach areas.' }
       ] as ContentItem[],
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
