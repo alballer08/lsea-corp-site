@@ -237,58 +237,6 @@ const ServiceDetail = () => {
           </div>
         </div>
       </section>
-
-      {/* Additional Section 1 - Image Left, Text Right */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative flex items-center justify-center">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                alt="Professional Engineering"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-            <div className="space-y-6">
-              <h2 className="font-montserrat text-3xl font-bold text-gray-900">
-                Professional Excellence
-              </h2>
-              <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                Our team of licensed professionals brings decades of experience to every project. We maintain the highest standards of quality and safety while delivering innovative solutions that meet your specific needs.
-              </p>
-              <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                From initial consultation through project completion, we work closely with clients to ensure successful outcomes that exceed expectations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Section 2 - Image Right, Text Left */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="font-montserrat text-3xl font-bold text-gray-900">
-                Cutting-Edge Technology
-              </h2>
-              <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                We leverage the latest technology and industry best practices to deliver superior results. Our advanced software tools and methodologies ensure precision and efficiency in every aspect of our work.
-              </p>
-              <p className="font-arial text-lg text-gray-600 leading-relaxed">
-                Stay ahead of the competition with our innovative approaches and commitment to continuous improvement in engineering practices.
-              </p>
-            </div>
-            <div className="relative flex items-center justify-center">
-              <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                alt="Modern Technology"
-                className="w-full h-96 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
