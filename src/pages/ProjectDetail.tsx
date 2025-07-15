@@ -17,331 +17,302 @@ const ProjectDetail = () => {
   const projects = [
     {
       id: '1',
-      title: 'Metro Bridge Project',
+      title: 'Overhead Sign Inspections (2016)',
       content: [
-        'A comprehensive infrastructure development project connecting urban areas with state-of-the-art bridge engineering. This major infrastructure project involved the design and construction of a modern bridge system that spans multiple waterways, connecting key urban districts.',
-        'Our engineering team developed innovative solutions for complex geological challenges while ensuring minimal environmental impact. The project required extensive soil analysis, seismic design considerations, and coordination with multiple transportation authorities.',
-        'The completed bridge system now serves thousands of commuters daily and has become a landmark structure in the metropolitan area. This project demonstrates our capability to deliver complex infrastructure solutions that balance functionality, safety, and aesthetic appeal.'
+        'LSEA provided sign inspection services to the New Jersey Department of Transportation (NJDOT) for 106 state-owned overhead sign structures located along various major routes throughout the state. These inspections were part of a statewide effort to ensure the safety, stability, and longevity of critical roadway signage.',
+        'Our team of engineers conducted detailed site visits and prepared comprehensive reports for each sign structure. These reports included observations on overall condition, structural components, and any visible damage or deterioration. As part of the process, LSEA also performed Pontis evaluations to help prioritize maintenance based on condition ratings and structural reliability.',
+        'In addition to visual inspections, LSEA performed ultrasonic testing of anchor bolts on all 106 structures. This non-destructive method allowed us to assess the internal integrity of the bolts anchoring each sign to its foundation. These tests added a vital layer of assurance, helping NJDOT make informed decisions regarding maintenance and structural performance.'
       ],
       image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '2',
-      title: 'Corporate Headquarters',
+      title: 'Passaic County Bridge Inspections (2012-2013)',
       content: [
-        'Modern corporate facility design featuring sustainable architecture and advanced building systems. Our team designed a cutting-edge corporate headquarters featuring sustainable building practices, advanced HVAC systems, and modern workspace design.',
-        'The project achieved LEED Gold certification and serves as a model for future commercial developments. We integrated energy-efficient systems, natural lighting optimization, and advanced building automation to create a healthy and productive work environment.',
-        'The headquarters now houses over 1,000 employees and features flexible workspaces, state-of-the-art conference facilities, and a rooftop garden. This project showcases our ability to balance sustainability, functionality, and employee well-being in commercial design.'
+        'LSEA performed inspections and calculated load ratings for 55 bridges owned by Passaic County as part of a two-cycle agreement. This effort was aimed at evaluating the structural integrity and safety of the county’s bridge inventory through a standardized and comprehensive process.',
+        'For each bridge, our engineers conducted detailed Pontis evaluations, which included assessing structural components, identifying deficiencies, and assigning condition ratings. These evaluations were documented in thorough reports that outlined our findings and provided recommendations for maintenance and repair.',
+        'As part of the project, LSEA also coordinated with the North Jersey District Water Supply Commission to inspect the West Brooke Bridge, which spans the Wanaque Reservoir. Due to the sensitive nature of the location, the inspection required careful planning and collaboration to ensure access and compliance with water supply protection protocols.'
       ],
       image: 'https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '3',
-      title: 'Industrial Complex',
+      title: 'Inspection and Rating of On and Off State Bridges (2010-2012)',
       content: [
-        'Large-scale industrial facility with advanced manufacturing capabilities and environmental controls. This comprehensive industrial development project features advanced manufacturing facilities, environmental control systems, and efficient logistics infrastructure.',
-        'Our engineering solutions optimized workflow while maintaining strict environmental compliance. We designed specialized ventilation systems, waste management processes, and safety protocols to ensure safe and efficient operations.',
-        'The completed complex now operates at full capacity with minimal environmental impact and serves as a model for sustainable industrial development. This project demonstrates our expertise in balancing industrial productivity with environmental responsibility.'
+        'LSEA conducted routine biennial inspections, bridge condition evaluations, and Pontis evaluations for 44 on-system and 2 off-system state bridges. These inspections were carried out in accordance with state and federal standards to assess the structural health and ensure the continued safety of each structure.',
+        'Two years after the initial inspections, LSEA performed a second-cycle follow-up to verify the accuracy and consistency of the original findings. This follow-up helped identify any changes in condition, confirmed the effectiveness of recommended maintenance actions, and supported long-term asset management planning.',
+        'As part of the overall assessment, our engineers also completed load rating calculations for all 46 bridges. These calculations were essential to determine whether the bridges met required safety thresholds and to establish appropriate load limits for ongoing use.'
       ],
       image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '4',
-      title: 'Residential Development',
+      title: 'Cantilever & Overhead Sign Structure Inspection (2011)',
       content: [
-        'Sustainable residential community with integrated infrastructure and green building practices. This residential development project showcases our expertise in community planning, sustainable design, and integrated infrastructure development.',
-        'The project features energy-efficient homes, advanced water management systems, and community amenities. We incorporated renewable energy systems, smart home technology, and sustainable building materials throughout the development.',
-        'The completed community now houses over 500 families and features parks, recreational facilities, and walking trails. This project demonstrates our commitment to creating sustainable, livable communities that enhance quality of life for residents.'
+        'LSEA evaluated the condition and fatigue stresses of 137 cantilever and overhead sign structures for the New Jersey Department of Transportation (NJDOT). These signs, critical for driver information and roadway safety, required thorough inspection to ensure structural soundness and long-term reliability.',
+        'As part of the project, our engineers conducted detailed assessments to determine whether each structure met the core responsibilities of safety inspections. These responsibilities included: (a) maintaining public safety, (b) protecting public investment, (c) supporting the federal inspection program, (d) producing accurate records, and (e) fulfilling legal requirements.',
+        'By verifying compliance with these standards, LSEA helped NJDOT maintain a safe and efficient roadway network. Our findings also supported the agency’s asset management efforts by providing accurate, up-to-date documentation of each sign structure’s condition.'
       ],
       image: 'https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '5',
-      title: 'Highway Infrastructure',
+      title: 'Morris County Bridges - Biennial Inspections (2007)',
       content: [
-        'Major highway expansion project improving regional transportation connectivity. This large-scale transportation infrastructure project involved highway expansion, bridge construction, and traffic management systems.',
-        'Our engineering solutions improved regional connectivity while minimizing construction impact on existing traffic flow. We developed phased construction plans and temporary traffic management systems to maintain traffic flow during construction.',
-        'The completed highway expansion now accommodates increased traffic volume and has reduced commute times for thousands of daily travelers. This project showcases our ability to deliver complex transportation infrastructure while maintaining public safety and minimizing disruption.'
+        'LSEA performed biennial inspections of 42 bridges in Morris County for the New Jersey Department of Transportation (NJDOT). These structures included a mix of multi-stringer steel bridges, reinforced concrete beams, prestressed concrete beams, and culverts located under several state highways.',
+        'As part of the inspection process, our engineers conducted comprehensive bridge condition evaluations to assess the structural health and identify any deterioration or maintenance needs. Each bridge was carefully examined to ensure compliance with safety standards and to support long-term infrastructure planning.',
+        'In addition, Pontis evaluations were completed for all 42 structures. These evaluations provided standardized condition ratings and data-driven insights, enabling NJDOT to prioritize repairs, manage risk, and plan effectively for future rehabilitation efforts.'
       ],
       image: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '6',
-      title: 'Educational Facility',
+      title: 'Special Inspection of 7 FCM Bridges (2007)',
       content: [
-        'State-of-the-art educational campus with modern learning environments and advanced technology integration. Our educational facility project combines innovative architectural design with advanced educational technology infrastructure.',
-        'The campus features flexible learning spaces, sustainable building systems, and cutting-edge laboratory facilities. We designed adaptable classrooms, advanced science laboratories, and technology-enhanced learning environments to support modern educational methods.',
-        'The completed campus now serves over 2,000 students and has become a model for educational facility design. This project demonstrates our ability to create learning environments that inspire innovation and support diverse educational programs.'
+        'LSEA assisted the NJDOT Bureau of Structural Evaluation in inspecting seven bridge structures containing Fracture Critical Members (FCMs). These types of structures require detailed inspection due to the potential for critical failure without redundancy in their design.',
+        'As part of the project, LSEA provided professional engineering inspection services for all seven bridges. Our work included the preparation of plans, specifications, and cost estimates related to potential bridge replacements, ensuring that any recommended actions were well-documented and ready for implementation.',
+        'The scope also involved the development of local and area-wide detour plans to accommodate future construction activities, as well as conducting traffic engineering studies to evaluate the impact on surrounding roadways. This comprehensive approach supported NJDOT’s planning and decision-making for the safe and efficient replacement of the FCM structures.'
       ],
       image: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '7',
-      title: 'Medical Center',
+      title: 'NJTA – GSP North and South (2005, 2008, 2009, 2017, and 2018)',
       content: [
-        'Comprehensive healthcare facility with advanced medical technology and patient-centered design. This comprehensive medical center project features advanced healthcare technology, patient-centered design, and efficient clinical workflows.',
-        'Our engineering solutions support critical medical operations while ensuring patient comfort and safety. We designed specialized HVAC systems, medical gas distribution, and advanced electrical systems to support critical care operations.',
-        'The completed medical center now provides comprehensive healthcare services to the community and has expanded access to specialized medical care. This project demonstrates our expertise in healthcare facility design and our commitment to improving community health outcomes.'
+        'In 2017 and 2018, the New Jersey Turnpike Authority (NJTA) selected LSEA as the prime consultant to inspect over 250 bridges along the Garden State Parkway. This large-scale project involved a comprehensive evaluation of the parkway’s bridge infrastructure to ensure public safety and long-term structural integrity.',
+        'LSEA’s team of engineers conducted thorough inspections of each bridge, carefully assessing structural components, identifying any deterioration, and evaluating overall safety. Each inspection was completed with meticulous attention to detail to ensure accurate findings.',
+        'Following the inspections, LSEA prepared comprehensive inspection reports for every bridge, documenting conditions, highlighting areas requiring attention, and providing actionable recommendations for maintenance and repairs. These reports helped NJTA prioritize future bridge management and maintenance efforts.'
       ],
       image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '8',
-      title: 'Urban Park Development',
+      title: 'NJTA – Microwave Tower Inspection (2014, 2017)',
       content: [
-        'Comprehensive park redesign with recreational facilities and natural landscapes. This urban park development project transformed underutilized city space into a vibrant community hub featuring modern recreational facilities and sustainable landscaping.',
-        'Our landscape architecture team created diverse recreational areas while preserving existing natural features. We integrated walking trails, playground equipment, sports facilities, and native plant gardens to create a multifunctional community space.',
-        'The completed park now serves as a gathering place for residents and has increased property values in the surrounding area. This project demonstrates our ability to enhance urban environments through thoughtful landscape design and community planning.'
+        'In 2014, LSEA inspected 15 cell towers, followed by an additional 24 towers in 2017. These inspections were conducted to assess the structural integrity and safety of the towers, ensuring they met industry standards.',
+        'Our engineers thoroughly evaluated each tower, documenting their findings and identifying any areas of concern. This process included checking for signs of wear, corrosion, or other structural issues that could compromise the towers’ performance and safety.',
+        'Following the inspections, LSEA provided detailed reports for each tower, which included a comprehensive outline of the findings and recommendations for necessary repairs. Additionally, we included cost estimates for each repair to help the client prioritize and budget for the required maintenance.'
       ],
       image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '9',
-      title: 'Transportation Hub',
+      title: 'NJTA – GSP Sign Structures and Culverts Inspection (2010)',
       content: [
-        'Multi-modal transportation center connecting various transit systems. This transportation hub project created a seamless connection between bus, rail, and pedestrian transportation modes while providing modern passenger amenities.',
-        'Our design team developed efficient passenger flow systems and integrated real-time information displays. We incorporated weather protection, retail spaces, and accessibility features to enhance the passenger experience.',
-        'The completed hub now serves over 10,000 daily passengers and has become a model for integrated transportation planning. This project showcases our expertise in creating efficient, user-friendly transportation infrastructure.'
+        'LSEA conducted inspections and Pontis/BMS evaluations for a total of 140 sign structures and 53 culverts. These evaluations were performed to assess the condition and structural integrity of the assets, ensuring they met safety standards.',
+        'Our team utilized the InspectTech software to streamline the inspection process and document findings efficiently. This allowed for precise data collection and consistent reporting across all assets.',
+        'In addition to the inspections, LSEA assisted in report writing for each asset, providing detailed documentation of the evaluation results. The reports included condition assessments and recommendations for maintenance or repairs, supporting long-term asset management.'
       ],
       image: 'https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '10',
-      title: 'Water Treatment Plant',
+      title: 'NJTA – Part A Inspection (2003 to 2015)',
       content: [
-        'Advanced water treatment facility ensuring clean water supply for the region. This water treatment plant project incorporated cutting-edge filtration technology and environmental monitoring systems to provide safe drinking water to over 100,000 residents.',
-        'Our engineering solutions optimize treatment processes while minimizing energy consumption. We designed automated control systems, redundant safety measures, and real-time water quality monitoring to ensure consistent treatment performance.',
-        'The completed facility exceeds all regulatory standards and serves as a model for sustainable water infrastructure. This project demonstrates our commitment to public health and environmental stewardship through innovative water treatment solutions.'
+        'LSEA conducted annual and in-depth inspections of 195 bridges across all districts for the New Jersey Turnpike Authority (NJTA). These bridges varied in design, ranging from single-span to multi-span structures, requiring a comprehensive evaluation of each one to ensure their structural integrity.',
+        'The inspection process also included seven long-span fracture-critical (FCM) structures, which are particularly sensitive to failure due to the absence of redundancy in their design. Among these were two Laderman Bridge sign structures and several FCM box girder inspections, which required specialized assessment techniques.',
+        'Our team meticulously documented the condition of each structure and provided detailed findings in comprehensive reports. These reports included recommendations for repairs, safety improvements, and long-term maintenance strategies to help NJTA prioritize necessary actions.'
       ],
       image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '11',
-      title: 'Solar Energy Farm',
+      title: 'NJTA - Part B Inspection (2007 to 2012)',
       content: [
-        'Large-scale solar installation providing renewable energy to thousands of homes. This solar energy farm project represents a significant step toward sustainable energy production, featuring advanced photovoltaic technology and smart grid integration.',
-        'Our renewable energy team optimized panel placement and electrical systems for maximum efficiency. We incorporated battery storage systems, grid-tie inverters, and monitoring systems to ensure reliable energy production and distribution.',
-        'The completed solar farm now generates enough clean energy to power 5,000 homes annually and has reduced regional carbon emissions significantly. This project showcases our expertise in renewable energy infrastructure and environmental sustainability.'
+        'LSEA conducted inspections of 220 bridges across districts 1 through 8, assessing the condition and structural integrity of each asset. These inspections were part of a comprehensive effort to ensure the safety and longevity of the bridge network.',
+        'Our engineers used the InspectTech software to streamline the data collection process, ensuring accurate and consistent documentation of findings across all bridges. This technology helped enhance the efficiency and precision of our inspections.',
+        'In addition to the inspections, LSEA assisted in report writing for all 220 assets, providing detailed condition assessments and recommendations for any necessary repairs or maintenance. The reports supported effective decision-making for bridge management and future planning.'
       ],
       image: 'https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '12',
-      title: 'Convention Center',
+      title: 'NJTA – Part C Inspection (2006 to 2012 & 2014)',
       content: [
-        'State-of-the-art convention facility with flexible event spaces and modern amenities. This convention center project created a versatile venue capable of hosting trade shows, conferences, and cultural events with advanced audio-visual systems and adaptable layouts.',
-        'Our design team developed modular space configurations and integrated advanced technology infrastructure. We incorporated flexible lighting systems, high-capacity electrical distribution, and sophisticated climate control to accommodate diverse event requirements.',
-        'The completed convention center now hosts over 200 events annually and has become a major economic driver for the region. This project demonstrates our ability to create dynamic, technology-enabled spaces that support business and cultural activities.'
+        'As the prime consultant, LSEA performed inspections of 13 bridges along the I-95 extension, 75 culverts across all districts, and over 430 sign structures for the New Jersey Turnpike Authority (NJTA). These inspections were crucial for assessing the condition and safety of key infrastructure along the route.',
+        'Using InspectTech software, LSEA efficiently collected and documented data for each asset, ensuring that all findings were accurately recorded and easily accessible for analysis. This software streamlined the inspection process and enhanced the quality of the data collected.',
+        'Following the inspections, LSEA prepared detailed reports for all inspected assets. These reports included comprehensive condition assessments, along with recommendations for repairs and maintenance, providing NJTA with valuable insights for future planning and asset management.'
       ],
       image: 'https://images.unsplash.com/photo-1485518994577-6cd6324ade8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '13',
-      title: 'Retail Complex',
+      title: 'NJTA - Part D Inspection (2005 and 2009)',
       content: [
-        'Mixed-use retail development with shopping, dining, and entertainment options. This retail complex project created a vibrant commercial destination featuring diverse retail spaces, restaurant facilities, and entertainment venues in a pedestrian-friendly environment.',
-        'Our planning team designed efficient traffic flow and integrated parking solutions. We incorporated attractive streetscapes, public gathering spaces, and sustainable building practices to create an inviting shopping and dining destination.',
-        'The completed retail complex now hosts over 50 businesses and attracts thousands of visitors daily. This project showcases our expertise in mixed-use development and our ability to create economically viable commercial spaces.'
+        'LSEA conducted thorough inspections of 5 bridges located within the I-95 Extension, as well as 42 culverts across districts 4, 5, and 8. The inspections were aimed at assessing the overall condition, structural integrity, and safety of these vital assets, ensuring they met current standards and identifying any potential maintenance needs.',
+        'Our engineers carefully examined each bridge and culvert, looking for signs of wear, deterioration, or any structural issues that could affect their performance. Detailed assessments were made for each structure to prioritize necessary repairs or improvements. This process provided essential data for effective asset management and long-term infrastructure planning.'
       ],
       image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '14',
-      title: 'Sports Stadium',
+      title: 'DRPA/PATCO Threat & Vulnerability Assessment (2016)',
       content: [
-        'Modern sports venue with advanced seating, lighting, and sound systems. This sports stadium project created a world-class athletic facility featuring state-of-the-art playing surfaces, spectator amenities, and broadcast capabilities.',
-        'Our engineering team developed innovative structural solutions and integrated advanced technology systems. We incorporated energy-efficient lighting, high-definition video displays, and sophisticated sound systems to enhance the spectator experience.',
-        'The completed stadium now hosts professional sporting events and has become a source of community pride. This project demonstrates our ability to deliver complex entertainment infrastructure that meets the highest performance standards.'
+        'LSEA conducted a comprehensive threat and vulnerability assessment for the properties owned and operated by the Delaware River Port Authority (DRPA) - PATCO. The project employed scenario-based approaches to evaluate the potential risks and expected losses from a range of hazard events, including natural disasters, human-initiated incidents, and technological or infrastructure failures.',
+        'Our team meticulously analyzed each scenario, considering the likelihood and impact of each event, and identified vulnerabilities within the DRPA-PATCO system. This assessment helped to determine critical areas where mitigation strategies could be implemented to minimize damage, protect assets, and ensure the continued safety and operation of the authority’s facilities.'
       ],
       image: 'https://images.unsplash.com/photo-1504016343244-4b17a2b0b0a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '15',
-      title: 'Airport Terminal',
+      title: 'Structural Hardening Countermeasures (2004 - 2006)',
       content: [
-        'Expanded airport terminal with improved passenger flow and security features. This airport terminal project modernized existing facilities and added new gates, security checkpoints, and passenger amenities to handle increased air traffic.',
-        'Our design team optimized passenger circulation and integrated advanced security systems. We incorporated automated baggage handling, biometric screening technology, and flexible gate configurations to improve operational efficiency.',
-        'The completed terminal expansion now handles 50% more passengers while maintaining security standards and improving the travel experience. This project showcases our expertise in aviation infrastructure and passenger facility design.'
+        'As a sub-consultant, LSEA performed a structural hardening assessment on the Benjamin Franklin Bridge and the Walt Whitman Bridge. Our engineers conducted detailed field inspections using a variety of access methods, including free climbing, man lifts, bucket trucks, and MPT (Mobile Platform Technology) vehicles, to thoroughly examine all structural components and assess potential vulnerabilities.',
+        'The project’s primary goal was to develop and recommend effective protective measures for the Benjamin Franklin, Walt Whitman, and Commodore Barry Bridges. In addition to the inspections, LSEA provided the final design for the necessary structural hardening improvements, ensuring that these critical bridges would be better equipped to withstand external threats and environmental stressors, thereby enhancing their long-term durability and safety.'
       ],
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '16',
-      title: 'Manufacturing Plant',
+      title: 'DRPA/PATCO Facility Replacement Study (2011 – 2012)',
       content: [
-        'Automated manufacturing facility with lean production processes and quality control. This manufacturing plant project created a modern production facility featuring automated assembly lines, quality control systems, and efficient material handling.',
-        'Our industrial engineering team optimized production workflows and integrated advanced automation systems. We incorporated robotic assembly equipment, real-time quality monitoring, and flexible production lines to maximize efficiency and product quality.',
-        'The completed manufacturing plant now produces high-quality products at competitive costs while maintaining strict quality standards. This project demonstrates our expertise in industrial facility design and advanced manufacturing systems.'
+        'As a sub-consultant, LSEA assisted the Delaware River Port Authority (DRPA) in conducting asset value studies to estimate potential replacement costs for critical infrastructure in the event of catastrophic incidents. Our role involved evaluating the current value of key assets and determining the financial impact of various hazard scenarios, such as natural disasters or unforeseen failures. ',
+        'This analysis provided DRPA with a clearer understanding of the potential costs involved in replacing or repairing essential assets, allowing for more informed decision-making regarding risk management, insurance coverage, and emergency preparedness. The findings from these studies helped DRPA plan for the long-term financial sustainability and resilience of its infrastructure portfolio.'
       ],
       image: 'https://images.unsplash.com/photo-1565191999001-551c187427bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '17',
-      title: 'Cultural Center',
+      title: 'PATCO Bridges Biennial Inspection (2010 & 2014)',
       content: [
-        'Arts and cultural venue featuring galleries, theaters, and community spaces. This cultural center project created a dynamic venue for artistic expression and community engagement, featuring flexible performance spaces and interactive exhibit areas.',
-        'Our design team developed acoustically optimized spaces and integrated advanced lighting systems. We incorporated moveable walls, specialized flooring, and climate control systems to support diverse artistic performances and exhibitions.',
-        'The completed cultural center now hosts over 300 events annually and has become a focal point for regional arts and culture. This project demonstrates our ability to create inspiring spaces that support artistic expression and community engagement.'
+        'As a sub-consultant, LSEA conducted the biennial inspection of the PATCO line bridges that span between Philadelphia, PA and Camden, NJ. Our engineers performed detailed assessments of the structural integrity and overall condition of each bridge along the line, examining key components for signs of wear, deterioration, or potential safety hazards.',
+        'The inspections were carried out in accordance with industry standards to ensure the bridges continued to meet safety requirements and function efficiently. The findings from these inspections helped inform maintenance planning, providing valuable insights for any necessary repairs or upgrades to sustain the reliability and safety of the PATCO transit system.'
       ],
       image: 'https://images.unsplash.com/photo-1519227355453-8f982e425321?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '18',
-      title: 'Data Center',
+      title: 'PATCO Safety Review (2003)',
       content: [
-        'High-security data center with redundant systems and environmental controls. This data center project created a mission-critical facility featuring advanced cooling systems, backup power infrastructure, and comprehensive security measures.',
-        'Our engineering team developed redundant systems and integrated advanced monitoring technology. We incorporated uninterruptible power supplies, precision cooling systems, and biometric security controls to ensure continuous operations.',
-        'The completed data center now provides reliable hosting services for critical business applications and has achieved industry-leading uptime performance. This project showcases our expertise in mission-critical infrastructure and advanced technology systems.'
+        'As a sub-consultant, LSEA provided safety review services for the State Oversight Agency by performing an on-site review of the implementation of the System Safety Program. The primary objective was to assess whether the System Safety & Security programs were being effectively executed to meet both Federal and State Safety Standards.',
+        'Our team conducted a thorough evaluation of safety protocols, identifying any gaps or areas for improvement in the system’s implementation. This review helped ensure that all safety measures were not only in place but functioning as intended, ultimately supporting compliance with regulatory requirements and enhancing overall safety within the system.'
       ],
       image: 'https://images.unsplash.com/photo-1548610325-7c2e2056b6c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '19',
-      title: 'Hotel Complex',
+      title: 'Walt Whitman Bridge Biennial Inspection (2008, 2010 and 2012)',
       content: [
-        'Luxury hotel with conference facilities, spa, and fine dining establishments. This hotel complex project created a premier hospitality destination featuring luxurious accommodations, world-class amenities, and advanced guest services.',
-        'Our hospitality design team developed elegant guest rooms and integrated sophisticated building systems. We incorporated advanced reservation systems, energy management controls, and high-speed internet infrastructure to enhance the guest experience.',
-        'The completed hotel complex now serves business and leisure travelers while contributing significantly to the local economy. This project demonstrates our ability to create exceptional hospitality environments that exceed guest expectations.'
+        'As a sub-consultant, LSEA conducted a biennial inspection of the Walt Whitman Bridge to assess its structural integrity and ensure its continued safety. The inspection focused on critical areas of the bridge, particularly fracture-critical members, which are essential for the bridge\'s stability, as well as collision-damaged members and pin hanger connections that are crucial to the overall load-bearing capacity of the structure.',
+        'Our team performed non-destructive testing (NDT) on these key components to identify any hidden cracks, fatigue, or other issues that could affect the bridge’s safety. This approach allowed us to assess the structural health without causing any damage to the materials. The results of the inspection and testing were carefully documented and used to inform necessary maintenance and repair actions to prolong the life of the bridge and ensure its safe operation.'
       ],
       image: 'https://images.unsplash.com/photo-1470197713549-4b0c11b7e78a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '20',
-      title: 'Research Laboratory',
+      title: 'Benjamin Franklin Bridge Biennial Inspection (2004, 2006, 2008 & 2010)',
       content: [
-        'Advanced research facility with specialized equipment and clean room environments. This research laboratory project created cutting-edge facilities for scientific research, featuring specialized laboratories, clean room environments, and advanced instrumentation.',
-        'Our laboratory design team developed controlled environments and integrated specialized utility systems. We incorporated HEPA filtration, precision temperature control, and specialized electrical distribution to support sensitive research equipment.',
-        'The completed research facility now supports groundbreaking scientific research and has attracted top researchers from around the world. This project showcases our expertise in specialized facility design and advanced building systems.'
+        'As a sub-consultant, LSEA conducted a biennial inspection of the Benjamin Franklin Bridge, a critical structure that supports a high-speed PATCO rail line running along each fascia. This iconic bridge is one of four major bridges owned, operated, and maintained by the Delaware River Port Authority (DRPA), serving as a vital transportation link between Philadelphia, PA and Camden, NJ.',
+        'The inspection focused on assessing the overall structural integrity of the bridge, including the rail line components and fascia areas, to ensure safety and operational efficiency. The findings from the inspection were documented and provided valuable insights for maintaining the bridge’s long-term performance and safety, supporting DRPA’s ongoing efforts to manage and preserve its infrastructure assets.'
       ],
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '21',
-      title: 'Parking Garage',
+      title: 'JFK Condition Survey of WTC Memorial (2017)',
       content: [
-        'Multi-level parking structure with smart parking systems and electric vehicle charging. This parking garage project created an efficient parking solution featuring automated guidance systems, electric vehicle charging stations, and advanced security features.',
-        'Our transportation engineering team optimized traffic flow and integrated smart parking technology. We incorporated LED lighting, real-time occupancy monitoring, and mobile payment systems to enhance the parking experience.',
-        'The completed parking garage now serves downtown businesses and has reduced street-level parking congestion. This project demonstrates our ability to create efficient transportation infrastructure that supports urban mobility.'
+        'LSEA conducted condition survey inspections of the World Trade Center (WTC) memorial site, encompassing both of the iconic reflection pools, the WTC Memorial Building, and the tunnels beneath the site. These inspections were integral to assessing the overall structural and environmental conditions of the site’s key components, ensuring that each element met the highest standards for safety and preservation.',
+        'Our engineers worked closely with the Port Authority of New York and New Jersey (PANYNJ) throughout the process to ensure thoroughness and accuracy in the condition survey reports. This collaboration allowed us to address specific concerns and verify that the findings were aligned with PANYNJ’s requirements, helping to inform any necessary repairs, ongoing maintenance, and long-term preservation strategies for this historically significant site.'
       ],
       image: 'https://images.unsplash.com/photo-1580836165012-e2f0f02c4e11?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '22',
-      title: 'Warehouse Distribution',
+      title: 'Condition Survey of Buildings at Elizabeth Marine Terminal (2015)',
       content: [
-        'Logistics center with automated storage and retrieval systems. This warehouse distribution project created a modern logistics facility featuring automated material handling, inventory management systems, and efficient loading dock operations.',
-        'Our logistics engineering team optimized warehouse layout and integrated advanced automation systems. We incorporated robotic storage systems, conveyor networks, and real-time inventory tracking to maximize operational efficiency.',
-        'The completed distribution center now handles thousands of shipments daily and has reduced delivery times significantly. This project showcases our expertise in logistics infrastructure and automated material handling systems.'
+        'LSEA conducted condition inspections of 4 buildings owned by the Port Authority of New York and New Jersey (PANYNJ) in Port Ivory, Staten Island. The inspections were comprehensive, covering all aspects of the buildings, including exterior elevations, interior floor structural framings and walls, and roof conditions, to ensure the structural integrity and safety of the facilities.',
+        'During the inspections, LSEA’s engineers identified and documented any deficiencies or potential hazards. Detailed reports were generated, and recommendations for immediate action were made to address any unsafe conditions found during the evaluation. These recommendations helped prioritize repairs and maintenance, ensuring the buildings’ continued safe operation and longevity.'
       ],
       image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '23',
-      title: 'Fire Station',
+      title: 'GWB Building and Miscellaneous Structures Condition Survey (2014)',
       content: [
-        'Modern fire station with emergency response capabilities and training facilities. This fire station project created a state-of-the-art emergency response facility featuring advanced vehicle storage, equipment maintenance areas, and training simulators.',
-        'Our emergency services design team developed efficient response workflows and integrated specialized building systems. We incorporated apparatus bays, equipment storage, and living quarters designed to support 24/7 emergency response operations.',
-        'The completed fire station now provides enhanced emergency response capabilities and has reduced response times to emergency calls. This project demonstrates our commitment to public safety and our expertise in emergency services infrastructure.'
+        'LSEA conducted condition inspections of 14 buildings owned by the Port Authority of New York and New Jersey (PANYNJ) near the George Washington Bridge (GWB). These buildings included a variety of facilities such as the administrative building, upper and lower toll booths, PIP toll booths, paint storage building, salt dome, ticket center, hopper room, and the PIP police building.'
       ],
       image: 'https://images.unsplash.com/photo-1555664824-0d4b0c6d6c1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '24',
-      title: 'Library Building',
+      title: 'Howland Hook/Port Ivory Buildings Condition Survey (2013)',
       content: [
-        'Contemporary library with digital resources and community meeting spaces. This library building project created a modern learning environment featuring digital media centers, quiet study areas, and flexible community spaces.',
-        'Our educational facility design team developed adaptable spaces and integrated advanced technology infrastructure. We incorporated high-speed internet, digital media equipment, and collaborative learning areas to support diverse educational activities.',
-        'The completed library now serves as a community hub for learning and cultural activities, hosting educational programs and providing access to digital resources. This project showcases our ability to create inspiring learning environments that serve diverse community needs.'
+        'LSEA conducted condition inspections of several buildings owned by the Port Authority of New York and New Jersey (PANYNJ) in Port Ivory, Staten Island. The comprehensive inspections covered all aspects of each building, including the exterior elevations, interior floor structural framings and walls, and roof conditions, ensuring a thorough evaluation of the structures.',
+        'Following the inspections, all findings were meticulously documented, and recommendations for immediate action were provided to address any unsafe conditions identified. These recommendations were aimed at mitigating potential risks and ensuring the buildings\' safety, guiding the necessary repairs or improvements for long-term structural integrity.',
       ],
       image: 'https://images.unsplash.com/photo-1519365842728-3ae8c5cbe6c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '25',
-      title: 'Government Building',
+      title: 'Essex County Resources Recovery facility Condition Survey (2012)',
       content: [
-        'Municipal building with public services and administrative offices. This government building project created efficient public service facilities featuring citizen service centers, administrative offices, and public meeting spaces.',
-        'Our civic architecture team developed accessible spaces and integrated modern technology systems. We incorporated security systems, digital service delivery, and barrier-free design to improve public access to government services.',
-        'The completed government building now provides enhanced public services and has improved citizen satisfaction with government interactions. This project demonstrates our expertise in civic architecture and public service facility design.'
+        'LSEA provided the structural building condition survey for the Essex County Resource Recovery facility. LSEA reviewed previous inspection reports of the site, and compared them with the current field conditions. LSEA presented the field findings and wrote detailed reports in accordance with the format and structure requirements set by PANYNJ.'
       ],
       image: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '26',
-      title: 'Shopping Mall',
+      title: 'Condition Survey of Buildings in Brooklyn Pier, Brooklyn, New York (2011)',
       content: [
-        'Regional shopping center with diverse retail options and entertainment. This shopping mall project created a comprehensive retail destination featuring anchor stores, specialty shops, dining areas, and entertainment venues.',
-        'Our retail design team developed efficient circulation patterns and integrated modern amenities. We incorporated flexible lease spaces, food courts, and entertainment areas to create a vibrant shopping environment.',
-        'The completed shopping mall now attracts millions of visitors annually and has become a major economic driver for the region. This project showcases our expertise in retail development and our ability to create successful commercial destinations.'
+        'LSEA provided structural building condition surveys for 5 warehouse buildings located in Brooklyn Pier owned by Port Authority of NY & NJ. The scope of work of these thorough building inspections included: all exterior elevations, interior floor structural framings and walls, and roof conditions. All inspection information was reported and recommendations of immediate action for unsafe conditions were made.'
       ],
       image: 'https://images.unsplash.com/photo-1481437156560-3205f6a55735?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '27',
-      title: 'Power Plant',
+      title: 'Teterboro Airport Condition Inspection (2011)',
       content: [
-        'Clean energy power generation facility with advanced emission controls. This power plant project created a modern electricity generation facility featuring advanced turbine technology, emission control systems, and grid integration capabilities.',
-        'Our power engineering team developed efficient generation systems and integrated environmental protection measures. We incorporated advanced control systems, emission monitoring, and grid synchronization equipment to ensure reliable power generation.',
-        'The completed power plant now provides clean electricity to thousands of homes and businesses while meeting strict environmental standards. This project demonstrates our expertise in power generation infrastructure and environmental compliance.'
+        'Designated as a "reliever" airport, Teterboro’s focus is on removing the smaller and slower aircraft from the regional air traffic that would cause major congestion at the Port Authority\'s commercial airports. LSEA performed condition inspection on 7 buildings within Teterboro Airport, including office buildings, hangers, the tower, and the museum.'
       ],
       image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '28',
-      title: 'Telecommunications Tower',
+      title: 'Undergrade Bridge Inspection, Groups: B, E and F (2015-2016)',
       content: [
-        'Communication infrastructure supporting regional network connectivity. This telecommunications tower project created essential communication infrastructure featuring multi-carrier antenna systems, backup power, and network switching equipment.',
-        'Our telecommunications engineering team developed robust communication systems and integrated redundant infrastructure. We incorporated fiber optic connections, microwave equipment, and emergency communication systems to ensure reliable service.',
-        'The completed telecommunications tower now provides enhanced cellular and data coverage to rural areas and has improved emergency communication capabilities. This project showcases our expertise in telecommunications infrastructure and network engineering.'
+        'LSEA provided a team of three engineers for in-depth, hands-on underground bridge inspections across three separate projects. The team conducted thorough assessments, inspecting all structural components and identifying any potential issues that could affect the integrity of the bridges.',
+        'In addition to the physical inspections, our engineers performed live load capacity calculations and load ratings based on the AREMA and NJ TRANSIT specifications and standards. These calculations were critical for determining the bridges\' ability to safely accommodate traffic and ensure compliance with established safety regulations. The findings and recommendations from the inspections were crucial in guiding maintenance and repair efforts to preserve the bridges\' long-term safety and functionality.'
       ],
       image: 'https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '29',
-      title: 'Apartment Complex',
+      title: 'Rehabilitation of Raritan Drawbridge (2015)',
       content: [
-        'Affordable housing development with community amenities and green spaces. This apartment complex project created quality housing options featuring energy-efficient apartments, community centers, and recreational facilities.',
-        'Our residential design team developed sustainable housing solutions and integrated community amenities. We incorporated energy-efficient appliances, green building materials, and shared community spaces to create a desirable living environment.',
-        'The completed apartment complex now provides affordable housing for working families and has enhanced the neighborhood with improved amenities. This project demonstrates our commitment to affordable housing and community development.'
+        'LSEA was involved in the rehabilitation of the Raritan Drawbridge, which was severely damaged during Hurricane Sandy. The bridge is located at the North Jersey Coastal Line between Perth Amboy and South Amboy. This project involved the upgrade of the mechanical, electrical, and structural systems of the swing span.'
       ],
       image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '30',
-      title: 'Senior Living Center',
+      title: 'Undergrade Bridge Inspection (2012-2013)',
       content: [
-        'Comprehensive senior care facility with medical services and recreational areas. This senior living center project created a supportive environment for elderly residents featuring assisted living units, medical facilities, and recreational programs.',
-        'Our senior care design team developed age-appropriate facilities and integrated specialized building systems. We incorporated barrier-free design, emergency call systems, and therapeutic environments to support resident health and wellbeing.',
-        'The completed senior living center now provides quality care for elderly residents and has become a model for senior housing design. This project showcases our expertise in specialized housing and our commitment to serving diverse community needs.'
+        'LSEA, as the Prime Consultant, performed inspections and structural rating analyses of 61 bridges carrying New Jersey Transit rail lines. The inspections and ratings were performed in accordance with the A.R.E.A. Manual of Railway Engineering and the specific requirements of N.J. Transit.'
       ],
       image: 'https://images.unsplash.com/photo-1519167758481-83f29c04446c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '31',
-      title: 'Waste Management Facility',
+      title: 'Aberdeen-Matawan Park & Ride Parking Study (2007)',
       content: [
-        'Advanced waste processing center with recycling and environmental protection. This waste management facility project created a comprehensive waste processing operation featuring recycling systems, environmental controls, and public education programs.',
-        'Our environmental engineering team developed sustainable waste processing systems and integrated pollution control measures. We incorporated automated sorting equipment, emission control systems, and groundwater monitoring to protect environmental quality.',
-        'The completed waste management facility now processes municipal waste while maximizing recycling and minimizing environmental impact. This project demonstrates our expertise in environmental infrastructure and our commitment to sustainable waste management.'
+        'LSEA was involved in the planning and study of the parking lot for the Aberdeen-Matawan station for NJ TRANSIT. The focus of the study was to assess the current capacity and determine how much additional parking-generated traffic could be accommodated in the station area.',
+        'Our team evaluated the existing and planned roadway systems surrounding the station to determine their ability to handle increased traffic from additional parking. The study provided crucial insights into potential traffic flow improvements and helped inform decisions regarding infrastructure upgrades, ensuring that the station\'s capacity aligns with future commuter needs and minimizing congestion in the area.'
       ],
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '32',
-      title: 'Community Center',
+      title: 'Undergrade Bridge Inspection (2009)',
       content: [
-        'Multi-purpose community facility with recreational and educational programs. This community center project created a vibrant hub for community activities featuring gymnasiums, classrooms, meeting rooms, and specialized program spaces.',
-        'Our community design team developed flexible spaces and integrated modern amenities. We incorporated athletic facilities, educational technology, and barrier-free design to support diverse community programs and activities.',
-        'The completed community center now serves thousands of residents through recreational and educational programs and has strengthened community connections. This project showcases our ability to create facilities that bring communities together and support lifelong learning.'
+        'LSEA provided a team of 3 engineers, which performed inspections and structural rating analyses of two sets of bridges. These sets contained a total of 85 undergrade bridges. Our engineers also calculated live load capacities and ratings based on the AREMA and NJ TRANSIT specifications and standards.'
       ],
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     },
     {
       id: '33',
-      title: 'Metro Station',
+      title: 'NJ TRANSIT Newark Subway & PATCO Line Safety Review (2003)',
       content: [
-        'Underground transit station with modern design and accessibility features. This metro station project created efficient public transportation infrastructure featuring platform systems, passenger circulation, and accessibility accommodations.',
-        'Our transit engineering team developed efficient passenger flow systems and integrated modern amenities. We incorporated escalators, elevators, and platform safety systems to ensure safe and convenient public transit access.',
-        'The completed metro station now serves thousands of daily commuters and has improved public transportation options in the region. This project demonstrates our expertise in transit infrastructure and our commitment to sustainable transportation solutions.'
+        'LSEA, as a sub-consultant, provided safety review services for the State Oversight Agency, through performing an on-site review of the implementation of the System Safety Program. The purpose was to verify the successful implementation of the System Safety & Security programs, inorder to complying with Federal and State Safety Standards.'
       ],
       image: 'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'
     }
