@@ -5,6 +5,7 @@ const TermsOfUse = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Terms of Use";
     setIsVisible(true);
   }, []);
 

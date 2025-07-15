@@ -9,6 +9,7 @@ const Clients = () => {
   const itemsPerPage = 3;
 
   useEffect(() => {
+    document.title = "LSEA | Clients";
     setIsVisible(true);
   }, []);
 

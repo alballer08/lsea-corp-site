@@ -8,6 +8,7 @@ const EmployeeAccess = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "LSEA | Employee Access";
     if (!loading) {
       if (user) {
         navigate('/dashboard');

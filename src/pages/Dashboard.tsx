@@ -16,6 +16,7 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "LSEA | Dashboard";
     if (!user) {
       navigate('/login');
       return;

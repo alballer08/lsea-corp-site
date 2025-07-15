@@ -6,6 +6,7 @@ const Partners = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Partners";
     setIsVisible(true);
   }, []);
 

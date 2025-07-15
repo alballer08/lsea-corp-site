@@ -12,6 +12,7 @@ const Contact = () => {
   const { toast } = useToast();
 
   useEffect(() => {
+    document.title = "LSEA | Contact";
     setIsVisible(true);
   }, []);
 

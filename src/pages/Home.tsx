@@ -5,6 +5,7 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Home";
     setIsVisible(true);
   }, []);
 

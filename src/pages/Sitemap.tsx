@@ -6,6 +6,7 @@ const Sitemap = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Sitemap";
     setIsVisible(true);
   }, []);
 

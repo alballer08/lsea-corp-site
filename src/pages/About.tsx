@@ -8,6 +8,7 @@ const About = () => {
   const [animatingSection, setAnimatingSection] = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = "LSEA | About";
     setIsVisible(true);
   }, []);
 

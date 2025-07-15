@@ -9,6 +9,7 @@ const Offices = () => {
   const [selectedState, setSelectedState] = useState('all');
 
   useEffect(() => {
+    document.title = "LSEA | Offices";
     setIsVisible(true);
   }, []);
 

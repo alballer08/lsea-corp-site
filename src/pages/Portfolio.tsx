@@ -9,6 +9,7 @@ const Portfolio = () => {
   const projectsPerPage = 9;
 
   useEffect(() => {
+    document.title = "LSEA | Portfolio";
     setIsVisible(true);
   }, []);
 

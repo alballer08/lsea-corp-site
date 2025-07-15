@@ -12,6 +12,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = "LSEA | Login";
     if (user) {
       navigate('/dashboard');
     }

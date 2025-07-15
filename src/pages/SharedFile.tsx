@@ -21,6 +21,7 @@ const SharedFile = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = "LSEA | Shared Filed";
     if (token) {
       fetchFileData();
     }

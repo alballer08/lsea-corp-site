@@ -11,6 +11,7 @@ const ProjectDetail = () => {
   const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null);
 
   useEffect(() => {
+    document.title = "LSEA | Project Details";
     setIsVisible(true);
   }, []);
 

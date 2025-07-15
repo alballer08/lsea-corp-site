@@ -7,6 +7,7 @@ const Careers = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Careers";
     setIsVisible(true);
   }, []);
 

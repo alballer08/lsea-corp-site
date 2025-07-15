@@ -19,8 +19,6 @@ import Contact from "./pages/Contact";
 import Sitemap from "./pages/Sitemap";
 import ServiceDetail from "./pages/ServiceDetail";
 import ProjectDetail from "./pages/ProjectDetail";
-import PartnerDetail from "./pages/PartnerDetail";
-import ClientDetail from "./pages/ClientDetail";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import EmployeeAccess from "./pages/EmployeeAccess";
@@ -49,9 +47,7 @@ const App = () => (
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/portfolio/:id" element={<ProjectDetail />} />
                 <Route path="/clients" element={<Clients />} />
-                <Route path="/clients/:id" element={<ClientDetail />} />
                 <Route path="/partners" element={<Partners />} />
-                <Route path="/partners/:id" element={<PartnerDetail />} />
                 <Route path="/offices" element={<Offices />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/contact" element={<Contact />} />

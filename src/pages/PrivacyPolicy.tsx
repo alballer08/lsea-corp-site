@@ -5,6 +5,7 @@ const PrivacyPolicy = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Privacy Policy";
     setIsVisible(true);
   }, []);
 

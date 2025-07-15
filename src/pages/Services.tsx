@@ -6,6 +6,7 @@ const Services = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    document.title = "LSEA | Services";
     setIsVisible(true);
   }, []);
 
