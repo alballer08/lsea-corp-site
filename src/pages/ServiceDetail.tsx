@@ -242,7 +242,7 @@ const ServiceDetail = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
                 alt="Professional Engineering"
@@ -279,7 +279,7 @@ const ServiceDetail = () => {
                 Stay ahead of the competition with our innovative approaches and commitment to continuous improvement in engineering practices.
               </p>
             </div>
-            <div className="relative">
+            <div className="relative flex items-center justify-center">
               <img
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
                 alt="Modern Technology"
