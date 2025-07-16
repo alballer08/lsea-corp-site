@@ -18,7 +18,7 @@ const Portfolio = () => {
   };
 
   const projects = [
-    { id: 1, title: 'Overhead Sign Inspections (2016)', image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', description: 'LSEA provided sign inspection services to the NJDOT for 106 state-owned overhead sign structures along various routes throughout New Jersey.' },
+    { id: 1, title: 'Overhead Sign Inspections (2016)', image: '', description: 'LSEA provided sign inspection services to the NJDOT for 106 state-owned overhead sign structures along various routes throughout New Jersey.' },
     { id: 2, title: 'Passaic County Bridge Inspections (2012-2013)', image: 'https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', description: 'LSEA performed inspections and calculated load ratings for 55 Passaic County owned bridges as part of a two cycle agreement.' },
     { id: 3, title: 'Inspection and Rating of On and Off State Bridges (2010-2012)', image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', description: 'LSEA handled the routine biennial inspections, bridge condition evaluations, and Pontis evaluations for 44 On and 2 Off state bridges.' },
     { id: 4, title: 'Cantilever & Overhead Sign Structure Inspection (2011)', image: 'https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80', description: 'LSEA evaluated the condition and fatigue stresses of 137 cantilever and overhead signs for the NJDOT.' },
