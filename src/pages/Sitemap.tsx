@@ -101,7 +101,8 @@ const Sitemap = () => {
       name: 'Site Information',
       url: '#',
       children: [
-        { name: 'Sitemap', url: '/sitemap' }
+        { name: 'Sitemap', url: '/sitemap' },
+        { name: 'Shared Files', url: '/shared/:token' }
       ]
     }
   ];
