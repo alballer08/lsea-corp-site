@@ -7,7 +7,7 @@ import { FileUpload } from '@/components/FileUpload';
 import { FileList } from '@/components/FileList';
 import { AdminPanel } from '@/components/AdminPanel';
 import { LogOut } from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
+import { toast } from '@/hooks/use-toast';
 
 const Dashboard = () => {
   const { user, signOut } = useAuth();
