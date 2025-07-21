@@ -102,7 +102,7 @@ CREATE POLICY "Users can create shared links for own files" ON public.shared_lin
 CREATE POLICY "Anyone can view website content" ON public.website_content
   FOR SELECT USING (true);
 
--- Insert sample website content for search
+-- Insert website content for search
 INSERT INTO public.website_content (page_title, page_url, content_type, heading, description, keywords) VALUES
 ('Home', '/', 'page', 'Welcome to LSEA Corporation', 'Professional engineering services with technical expertise and total commitment to quality', ARRAY['engineering', 'professional', 'services', 'LSEA']),
 ('About', '/about', 'page', 'About Us', 'Learn about our story, mission, and technical expertise', ARRAY['about', 'company', 'mission', 'expertise']),

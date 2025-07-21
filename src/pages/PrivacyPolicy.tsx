@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <p className="font-arial text-gray-600 mb-8">
-              Last updated: January 1, 2024
+              Last updated: July 21, 2025
             </p>
 
             <h2 className="font-montserrat text-2xl font-bold text-gray-900 mb-4">
@@ -73,7 +73,7 @@ const PrivacyPolicy = () => {
               6. Contact Us
             </h2>
             <p className="font-arial text-gray-600">
-              If you have any questions about this Privacy Policy, please contact us at privacy@lseacorp.com or (212) 555-0100.
+              If you have any questions about this Privacy Policy, please contact us at info@lseacorp.com or (973) 588-3122.
             </p>
           </div>
         </div>
