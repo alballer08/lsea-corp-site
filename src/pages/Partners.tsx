@@ -38,9 +38,9 @@ const Partners = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[65vh]">
         <img
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          src="/public/images/handshake.jpg"
           alt="Our Partners"
           className="w-full h-full object-cover"
         />

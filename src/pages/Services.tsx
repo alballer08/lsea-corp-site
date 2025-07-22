@@ -18,61 +18,61 @@ const Services = () => {
     { 
       id: 1, 
       title: 'Bridge Inspection', 
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/bridge-inspection.jpg'
     },
     { 
       id: 2, 
       title: 'Bridge Design and Rehabilitation', 
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/PatcongCreek.jpg'
     },
     { 
       id: 3, 
       title: 'Building Assessment', 
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/wtc.jpg'
     },
     { 
       id: 4, 
       title: 'Building Design and Rehabilitation', 
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/ParsonsBoulevard.jpg'
     },
     { 
       id: 5, 
       title: 'Architecture', 
-      image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/chinahouse.jpg'
     },
     { 
       id: 6, 
       title: 'MEP Engineering',
-      image: 'https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/generatorupgrade.jpg'
     },
     { 
       id: 7, 
       title: 'Site and Highway Engineering', 
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/cloverleaf-medium.jpg'
     },
     { 
       id: 8, 
       title: 'Land Surveying', 
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/survey1.jpg'
     },
     { 
       id: 9, 
       title: 'Structural Assessment and Design', 
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/GSPAntenna2.jpg'
     },
     { 
       id: 10, 
       title: 'Traffic Engineering', 
-      image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'
+      image: '/public/images/GWBTunnel.jpg'
     },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[65vh]">
         <img
-          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          src="/public/images/software.jpg"
           alt="Our Services"
           className="w-full h-full object-cover"
         />

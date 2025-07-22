@@ -340,7 +340,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px] overflow-hidden">
+      <section className="relative h-[65vh] overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
