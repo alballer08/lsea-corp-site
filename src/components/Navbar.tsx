@@ -28,9 +28,9 @@ const Navbar = () => {
             {/* Logo */}
             <div 
               onClick={handleLogoClick}
-              className="flex items-center space-x-1 cursor-pointer"
+              className="flex items-center space-x-1 cursor-pointer flex-shrink-0"
             >
-              <div className="w-12 h-18 bg-transparent rounded flex items-center justify-center p-1">
+              <div className="w-12 h-18 sm:w-12 sm:h-18 md:w-12 md:h-18 lg:w-12 lg:h-18 bg-transparent rounded flex items-center justify-center p-1 flex-shrink-0">
                 <img 
                   src="/public/logo.png"
                   alt="LSEA Logo"
@@ -44,7 +44,7 @@ const Navbar = () => {
                   }}
                 />
               </div>
-              <span className="text-3xl font-medium text-gray-900 font-montserrat">LSEA Corporation</span>
+              <span className="text-3xl sm:text-3xl md:text-3xl lg:text-3xl font-medium text-gray-900 font-montserrat flex-shrink-0">LSEA Corporation</span>
             </div>
 
             {/* Desktop Navigation */}
