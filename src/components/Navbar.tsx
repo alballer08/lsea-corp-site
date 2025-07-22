@@ -44,7 +44,7 @@ const Navbar = () => {
                   }}
                 />
               </div>
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 font-montserrat">LSEA Corporation</span>
+              <span className="text-3xl md:text-2xl lg:text-3xl font-medium text-gray-900 font-montserrat">LSEA Corporation</span>
             </div>
 
             {/* Desktop Navigation */}
