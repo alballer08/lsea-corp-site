@@ -31,7 +31,7 @@ const Clients = () => {
   };
 
   const handleLinkClick = () => {
-    window.scrollTo(0, 0);
+    
   };
 
   const clients = [
@@ -40,7 +40,7 @@ const Clients = () => {
       name: 'The Port Authority of New York and New Jersey',
       industry: 'Transportation',
       description: 'Bistate agency managing transportation infrastructure, including airports, bridges, tunnels, ports, and World Trade Center.',
-      image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/port-authority-ny-nj.png',
       website: 'https://www.panynj.gov/'
     },
     {
@@ -48,7 +48,7 @@ const Clients = () => {
       name: 'New Jersey Department of Transportation',
       industry: 'Government',
       description: 'State agency overseeing New Jersey’s transportation systems, including planning, engineering, maintenance, and transit.',
-      image: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/njdot.jpg',
       website: 'https://www.state.nj.us/transportation/'
     },
     {
@@ -56,7 +56,7 @@ const Clients = () => {
       name: 'New Jersey Turnpike Authority',
       industry: 'Government',
       description: 'Agency managing New Jersey Turnpike and GSP, overseeing toll collection, maintenance, and roadway improvements.',
-      image: 'https://images.unsplash.com/photo-1433832597046-4f10e10ac764?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/njta.jpg',
       website: 'https://www.thruway.ny.gov/index.shtml?'
     },
     {
@@ -64,7 +64,7 @@ const Clients = () => {
       name: 'NJ Transit',
       industry: 'Transportation',
       description: 'Public transportation agency operating buses, trains, and light rail across New Jersey and into New York.',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/njtransit.jpg',
       website: 'https://www.njtransit.com/'
     },
     {
@@ -72,7 +72,7 @@ const Clients = () => {
       name: 'Delaware River Port Authority',
       industry: 'Transportation',
       description: 'Bistate agency managing bridges and public transit between New Jersey and Pennsylvania across the Delaware River.',
-      image: 'https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/drpa.jpg',
       website: 'https://www.drpa.org/'
     },
     {
@@ -80,7 +80,7 @@ const Clients = () => {
       name: 'Counties and Municipalities',
       industry: 'Transportation',
       description: 'Local governments managing roads, traffic, planning, and transportation services within specific counties and municipalities in NJ.',
-      image: 'https://images.unsplash.com/photo-1558618047-6c0c2e7c5c6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/comu.jpg',
       website: 'https://www.nj.gov/nj/gov/county/'
     },
     {
@@ -88,7 +88,7 @@ const Clients = () => {
       name: 'HUD/Housing Authorities',
       industry: 'Transportation',
       description: 'Agencies providing affordable housing, community development, and assistance programs to low-income residents.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/ushud.jpg',
       website: 'https://www.hud.gov/contactus/public-housing-contacts'
     }
   ];

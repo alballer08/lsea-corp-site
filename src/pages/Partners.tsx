@@ -19,7 +19,7 @@ const Partners = () => {
       id: 1,
       name: 'Y Bird Airways',
       description: 'Leading aviation services provider with comprehensive flight operations and aircraft maintenance solutions across the northeast region.',
-      image: 'https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/y-bird-airways.jpg',
       website: 'https://ybirdairways.com',
       industry: 'Aviation',
       services: ['Aircraft Maintenance', 'Flight Operations', 'Ground Support']
@@ -28,7 +28,7 @@ const Partners = () => {
       id: 2,
       name: 'WOW Design',
       description: 'Creative design agency specializing in brand identity, digital experiences, and innovative marketing solutions for modern businesses.',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: '/public/images/wow-design-logo.jpg',
       website: 'https://wowdesign.com',
       industry: 'Design & Marketing',
       services: ['Brand Identity', 'Web Design', 'Digital Marketing']
@@ -79,7 +79,7 @@ const Partners = () => {
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 </div>

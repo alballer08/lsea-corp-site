@@ -174,7 +174,7 @@ const ServiceDetail = () => {
         <img
           src={service.image}
           alt={service.title}
-          className={`w-full h-full object-cover transition-all duration-500 ${
+          className={`w-full h-full object-cover object-center transition-all duration-500 ${
             slideDirection === 'left' 
               ? '-translate-x-full opacity-0' 
               : slideDirection === 'right' 
