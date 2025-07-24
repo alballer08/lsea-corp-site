@@ -11,27 +11,20 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-96">
-        <img
-          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-          alt="Privacy Policy"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute bottom-10 left-10">
-          <h1 className={`font-montserrat text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            Privacy Policy
-          </h1>
-        </div>
-      </section>
+      <header className="bg-white py-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 className="text-4xl font-extrabold font-montserrat text-gray-900 text-center">
+        Privacy Policy
+      </h1>
+    </div>
+  </header>
 
       {/* Privacy Content */}
-      <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
+      <section className={`bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
             <p className="font-arial text-gray-600 mb-8">
-              Last updated: July 21, 2025
+              Last updated: July 24, 2025
             </p>
 
             <h2 className="font-montserrat text-2xl font-bold text-gray-900 mb-4">

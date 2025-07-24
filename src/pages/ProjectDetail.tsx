@@ -88,7 +88,7 @@ const ProjectDetail = () => {
     },
     {
       id: '8',
-      title: 'NJTA – Microwave Tower Inspection (2014, 2017)',
+      title: 'NJTA – Microwave Tower Inspection (2014 and 2017)',
       content: [
         'In 2014, LSEA inspected 15 cell towers, followed by an additional 24 towers in 2017. These inspections were conducted to assess the structural integrity and safety of the towers, ensuring they met industry standards.',
         'Our engineers thoroughly evaluated each tower, documenting their findings and identifying any areas of concern. This process included checking for signs of wear, corrosion, or other structural issues that could compromise the towers’ performance and safety.',
