@@ -36,9 +36,9 @@ const Offices = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[65vh]">
         <img
-          src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          src="/public/images/nybuildings.jpg"
           alt="Our Offices"
           className="w-full h-full object-cover"
         />

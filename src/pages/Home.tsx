@@ -21,7 +21,7 @@ const Home = () => {
           loop
           playsInline
         >
-          <source src="/public/ce-mp4.mp4" type="video/mp4" />
+          <source src="/public/videos/ce-mp4.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute bottom-10 left-10 z-20">
@@ -45,7 +45,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/public/images/nanjing.jpg"
                 alt="Engineering Services"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -60,7 +60,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/public/images/wtc.jpg"
                 alt="Company Culture"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -91,7 +91,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/public/images/skyline-wide.jpg"
                 alt="Office Buildings"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />

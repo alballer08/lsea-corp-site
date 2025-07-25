@@ -31,7 +31,7 @@ const About = () => {
         'Since our founding, we have successfully completed hundreds of projects—from small-scale residential developments to large infrastructure installations. These projects have contributed to a deep and diverse knowledge base that informs our approach to engineering excellence.',
         'Today, LSEA Corporation continues to expand its capabilities while maintaining the personalized service and high standards that have defined us from the beginning.'
       ],
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/public/images/GWBfromNJ.jpg'
     },
     mission: {
       title: 'Company Mission',
@@ -41,7 +41,7 @@ const About = () => {
         'Our dedicated team of highly qualified and motivated professionals is the foundation of our success. By combining technical expertise with personalized service, we are able to match the capabilities of larger firms while maintaining the responsiveness and attention to detail that define our approach.',
         'At LSEA, our success is measured by the success of our clients and the meaningful contributions our work makes to society.'
       ],
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/public/images/Hanger1.jpg'
     },
     expertise: {
       title: 'Technical Expertise',
@@ -50,7 +50,7 @@ const About = () => {
         'Our engineers bring specialized knowledge in seismic design, sustainable building practices, advanced materials, and complex system integration. We leverage cutting-edge technology and proven methodologies to develop solutions that are both innovative and practical.',
         'At LSEA, we take a comprehensive, holistic approach to engineering—considering every aspect of a project from concept through implementation. This perspective allows us to identify challenges early, streamline project delivery, and optimize performance, efficiency, and cost-effectiveness. Through continuous learning and professional development, our team remains at the forefront of industry advancement, ensuring our clients benefit from the latest in engineering innovation.'
       ],
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/public/images/BoontonBoilerPiping.jpg'
     },
     commitment: {
       title: 'Total Commitment and Qualifications',
@@ -60,16 +60,16 @@ const About = () => {
         'LSEA is proud to be certified as a Minority Business Enterprise (MBE), Disadvantaged Business Enterprise (DBE), and Small Business Enterprise (SBE) with over 20 public agencies, including:',
         'At LSEA, we combine technical excellence with personal commitment—ensuring every project is completed to the highest standards of safety, sustainability, and client satisfaction.'
       ],
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: '/public/images/survey0.jpg'
     },
   };
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[500px]">
+      <section className="relative h-[65vh]">
         <img
-          src="https://images.unsplash.com/photo-1497604401993-f2e922e5cb0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+          src="/public/images/waterbridge.jpg"
           alt="About LSEA"
           className="w-full h-full object-cover"
         />

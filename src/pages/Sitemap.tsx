@@ -10,6 +10,10 @@ const Sitemap = () => {
     setIsVisible(true);
   }, []);
 
+const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
+  
   const siteStructure = [
     {
       name: 'Home',
@@ -25,46 +29,66 @@ const Sitemap = () => {
       name: 'Services',
       url: '/services',
       children: [
-        { name: 'Structural Engineering', url: '/services/1' },
-        { name: 'Civil Engineering', url: '/services/2' },
-        { name: 'Mechanical Systems', url: '/services/3' },
-        { name: 'Electrical Engineering', url: '/services/4' },
-        { name: 'Environmental Engineering', url: '/services/5' },
-        { name: 'Project Management', url: '/services/6' },
-        { name: 'Consulting Services', url: '/services/7' },
-        { name: 'Quality Assurance', url: '/services/8' },
-        { name: 'Safety Engineering', url: '/services/9' }
+        { name: 'Bridge Inspection', url: '/services/1' },
+        { name: 'Bridge Design and Rehabilitation', url: '/services/2' },
+        { name: 'Building Assessment', url: '/services/3' },
+        { name: 'Building Design and Rehabilitation', url: '/services/4' },
+        { name: 'Architecture', url: '/services/5' },
+        { name: 'MEP Engineering', url: '/services/6' },
+        { name: 'Site and Highway Engineering', url: '/services/7' },
+        { name: 'Land Surveying', url: '/services/8' },
+        { name: 'Structural Assessment and Design', url: '/services/9' },
+        { name: 'Traffic Engineering', url: '/services/10' }
       ]
     },
     {
       name: 'Portfolio',
       url: '/portfolio',
       children: [
-        { name: 'Metro Bridge Project', url: '/portfolio/1' },
-        { name: 'Corporate Headquarters', url: '/portfolio/2' },
-        { name: 'Industrial Complex', url: '/portfolio/3' },
-        { name: 'Residential Development', url: '/portfolio/4' },
-        { name: 'Highway Infrastructure', url: '/portfolio/5' },
-        { name: 'Educational Facility', url: '/portfolio/6' },
-        { name: 'Medical Center', url: '/portfolio/7' }
+        { name: 'Overhead Sign Inspections (2016)', url: '/portfolio/1' },
+        { name: 'Passaic County Bridge Inspections (2012-2013)', url: '/portfolio/2' },
+        { name: 'Inspection and Rating of On and Off State Bridges (2010-2012)', url: '/portfolio/3' },
+        { name: 'Cantilever & Overhead Sign Structure Inspection (2011)', url: '/portfolio/4' },
+        { name: 'Morris County Bridges - Biennal Inspections (2007)', url: '/portfolio/5' },
+        { name: 'Special Inspections of 7 FCM Bridges (2007)', url: '/portfolio/6' },
+        { name: 'NJTA - GSP North and South (2005, 2008, 2009, 2017, and 2018)', url: '/portfolio/7' },
+        { name: 'NJTA - Microwave Tower Inspection (2014 and 2017)', url: '/portfolio/8' },
+        { name: 'NJTA - GSP Sign Structures and Culverts Inspection (2010)', url: '/portfolio/9' },
+        { name: 'NJTA – Part A Inspection (2003 to 2015)', url: '/portfolio/10' },
+        { name: 'NJTA - Part B Inspection (2007 to 2012)', url: '/portfolio/11' },
+        { name: 'NJTA – Part C Inspection (2006 to 2012 & 2014)', url: '/portfolio/12' },
+        { name: 'NJTA - Part D Inspection (2005 and 2009)', url: '/portfolio/13' },
+        { name: 'DRPA/PATCO Threat & Vulnerability Assessment (2016)', url: '/portfolio/14' },
+        { name: 'Structural Hardening Countermeasures (2004 - 2006)', url: '/portfolio/15' },
+        { name: 'DRPA/PATCO Facility Replacement Study (2011 – 2012)', url: '/portfolio/16' },
+        { name: 'PATCO Bridges Biennial Inspection (2010 & 2014)', url: '/portfolio/17' },
+        { name: 'PATCO Safety Review (2003)', url: '/portfolio/18' },
+        { name: 'Walt Whitman Bridge Biennial Inspection (2008, 2010 and 2012)', url: '/portfolio/19' },
+        { name: 'Benjamin Franklin Bridge Biennial Inspection (2004, 2006, 2008 & 2010)', url: '/portfolio/20' },
+        { name: 'JFK Condition Survey of WTC Memorial (2017)', url: '/portfolio/21' },
+        { name: 'Condition Survey of Buildings at Elizabeth Marine Terminal (2015)', url: '/portfolio/22' },
+        { name: 'GWB Building and Miscellaneous Structures Condition Survey (2014)', url: '/portfolio/23' },
+        { name: 'Howland Hook/Port Ivory Buildings Condition Survey (2013)', url: '/portfolio/24' },
+        { name: 'Essex County Resources Recovery facility Condition Survey (2012)', url: '/portfolio/25' },
+        { name: 'Condition Survey of Buildings in Brooklyn Pier, Brooklyn, New York (2011)', url: '/portfolio/26' },
+        { name: 'Teterboro Airport Condition Inspection (2011)', url: '/portfolio/27' },
+        { name: 'Undergrade Bridge Inspection, Groups: B, E and F (2015-2016)', url: '/portfolio/28' },
+        { name: 'Rehabilitation of Raritan Drawbridge (2015)', url: '/portfolio/29' },
+        { name: 'Undergrade Bridge Inspection (2012-2013)', url: '/portfolio/30' },
+        { name: 'Aberdeen-Matawan Park & Ride Parking Study (2007)', url: '/portfolio/31' },
+        { name: 'Undergrade Bridge Inspection (2009)', url: '/portfolio/32' },
+        { name: 'NJ TRANSIT Newark Subway & PATCO Line Safety Review (2003)', url: '/portfolio/33' }
       ]
     },
     {
       name: 'Partners',
       url: '/partners',
-      children: [
-        { name: 'Y Bird Airways', url: '/partners/ybirdairways' },
-        { name: 'WOW Design', url: '/partners/wowdesign' }
-      ]
+      children: []
     },
     {
       name: 'Clients',
       url: '/clients',
-      children: [
-        { name: 'Tech Innovations Inc.', url: '/clients/tech-innovations' },
-        { name: 'Green Energy Solutions', url: '/clients/green-energy' },
-        { name: 'Urban Development Corp.', url: '/clients/urban-development' }
-      ]
+      children: [ ]
     },
     {
       name: 'Offices',
@@ -101,31 +125,23 @@ const Sitemap = () => {
       name: 'Site Information',
       url: '#',
       children: [
-        { name: 'Sitemap', url: '/sitemap' },
-        { name: 'Shared Files', url: '/shared/:token' }
+        { name: 'Sitemap', url: '/sitemap' }
       ]
     }
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-96">
-        <img
-          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-          alt="Sitemap"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute bottom-10 left-10">
-          <h1 className={`font-montserrat text-4xl md:text-6xl font-bold text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            Sitemap
-          </h1>
-        </div>
-      </section>
+       <header className="bg-white py-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 className="text-4xl font-extrabold font-montserrat text-gray-900 text-center">
+        Site Map
+      </h1>
+    </div>
+  </header>
 
       {/* Sitemap Content */}
-      <section className={`py-16 bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
+      <section className={`bg-white transition-all duration-1000 ${isVisible ? 'opacity-100 animate-fade-in' : 'opacity-0'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="font-montserrat text-3xl font-bold text-gray-900 mb-4">
@@ -148,10 +164,12 @@ const Sitemap = () => {
                     {section.url !== '#' ? (
                       <Link
                         to={section.url}
+                        onClick={handleLinkClick}
                         className="font-montserrat text-xl font-semibold text-blue-600 hover:text-blue-800 transition-colors"
-                      >
+                        >
                         {section.name}
                       </Link>
+
                     ) : (
                       <h3 className="font-montserrat text-xl font-semibold text-gray-900">
                         {section.name}
@@ -165,6 +183,7 @@ const Sitemap = () => {
                             <div className="w-2 h-2 bg-gray-400 rounded-full mr-3 flex-shrink-0"></div>
                             <Link
                               to={child.url}
+                              onClick={handleLinkClick}
                               className="font-arial text-gray-700 hover:text-blue-600 transition-colors"
                             >
                               {child.name}
