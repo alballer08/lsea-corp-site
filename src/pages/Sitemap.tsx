@@ -135,7 +135,7 @@ const handleLinkClick = () => {
        <header className="bg-white py-10">
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h1 className="text-4xl font-extrabold font-montserrat text-gray-900 text-center">
-        Sitemap
+        Site Map
       </h1>
     </div>
   </header>

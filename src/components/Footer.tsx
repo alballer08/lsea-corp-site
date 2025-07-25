@@ -156,7 +156,7 @@ const Footer = () => {
                 onClick={handleLinkClick}
                 className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
               >
-                Sitemap
+                Site Map
               </Link>
               <Link 
                 to="/employee-access" 
