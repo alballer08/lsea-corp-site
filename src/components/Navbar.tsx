@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import { SearchModal } from './SearchModal';
 
 const Navbar = () => {
@@ -49,9 +49,73 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden xl:flex items-center space-x-8">
-              <Link to="/about" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/about' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>ABOUT</Link>
-              <Link to="/services" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/services' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>SERVICES</Link>
-              <Link to="/portfolio" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/portfolio' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>PORTFOLIO</Link>
+              {/* About Dropdown */}
+              <div className="relative group">
+                <Link 
+                  to="/about" 
+                  onClick={handleLinkClick} 
+                  className={`relative text-sm font-medium font-arial transition-colors duration-200 flex items-center space-x-1 ${location.pathname === '/about' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}
+                >
+                  <span>ABOUT</span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                </Link>
+                <div className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-md border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <Link to="/about#our-story" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Our Story</Link>
+                    <Link to="/about#company-mission" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Company Mission</Link>
+                    <Link to="/about#technical-expertise" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Technical Expertise</Link>
+                    <Link to="/about#total-commitment" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Total Commitment</Link>
+                    <Link to="/about#qualifications" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Qualifications</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Services Dropdown */}
+              <div className="relative group">
+                <Link 
+                  to="/services" 
+                  onClick={handleLinkClick} 
+                  className={`relative text-sm font-medium font-arial transition-colors duration-200 flex items-center space-x-1 ${location.pathname === '/services' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}
+                >
+                  <span>SERVICES</span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                </Link>
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <Link to="/services" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">All Services</Link>
+                    <Link to="/services/bridge-inspection" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Bridge Inspection</Link>
+                    <Link to="/services/structural-inspection" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Structural Inspection</Link>
+                    <Link to="/services/building-assessment" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Building Assessment</Link>
+                    <Link to="/services/transit-rail" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Transit & Rail</Link>
+                    <Link to="/services/assessment-evaluation" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Assessment & Evaluation</Link>
+                    <Link to="/services/surveying" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Surveying</Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Portfolio Dropdown */}
+              <div className="relative group">
+                <Link 
+                  to="/portfolio" 
+                  onClick={handleLinkClick} 
+                  className={`relative text-sm font-medium font-arial transition-colors duration-200 flex items-center space-x-1 ${location.pathname === '/portfolio' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}
+                >
+                  <span>PORTFOLIO</span>
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                </Link>
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    <Link to="/portfolio" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">All Projects</Link>
+                    <Link to="/portfolio?filter=Bridge Inspection" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Bridge Inspection</Link>
+                    <Link to="/portfolio?filter=Structural Inspection" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Structural Inspection</Link>
+                    <Link to="/portfolio?filter=Building Assessment" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Building Assessment</Link>
+                    <Link to="/portfolio?filter=Transit & Rail" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Transit & Rail</Link>
+                    <Link to="/portfolio?filter=Assessment & Evaluation" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Assessment & Evaluation</Link>
+                    <Link to="/portfolio?filter=Surveying" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Surveying</Link>
+                  </div>
+                </div>
+              </div>
+
               <Link to="/clients" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/clients' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>CLIENTS</Link>
               <Link to="/partners" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/partners' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>PARTNERS</Link>
               <Link to="/offices" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/offices' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>OFFICES</Link>
