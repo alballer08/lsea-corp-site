@@ -20,7 +20,7 @@ const Partners = () => {
       name: 'Y Bird Airways',
       description: 'Leading aviation services provider with comprehensive flight operations and aircraft maintenance solutions across the northeast region.',
       image: '/public/images/y-bird-airways.jpg',
-      website: 'https://ybirdairways.com',
+      website: 'https://www.crunchbase.com/organization/y-bird-airways',
       industry: 'Aviation',
       services: ['Aircraft Maintenance', 'Flight Operations', 'Ground Support']
     },
@@ -29,7 +29,7 @@ const Partners = () => {
       name: 'WOW Design',
       description: 'Creative design agency specializing in brand identity, digital experiences, and innovative marketing solutions for modern businesses.',
       image: '/public/images/wow-design-logo.jpg',
-      website: 'https://wowdesign.com',
+      website: 'http://www.wowdesign.net.cn/',
       industry: 'Design & Marketing',
       services: ['Brand Identity', 'Web Design', 'Digital Marketing']
     }
