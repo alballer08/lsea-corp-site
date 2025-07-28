@@ -9,196 +9,133 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style type="text/css">
           body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.5;
             margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            min-height: 100vh;
+            padding: 40px;
+            background: #fafafa;
             color: #333;
           }
           
           .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            border: 1px solid #e0e0e0;
           }
           
           .header {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
+            background: #f5f5f5;
+            padding: 30px;
+            border-bottom: 1px solid #e0e0e0;
           }
           
           .header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.5em;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin: 0 0 8px 0;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333;
           }
           
           .header p {
             margin: 0;
-            font-size: 1.1em;
-            opacity: 0.9;
+            color: #666;
+            font-size: 14px;
           }
           
-          .info-section {
-            background: #f8fafc;
-            padding: 30px;
-            border-bottom: 1px solid #e2e8f0;
-          }
-          
-          .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-          }
-          
-          .info-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-          }
-          
-          .info-card h3 {
-            margin: 0 0 10px 0;
-            color: #1e40af;
-            font-size: 1.1em;
-            font-weight: 600;
-          }
-          
-          .info-card p {
-            margin: 0;
-            color: #64748b;
+          .info {
+            padding: 20px 30px;
+            background: #fafafa;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+            color: #666;
           }
           
           .content {
-            padding: 30px;
+            padding: 0;
           }
           
           table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
           }
           
           th {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 15px 12px;
+            background: #f0f0f0;
+            padding: 12px 15px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 13px;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
           }
           
           td {
-            padding: 12px;
-            border-bottom: 1px solid #e2e8f0;
-            vertical-align: top;
+            padding: 10px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
           }
           
           tr:hover {
-            background-color: #f8fafc;
-            transform: translateY(-1px);
-            transition: all 0.2s ease;
+            background-color: #fafafa;
           }
           
           .url {
-            color: #3b82f6;
+            color: #0066cc;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
           }
           
           .url:hover {
-            color: #1e40af;
             text-decoration: underline;
           }
           
           .priority {
             font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.85em;
           }
           
           .priority-high {
-            background: #dcfce7;
-            color: #166534;
+            color: #0066cc;
           }
           
           .priority-medium {
-            background: #fef3c7;
-            color: #92400e;
+            color: #666;
           }
           
           .priority-low {
-            background: #fee2e2;
-            color: #991b1b;
+            color: #999;
           }
           
           .changefreq {
-            background: #ede9fe;
-            color: #5b21b6;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            font-weight: 500;
+            color: #666;
+            font-size: 12px;
           }
           
           .lastmod {
-            color: #64748b;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
+            color: #999;
+            font-family: monospace;
+            font-size: 12px;
           }
           
           .footer {
-            background: #f8fafc;
             padding: 20px 30px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 12px;
             text-align: center;
-            border-top: 1px solid #e2e8f0;
-            color: #64748b;
-            font-size: 0.9em;
           }
           
           @media (max-width: 768px) {
             body {
-              padding: 10px;
-            }
-            
-            .header {
-              padding: 30px 20px;
-            }
-            
-            .header h1 {
-              font-size: 2em;
-            }
-            
-            .content, .info-section {
               padding: 20px;
             }
             
-            table {
-              font-size: 0.9em;
+            .header, .info, .footer {
+              padding: 20px;
             }
             
             th, td {
-              padding: 8px 6px;
+              padding: 8px 10px;
             }
           }
         </style>
@@ -210,21 +147,8 @@
             <p>LS Engineering Associates Corporation</p>
           </div>
           
-          <div class="info-section">
-            <div class="info-grid">
-              <div class="info-card">
-                <h3>Total URLs</h3>
-                <p><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> pages indexed</p>
-              </div>
-              <div class="info-card">
-                <h3>Last Updated</h3>
-                <p>July 25, 2024</p>
-              </div>
-              <div class="info-card">
-                <h3>XML Sitemap</h3>
-                <p>This sitemap helps search engines discover and index your content</p>
-              </div>
-            </div>
+          <div class="info">
+            <strong><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong> URLs found in this sitemap. Last updated: July 25, 2024
           </div>
           
           <div class="content">
