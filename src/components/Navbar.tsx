@@ -1,8 +1,14 @@
 
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import { SearchModal } from './SearchModal';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from './ui/dropdown-menu';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +56,36 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden xl:flex items-center space-x-8">
               <Link to="/about" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/about' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>ABOUT</Link>
-              <Link to="/services" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/services' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>SERVICES</Link>
+              
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center space-x-1 relative text-sm font-medium font-arial transition-colors duration-200 text-gray-700 hover:text-blue-600 focus:outline-none">
+                  <span>SERVICES</span>
+                  <ChevronDown className="w-4 h-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white border shadow-lg">
+                  <DropdownMenuItem asChild>
+                    <Link to="/services" onClick={handleLinkClick} className="w-full text-gray-700 hover:text-blue-600">
+                      All Services
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/services/bridge-inspection" onClick={handleLinkClick} className="w-full text-gray-700 hover:text-blue-600">
+                      Bridge Inspection
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/services/structural-engineering" onClick={handleLinkClick} className="w-full text-gray-700 hover:text-blue-600">
+                      Structural Engineering
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/services/surveying" onClick={handleLinkClick} className="w-full text-gray-700 hover:text-blue-600">
+                      Surveying
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <Link to="/portfolio" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/portfolio' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>PORTFOLIO</Link>
               <Link to="/clients" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/clients' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>CLIENTS</Link>
               <Link to="/partners" onClick={handleLinkClick} className={`relative text-sm font-medium font-arial transition-colors duration-200 ${location.pathname === '/partners' ? 'text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600' : 'text-gray-700 hover:text-blue-600 after:content-[""] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-blue-600 after:transition-all after:duration-200 hover:after:w-full'}`}>PARTNERS</Link>
