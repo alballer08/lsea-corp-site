@@ -1,6 +1,5 @@
-
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
@@ -8,30 +7,37 @@ const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const location = useLocation();
   const projectsPerPage = 9;
 
   useEffect(() => {
     document.title = "LSEA | Portfolio";
     setIsVisible(true);
-    
-    // Handle URL query parameter for filtering
-    const urlParams = new URLSearchParams(window.location.search);
+  }, []);
+
+  // Handle URL query parameter for filtering - run on every location change
+  useEffect(() => {
+    const urlParams = new URLSearchParams(location.search);
     const filter = urlParams.get('filter');
+    
     if (filter) {
+      // Map the filter names to category values
       const categoryMap = {
         'Bridge Inspection': 'bridge-inspection',
-        'Structural Inspection': 'structural-inspection',
+        'Structural Inspection': 'structural-inspection', 
         'Building Assessment': 'building-assessment',
         'Transit & Rail': 'transit-rail',
         'Assessment & Evaluation': 'assessment',
         'Surveying': 'surveying'
       };
-      const category = categoryMap[filter] || filter;
-      if (categories.includes(category)) {
-        setSelectedCategory(category);
-      }
+      
+      const category = categoryMap[filter as keyof typeof categoryMap] || 'all';
+      setSelectedCategory(category);
+      setCurrentPage(1); // Reset to first page when filtering
+    } else {
+      setSelectedCategory('all');
     }
-  }, []);
+  }, [location.search]);
 
   const handleLinkClick = () => {
     window.scrollTo(0, 0);
