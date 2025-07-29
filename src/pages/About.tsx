@@ -3,13 +3,19 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 const About = () => {
-  const [activeSection, setActiveSection] = useState('story');
+  const [activeSection, setActiveSection] = useState('our-story');
   const [isVisible, setIsVisible] = useState(false);
   const [animatingSection, setAnimatingSection] = useState<string | null>(null);
 
   useEffect(() => {
     document.title = "LSEA | About";
     setIsVisible(true);
+    
+    // Handle URL fragment navigation
+    const hash = window.location.hash.replace('#', '');
+    if (hash && sections[hash]) {
+      setActiveSection(hash);
+    }
   }, []);
 
   const handleSectionChange = (section: string) => {
@@ -23,7 +29,7 @@ const About = () => {
   };
 
   const sections = {
-    story: {
+    'our-story': {
       title: 'Our Story',
       content: [
         'LSEA Corporation is a multi-discipline consulting firm established in 2001 with a vision to provide exceptional engineering and consulting services to both public and private sector clients. Founded by a small team of dedicated professionals, our company has steadily grown through a commitment to quality, innovation, and client satisfaction.',
@@ -33,7 +39,7 @@ const About = () => {
       ],
       image: '/public/images/GWBfromNJ.jpg'
     },
-    mission: {
+    'company-mission': {
       title: 'Company Mission',
       content: [
         'At LSEA Corporation, our mission is to deliver innovative engineering solutions that exceed client expectations while upholding the highest standards of quality, safety, and environmental responsibility. We are committed to creating sustainable, efficient, and safe outcomes that positively impact communities and contribute to a better future.',
@@ -43,7 +49,7 @@ const About = () => {
       ],
       image: '/public/images/Hanger1.jpg'
     },
-    expertise: {
+    'technical-expertise': {
       title: 'Technical Expertise',
       content: [
         'LSEA Corporation offers a multidisciplinary team with expertise in civil and structural engineering. With decades of combined experience, our principals, project managers, and engineers are equipped to manage projects of various sizes and complexities. From preliminary studies to final design, we provide the technical support and insight needed to complement our clients’ in-house teams and deliver fully integrated solutions.',
@@ -52,7 +58,7 @@ const About = () => {
       ],
       image: '/public/images/BoontonBoilerPiping.jpg'
     },
-    commitment: {
+    'total-commitment': {
       title: 'Total Commitment and Qualifications',
       content: [
         'At LSEA Corporation, our success is built on the expertise and dedication of our experienced staff. With a multidisciplinary team of professionals in civil, structural, mechanical, and electrical engineering, we deliver innovative, practical solutions tailored to each client’s needs. From feasibility studies to final design, we manage projects of all sizes and complexity with a commitment to quality, budget, and schedule.',
@@ -125,7 +131,7 @@ const About = () => {
               <div className="space-y-4">
                 {sections[activeSection].content.map((paragraph, index) => {
                   // Special handling for commitment section with certifications
-                  if (activeSection === 'commitment' && index === 2) {
+                  if (activeSection === 'total-commitment' && index === 2) {
                     return (
                       <div key={index} className="space-y-2">
                         <p className="font-arial text-lg text-gray-600 leading-relaxed">

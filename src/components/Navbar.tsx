@@ -65,7 +65,7 @@ const Navbar = () => {
                     <Link to="/about#company-mission" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Company Mission</Link>
                     <Link to="/about#technical-expertise" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Technical Expertise</Link>
                     <Link to="/about#total-commitment" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Total Commitment</Link>
-                    <Link to="/about#qualifications" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Qualifications</Link>
+                    <Link to="/about#total-commitment" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Qualifications</Link>
                   </div>
                 </div>
               </div>

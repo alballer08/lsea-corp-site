@@ -13,6 +13,24 @@ const Portfolio = () => {
   useEffect(() => {
     document.title = "LSEA | Portfolio";
     setIsVisible(true);
+    
+    // Handle URL query parameter for filtering
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get('filter');
+    if (filter) {
+      const categoryMap = {
+        'Bridge Inspection': 'bridge-inspection',
+        'Structural Inspection': 'structural-inspection',
+        'Building Assessment': 'building-assessment',
+        'Transit & Rail': 'transit-rail',
+        'Assessment & Evaluation': 'assessment',
+        'Surveying': 'surveying'
+      };
+      const category = categoryMap[filter] || filter;
+      if (categories.includes(category)) {
+        setSelectedCategory(category);
+      }
+    }
   }, []);
 
   const handleLinkClick = () => {
