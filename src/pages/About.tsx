@@ -18,6 +18,19 @@ const About = () => {
     }
   }, []);
 
+  // Listen for hash changes (same-page navigation)
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && sections[hash]) {
+        setActiveSection(hash);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   const handleSectionChange = (section: string) => {
     if (section !== activeSection) {
       setAnimatingSection(section);

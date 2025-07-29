@@ -83,12 +83,16 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <Link to="/services" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">All Services</Link>
-                    <Link to="/services/bridge-inspection" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Bridge Inspection</Link>
-                    <Link to="/services/structural-inspection" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Structural Inspection</Link>
-                    <Link to="/services/building-assessment" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Building Assessment</Link>
-                    <Link to="/services/transit-rail" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Transit & Rail</Link>
-                    <Link to="/services/assessment-evaluation" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Assessment & Evaluation</Link>
-                    <Link to="/services/surveying" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Surveying</Link>
+                    <Link to="/services/1" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Bridge Inspection</Link>
+                    <Link to="/services/2" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Bridge Design and Rehabilitation</Link>
+                    <Link to="/services/3" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Building Assessment</Link>
+                    <Link to="/services/4" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Building Design and Rehabilitation</Link>
+                    <Link to="/services/5" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Architecture</Link>
+                    <Link to="/services/6" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">MEP Engineering</Link>
+                    <Link to="/services/7" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Site and Highway Engineering</Link>
+                    <Link to="/services/8" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Land Surveying</Link>
+                    <Link to="/services/9" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Structural Assessment and Design</Link>
+                    <Link to="/services/10" onClick={handleLinkClick} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Traffic Engineering</Link>
                   </div>
                 </div>
               </div>
