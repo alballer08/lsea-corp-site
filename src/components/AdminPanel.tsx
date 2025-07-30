@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { UserPlus, Users, Trash2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { useAuth } from './AuthProvider';
 
 interface User {
   id: string;
@@ -13,10 +14,12 @@ interface User {
 }
 
 export const AdminPanel: React.FC = () => {
+  const { user: currentUser } = useAuth();
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [deletingUserId, setDeletingUserId] = useState<string | null>(null);
+  const [currentUserRole, setCurrentUserRole] = useState<string>('user');
   const [newUser, setNewUser] = useState({
     email: '',
     password: '',
@@ -25,10 +28,43 @@ export const AdminPanel: React.FC = () => {
   });
 
   useEffect(() => {
-    fetchUsers();
-  }, []);
+    if (currentUser) {
+      verifyAdminAccess();
+    }
+  }, [currentUser]);
+
+  const verifyAdminAccess = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('users')
+        .select('role')
+        .eq('id', currentUser?.id)
+        .single();
+
+      if (error || data?.role !== 'admin') {
+        toast({
+          title: "Access Denied",
+          description: "You don't have admin permissions",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      setCurrentUserRole(data.role);
+      fetchUsers();
+    } catch (error) {
+      console.error('Error verifying admin access:', error);
+      toast({
+        title: "Access verification failed",
+        description: "Unable to verify admin permissions",
+        variant: "destructive",
+      });
+    }
+  };
 
   const fetchUsers = async () => {
+    if (currentUserRole !== 'admin') return;
+
     try {
       const { data, error } = await supabase
         .from('users')
@@ -39,7 +75,7 @@ export const AdminPanel: React.FC = () => {
         console.error('Error fetching users:', error);
         toast({
           title: "Error loading users",
-          description: "You may not have admin permissions",
+          description: "Failed to load user list",
           variant: "destructive",
         });
       } else {
@@ -49,7 +85,7 @@ export const AdminPanel: React.FC = () => {
       console.error('Unexpected error:', error);
       toast({
         title: "Error loading users",
-        description: error.message,
+        description: "An unexpected error occurred",
         variant: "destructive",
       });
     } finally {
@@ -60,8 +96,25 @@ export const AdminPanel: React.FC = () => {
   const createUser = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (currentUserRole !== 'admin') {
+      toast({
+        title: "Access Denied",
+        description: "Only admins can create users",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (newUser.password.length < 6) {
+      toast({
+        title: "Invalid Password",
+        description: "Password must be at least 6 characters long",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     try {
-      // Create user in Supabase Auth
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email: newUser.email,
         password: newUser.password,
@@ -70,13 +123,12 @@ export const AdminPanel: React.FC = () => {
       if (authError) throw authError;
 
       if (authData.user) {
-        // Add user to our users table
         const { error: dbError } = await supabase
           .from('users')
           .insert({
             id: authData.user.id,
             email: newUser.email,
-            full_name: newUser.full_name,
+            full_name: newUser.full_name || null,
             role: newUser.role
           });
 
@@ -102,6 +154,24 @@ export const AdminPanel: React.FC = () => {
   };
 
   const deleteUser = async (userId: string, userEmail: string) => {
+    if (currentUserRole !== 'admin') {
+      toast({
+        title: "Access Denied",
+        description: "Only admins can delete users",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (userId === currentUser?.id) {
+      toast({
+        title: "Cannot Delete Self",
+        description: "You cannot delete your own account",
+        variant: "destructive",
+      });
+      return;
+    }
+
     if (!confirm(`Are you sure you want to delete user ${userEmail}? This action cannot be undone.`)) {
       return;
     }
@@ -109,13 +179,11 @@ export const AdminPanel: React.FC = () => {
     setDeletingUserId(userId);
     
     try {
-      // Get the current session to pass the auth token
       const { data: { session } } = await supabase.auth.getSession();
       if (!session) {
         throw new Error('No active session');
       }
 
-      // Call the Edge Function to delete the user
       const { data, error } = await supabase.functions.invoke('delete-user', {
         body: { userId },
         headers: {
@@ -134,10 +202,9 @@ export const AdminPanel: React.FC = () => {
 
       toast({
         title: "User deleted successfully",
-        description: `${userEmail} has been completely removed from the system`,
+        description: `${userEmail} has been removed from the system`,
       });
 
-      // Refresh the users list
       fetchUsers();
     } catch (error: any) {
       console.error('Error deleting user:', error);
@@ -150,6 +217,14 @@ export const AdminPanel: React.FC = () => {
       setDeletingUserId(null);
     }
   };
+
+  if (currentUserRole !== 'admin') {
+    return (
+      <div className="bg-white rounded-lg shadow p-6">
+        <p className="text-gray-500 text-center">Access denied. Admin privileges required.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white rounded-lg shadow">
@@ -186,11 +261,12 @@ export const AdminPanel: React.FC = () => {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Password
+                Password (min 6 characters)
               </label>
               <input
                 type="password"
                 required
+                minLength={6}
                 value={newUser.password}
                 onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
@@ -265,18 +341,20 @@ export const AdminPanel: React.FC = () => {
                   <span className="text-sm text-gray-500">
                     {new Date(user.created_at).toLocaleDateString()}
                   </span>
-                  <button
-                    onClick={() => deleteUser(user.id, user.email)}
-                    disabled={deletingUserId === user.id}
-                    className="ml-2 p-1 text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                    title="Delete user"
-                  >
-                    {deletingUserId === user.id ? (
-                      <div className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
-                    ) : (
-                      <Trash2 className="w-4 h-4" />
-                    )}
-                  </button>
+                  {user.id !== currentUser?.id && (
+                    <button
+                      onClick={() => deleteUser(user.id, user.email)}
+                      disabled={deletingUserId === user.id}
+                      className="ml-2 p-1 text-red-600 hover:text-red-800 hover:bg-red-50 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      title="Delete user"
+                    >
+                      {deletingUserId === user.id ? (
+                        <div className="w-4 h-4 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                      ) : (
+                        <Trash2 className="w-4 h-4" />
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

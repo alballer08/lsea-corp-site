@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
+  const [loginAttempts, setLoginAttempts] = useState(0);
   const { signIn, user } = useAuth();
   const navigate = useNavigate();
 
@@ -20,18 +21,30 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (loginAttempts >= 5) {
+      toast({
+        title: "Too Many Attempts",
+        description: "Please wait before trying again",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setLoading(true);
 
     try {
       const { error } = await signIn(email, password);
       
       if (error) {
+        setLoginAttempts(prev => prev + 1);
         toast({
           title: "Login Failed",
           description: error.message,
           variant: "destructive",
         });
       } else {
+        setLoginAttempts(0);
         toast({
           title: "Login Successful",
           description: "Welcome back!",
@@ -39,6 +52,7 @@ const Login = () => {
         navigate('/dashboard');
       }
     } catch (error) {
+      setLoginAttempts(prev => prev + 1);
       toast({
         title: "Login Failed",
         description: "An unexpected error occurred",
@@ -76,7 +90,8 @@ const Login = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  disabled={loading || loginAttempts >= 5}
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50"
                 />
               </div>
             </div>
@@ -94,15 +109,22 @@ const Login = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  disabled={loading || loginAttempts >= 5}
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50"
                 />
               </div>
             </div>
 
+            {loginAttempts >= 3 && (
+              <div className="text-sm text-red-600">
+                {loginAttempts >= 5 ? 'Account temporarily locked. Please try again later.' : `${5 - loginAttempts} attempts remaining`}
+              </div>
+            )}
+
             <div>
               <button
                 type="submit"
-                disabled={loading}
+                disabled={loading || loginAttempts >= 5}
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
               >
                 {loading ? 'Signing in...' : 'Sign in'}
