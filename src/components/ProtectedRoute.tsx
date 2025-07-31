@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuth } from './AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { LoadingSkeleton } from './LoadingSkeleton';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
@@ -33,11 +34,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   }, [user, loading, navigate, requireAdmin, userRole]);
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-lg">Loading...</div>
-      </div>
-    );
+    return <LoadingSkeleton variant="minimal" />;
   }
 
   if (!user) {

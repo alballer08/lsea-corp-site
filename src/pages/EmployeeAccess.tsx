@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/components/AuthProvider';
+import { LoadingSkeleton } from '@/components/LoadingSkeleton';
 
 const EmployeeAccess = () => {
   const { user, loading } = useAuth();
@@ -19,11 +20,7 @@ const EmployeeAccess = () => {
   }, [user, loading, navigate]);
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-lg">Loading...</div>
-      </div>
-    );
+    return <LoadingSkeleton variant="minimal" />;
   }
 
   return null;

@@ -79,8 +79,15 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onUploadComplete }) => {
             />
           </label>
         </div>
-        <p className="mt-1 text-xs text-gray-500">
-          {uploading ? 'Uploading...' : 'Upload any file type'}
+        <p className="mt-1 text-xs text-gray-500 flex items-center justify-center">
+          {uploading ? (
+            <>
+              <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-primary mr-2"></div>
+              Uploading...
+            </>
+          ) : (
+            'Upload any file type'
+          )}
         </p>
       </div>
     </div>

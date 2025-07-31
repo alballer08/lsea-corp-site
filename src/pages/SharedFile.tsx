@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { Download, Clock, FileX } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { LoadingSkeleton } from '@/components/LoadingSkeleton';
 
 interface SharedFileData {
   id: string;
@@ -96,11 +97,7 @@ const SharedFile = () => {
   };
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-lg text-foreground">Loading...</div>
-      </div>
-    );
+    return <LoadingSkeleton variant="minimal" />;
   }
 
   if (error) {
