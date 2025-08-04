@@ -74,6 +74,24 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link 
+                    to="/clients" 
+                    onClick={handleLinkClick}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    Clients
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/partners" 
+                    onClick={handleLinkClick}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
+                  >
+                    Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link 
                     to="/offices" 
                     onClick={handleLinkClick}
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
