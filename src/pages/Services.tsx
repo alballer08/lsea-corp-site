@@ -63,7 +63,7 @@ const Services = () => {
     { 
       id: 10, 
       title: 'Traffic Engineering', 
-      image: '/public/images/GWBTunnel.jpg'
+      image: '/public/images/GWBtunnel.jpg'
     },
   ];
 
