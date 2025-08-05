@@ -104,8 +104,7 @@ const Navbar = () => {
                     <button onClick={() => handleAboutNavigation('our-story')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Our Story</button>
                     <button onClick={() => handleAboutNavigation('company-mission')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Company Mission</button>
                     <button onClick={() => handleAboutNavigation('technical-expertise')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Technical Expertise</button>
-                    <button onClick={() => handleAboutNavigation('total-commitment')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Total Commitment</button>
-                    <button onClick={() => handleAboutNavigation('total-commitment')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Qualifications</button>
+                    <button onClick={() => handleAboutNavigation('total-commitment')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Total Commitment and Qualifications</button>
                   </div>
                 </div>
               </div>
