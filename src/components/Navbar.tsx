@@ -102,7 +102,7 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-1 w-56 bg-white shadow-lg rounded-md border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
                     <button onClick={() => handleAboutNavigation('our-story')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Our Story</button>
-                    <button onClick={() => handleAboutNavigation('company-mission')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Company Mission</button>
+                    <button onClick={() => handleAboutNavigation('company-mission')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Company Mission</button          >
                     <button onClick={() => handleAboutNavigation('technical-expertise')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Technical Expertise</button>
                     <button onClick={() => handleAboutNavigation('total-commitment')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 font-arial">Total Commitment and Qualifications</button>
                   </div>
