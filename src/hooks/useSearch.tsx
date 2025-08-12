@@ -20,6 +20,21 @@ export const useSearch = () => {
       return;
     }
 
+    // Special case: direct navigation result for "portfolio"
+    if (query.trim().toLowerCase() === 'portfolio') {
+      setResults([
+        {
+          id: 'portfolio',
+          page_title: 'Portfolio',
+          page_url: '/portfolio',
+          heading: 'Our Portfolio',
+          description: 'Explore our projects and case studies.'
+        }
+      ]);
+      setLoading(false);
+      return;
+    }
+
     setLoading(true);
     try {
       const { data, error } = await supabase

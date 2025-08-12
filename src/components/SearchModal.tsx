@@ -51,6 +51,16 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
             placeholder="Search website..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                const q = query.trim().toLowerCase();
+                if (q === 'portfolio') {
+                  handleResultClick('/portfolio');
+                } else if (results.length > 0) {
+                  handleResultClick(results[0].page_url);
+                }
+              }
+            }}
             className="flex-1 outline-none text-lg bg-transparent text-gray-900 placeholder-gray-500 font-medium"
             autoFocus
             style={{ caretColor: '#3b82f6' }}
