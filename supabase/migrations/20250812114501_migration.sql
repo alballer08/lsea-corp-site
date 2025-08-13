@@ -48,12 +48,19 @@ ALTER TABLE public.files ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.shared_links ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.website_content ENABLE ROW LEVEL SECURITY;
 
+-- Drop the policy if it exists
+DROP POLICY IF EXISTS "Users can view own profile" ON public.users;
+
 -- RLS Policies for users table
 CREATE POLICY "Users can view own profile" ON public.users
   FOR SELECT USING (auth.uid() = id);
 
+DROP POLICY IF EXISTS "Users can update own profile" ON public.users;
+
 CREATE POLICY "Users can update own profile" ON public.users
   FOR UPDATE USING (auth.uid() = id);
+
+DROP POLICY IF EXISTS "Admins can view all users" ON public.users;
 
 CREATE POLICY "Admins can view all users" ON public.users
   FOR SELECT USING (
@@ -63,6 +70,8 @@ CREATE POLICY "Admins can view all users" ON public.users
     )
   );
 
+DROP POLICY IF EXISTS "Admins can insert users" ON public.users;
+
 CREATE POLICY "Admins can insert users" ON public.users
   FOR INSERT WITH CHECK (
     EXISTS (
@@ -71,16 +80,22 @@ CREATE POLICY "Admins can insert users" ON public.users
     )
   );
 
+DROP POLICY IF EXISTS "Users can view own files" ON public.users;
 -- RLS Policies for files table
 CREATE POLICY "Users can view own files" ON public.files
   FOR SELECT USING (user_id = auth.uid());
 
+DROP POLICY IF EXISTS "Users can insert own files" ON public.users;
+
 CREATE POLICY "Users can insert own files" ON public.files
   FOR INSERT WITH CHECK (user_id = auth.uid());
+
+DROP POLICY IF EXISTS "Users can delete own files" ON public.users;
 
 CREATE POLICY "Users can delete own files" ON public.files
   FOR DELETE USING (user_id = auth.uid());
 
+DROP POLICY IF EXISTS "Users can view own shared links" ON public.users;
 -- RLS Policies for shared_links table
 CREATE POLICY "Users can view own shared links" ON public.shared_links
   FOR SELECT USING (
@@ -90,6 +105,8 @@ CREATE POLICY "Users can view own shared links" ON public.shared_links
     )
   );
 
+DROP POLICY IF EXISTS "Users can create shared links for own files" ON public.users;
+
 CREATE POLICY "Users can create shared links for own files" ON public.shared_links
   FOR INSERT WITH CHECK (
     EXISTS (
@@ -97,6 +114,8 @@ CREATE POLICY "Users can create shared links for own files" ON public.shared_lin
       WHERE files.id = shared_links.file_id AND files.user_id = auth.uid()
     )
   );
+
+DROP POLICY IF EXISTS "Anyone can view website content" ON public.users;
 
 -- RLS Policies for website_content table (public read)
 CREATE POLICY "Anyone can view website content" ON public.website_content
@@ -115,12 +134,18 @@ INSERT INTO public.website_content (page_title, page_url, content_type, heading,
 -- Create storage bucket for files
 INSERT INTO storage.buckets (id, name, public) VALUES ('user-files', 'user-files', false);
 
+DROP POLICY IF EXISTS "Users can upload own files" ON public.users;
+
 -- Storage policies
 CREATE POLICY "Users can upload own files" ON storage.objects
   FOR INSERT WITH CHECK (bucket_id = 'user-files' AND auth.uid()::text = (storage.foldername(name))[1]);
 
+DROP POLICY IF EXISTS "Users can view own files" ON public.users;
+
 CREATE POLICY "Users can view own files" ON storage.objects
   FOR SELECT USING (bucket_id = 'user-files' AND auth.uid()::text = (storage.foldername(name))[1]);
+
+DROP POLICY IF EXISTS "Users can delete own files" ON public.users;
 
 CREATE POLICY "Users can delete own files" ON storage.objects
   FOR DELETE USING (bucket_id = 'user-files' AND auth.uid()::text = (storage.foldername(name))[1]);
