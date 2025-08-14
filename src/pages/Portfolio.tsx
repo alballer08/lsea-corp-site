@@ -132,17 +132,17 @@ const Portfolio = () => {
           {/* Filter */}
           <div className="mb-8">
             <Select value={selectedCategory} onValueChange={handleCategoryChange}>
-              <SelectTrigger className="w-64 bg-white border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <SelectTrigger className="w-64 bg-white border-2 border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary shadow-sm hover:border-gray-400 transition-colors">
                 <SelectValue placeholder="Filter by project type" />
               </SelectTrigger>
-              <SelectContent className="bg-white border border-gray-300 shadow-lg z-50">
-                <SelectItem value="all">All Project Types</SelectItem>
-                <SelectItem value="bridge-inspection">Bridge Inspection</SelectItem>
-                <SelectItem value="structural-inspection">Structural Inspection</SelectItem>
-                <SelectItem value="building-assessment">Building Assessment</SelectItem>
-                <SelectItem value="transit-rail">Transit & Rail</SelectItem>
-                <SelectItem value="assessment">Assessment & Evaluation</SelectItem>
-                <SelectItem value="surveying">Surveying</SelectItem>
+              <SelectContent className="bg-white border-2 border-gray-200 shadow-xl z-[100] min-w-[16rem]">
+                <SelectItem value="all" className="hover:bg-gray-100 focus:bg-gray-100">All Project Types</SelectItem>
+                <SelectItem value="bridge-inspection" className="hover:bg-gray-100 focus:bg-gray-100">Bridge Inspection</SelectItem>
+                <SelectItem value="structural-inspection" className="hover:bg-gray-100 focus:bg-gray-100">Structural Inspection</SelectItem>
+                <SelectItem value="building-assessment" className="hover:bg-gray-100 focus:bg-gray-100">Building Assessment</SelectItem>
+                <SelectItem value="transit-rail" className="hover:bg-gray-100 focus:bg-gray-100">Transit & Rail</SelectItem>
+                <SelectItem value="assessment" className="hover:bg-gray-100 focus:bg-gray-100">Assessment & Evaluation</SelectItem>
+                <SelectItem value="surveying" className="hover:bg-gray-100 focus:bg-gray-100">Surveying</SelectItem>
               </SelectContent>
             </Select>
           </div>
