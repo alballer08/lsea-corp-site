@@ -148,7 +148,7 @@
           </div>
           
           <div class="info">
-            <strong><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong> URLs found in this sitemap. Last updated: July 25, 2024
+            <strong><xsl:value-of select="count(sitemap:urlset/sitemap:url)"/></strong> URLs found in this sitemap. Last updated: August 14, 2025
           </div>
           
           <div class="content">
