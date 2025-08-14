@@ -27,8 +27,7 @@ const Portfolio = () => {
         'Structural Inspection': 'structural-inspection', 
         'Building Assessment': 'building-assessment',
         'Transit & Rail': 'transit-rail',
-        'Assessment & Evaluation': 'assessment',
-        'Surveying': 'surveying'
+        'Assessment & Evaluation': 'assessment'
       };
       
       const category = categoryMap[filter as keyof typeof categoryMap] || 'all';
@@ -74,7 +73,7 @@ const Portfolio = () => {
     { id: 28, title: 'Undergrade Bridge Inspection, Groups: B, E and F (2015-2016)', image: '/public/images/transit-1.jpg', description: 'LSEA provided a team of 3 engineers for the in-depth hands-on undergrade bridge inspections for 3 projects.', category: 'transit-rail' },
     { id: 29, title: 'Rehabilitation of Raritan Drawbridge (2015)', image: '/public/images/transit-db.jpg', description: 'LSEA was involved in the rehabilitation of the Raritan Drawbridge, which was severely damaged during Hurricane Sandy.', category: 'transit-rail' },
     { id: 30, title: 'Undergrade Bridge Inspection (2012-2013)', image: '/public/images/transit-1.jpg', description: 'LSEA, as the Prime Consultant, performed inspections and structural rating analyses of 61 bridges carrying New Jersey Transit rail lines.', category: 'transit-rail' },
-    { id: 31, title: 'Aberdeen-Matawan Park & Ride Parking Study (2007)', image: '/public/images/transit-3.jpg', description: 'LSEA was involved in the planning and study of the parking lot for the Aberdeen-Matawan station for NJ TRANSIT.', category: 'surveying' },
+    { id: 31, title: 'Aberdeen-Matawan Park & Ride Parking Study (2007)', image: '/public/images/transit-3.jpg', description: 'LSEA was involved in the planning and study of the parking lot for the Aberdeen-Matawan station for NJ TRANSIT.', category: 'transit-rail' },
     { id: 32, title: 'Undergrade Bridge Inspection (2009)', image: '/public/images/transit-1.jpg', description: 'LSEA provided a team of 3 engineers, which performed inspections and structural rating analyses of two sets of bridges. ', category: 'transit-rail' },
     { id: 33, title: 'NJ TRANSIT Newark Subway & PATCO Line Safety Review (2003)', image: '/public/images/transit-3.jpg', description: 'LSEA, as a sub-consultant, provided safety review services for the State Oversight Agency, through performing an on-site review of the implementation of the System Safety Program.', category: 'transit-rail' }
   ];
@@ -142,7 +141,6 @@ const Portfolio = () => {
                 <SelectItem value="building-assessment" className="hover:bg-gray-100 focus:bg-gray-100">Building Assessment</SelectItem>
                 <SelectItem value="transit-rail" className="hover:bg-gray-100 focus:bg-gray-100">Transit & Rail</SelectItem>
                 <SelectItem value="assessment" className="hover:bg-gray-100 focus:bg-gray-100">Assessment & Evaluation</SelectItem>
-                <SelectItem value="surveying" className="hover:bg-gray-100 focus:bg-gray-100">Surveying</SelectItem>
               </SelectContent>
             </Select>
           </div>
