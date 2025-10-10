@@ -83,7 +83,7 @@ const Careers = () => {
       {/* Hero Section */}
       <section className="relative h-[65vh]">
         <img
-          src="/public/images/highway.jpg"
+          src="/images/highway.jpg"
           alt="Careers at LSEA"
           className="w-full h-full object-cover"
         />

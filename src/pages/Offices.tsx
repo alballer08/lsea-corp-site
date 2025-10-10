@@ -38,7 +38,7 @@ const Offices = () => {
       {/* Hero Section */}
       <section className="relative h-[65vh]">
         <img
-          src="/public/images/nybuildings.jpg"
+          src="/images/nybuildings.jpg"
           alt="Our Offices"
           className="w-full h-full object-cover"
         />

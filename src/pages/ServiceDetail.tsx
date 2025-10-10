@@ -30,7 +30,7 @@ const ServiceDetail = () => {
         { type: 'list', items: ['Railroad bridges', 'Short-span bridges', 'Major bridges', 'Culverts', 'Sign structures', 'Pedestrian bridges', 'Utility bridges'] },
         { type: 'text', text: 'Our experienced staff also can perform and/or implement several types of evaluation programs including non-destructive testing, load testing and rating, and fracture and fatigue analysis.' }
       ] as ContentItem[],
-      image: '/public/images/bridge-inspection.jpg'
+      image: '/images/bridge-inspection.jpg'
     },
     {
       id: '2',
@@ -42,7 +42,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'Our staff is experienced in all phases of bridge and roadway design, including:' },
         { type: 'list', items: ['Feasibility studies and reports', 'Initial scoping phases', 'Evaluation of alternative solutions', 'Structural analysis and design', 'Reconstruction and rehabilitation design', 'Seismic analysis and design', 'Foundation studies and reports'] }
       ] as ContentItem[],
-      image: '/public/images/PatcongCreek.jpg'
+      image: '/images/PatcongCreek.jpg'
     },
     {
       id: '3',
@@ -54,7 +54,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'LSEA provides full inspection, evaluation, and design services for residential properties. Our licensed structural engineers are well-versed in NJ/NY codes and national standards. Services include:' },
         { type: 'list', items: ['Pre-purchase & Seller Home Inspections', 'Structural & Mechanical Consultations', 'Lead, Mold, Asbestos Testing', 'Expert Witness Testimony', 'Pre-construction Plan Reviews & On-site Inspections'] },
       ] as ContentItem[],
-      image: '/public/images/wtc-main.jpg'
+      image: '/images/wtc-main.jpg'
     },
     {
       id: '4',
@@ -66,7 +66,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'LSEA has preformed numerous architectural and engineering design services for various clients throughout the State of New Jersey and New York. Our design teams provide the following services:' },
         { type: 'list', items: ['Feasibility Studies', 'Diagnostic Studies', 'Maintenance Planning', 'Structural Design/Renovations/Repair/Upgrading', 'Site Planning and Design', 'Landscaping Design', 'Lighting Design', 'Electrical System Design', 'Mechanical System Design', 'Security System Design'] }
       ] as ContentItem[],
-      image: '/public/images/ParsonsBoulevard.jpg'
+      image: '/images/ParsonsBoulevard.jpg'
     },
     {
       id: '5',
@@ -75,7 +75,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'LSEA has provided architectural design and consulting services to clients throughout the Tri-state area. The projects we have been involved with include, but are not limited to:' },
         { type: 'list', items: ['Residential - Single and Multi-Family', 'Commercial - Low Rise to High Rise Building', 'Industrial - Warehouses, Hangar Buildings, Storage', 'Shopping Center', 'Stadium', 'Plaza', 'Apartment complex', 'Churches/Religious Buildings/Libraries'] }
       ] as ContentItem[],
-      image: '/public/images/chinahouse.jpg'
+      image: '/images/chinahouse.jpg'
     },
     {
       id: '6',
@@ -84,7 +84,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'LSEA has provided MEP Engineering Services to various state agencies, local municipalities, and private sectors. Our specialties include the following services:' },
         { type: 'list', items: ['HVAC Upgrade and Replacement', 'Emergency Generator Design', 'Fire Protection/Sprinkler/Standpipe System Design', 'Energy Audit', 'Electrical System Upgrade', 'Solar Power Design', 'Boiler/Chiller Design', 'Lighting Design', 'Lightening Protection System', 'Underground Feeder Distribution', 'Switchgears/CT Cabinets', 'High and Low Tension Power Distribution System', 'Transformer Design', 'Domestic Hot Water', 'Building and Plumbing Piping Distribution System', 'Elevator and Escalator Design'] }
       ] as ContentItem[],
-      image: '/public/images/generatorupgrade.jpg'
+      image: '/images/generatorupgrade.jpg'
     },
     {
       id: '7',
@@ -95,7 +95,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'LSEA has provided Site and Highway Engineering services to various state agencies, local municipalities, and private sectors. Our services include the following services:' },
         { type: 'list', items: ['Planning for future traffic flows', 'Design of highway intersections/interchanges', 'Geometric alignment and design', 'Highway pavement materials and design', 'Structural design of pavement thickness', 'Pavement maintenance'] }
       ] as ContentItem[],
-      image: '/public/images/cloverleaf-medium.jpg'
+      image: '/images/cloverleaf-medium.jpg'
     },
     {
       id: '8',
@@ -104,7 +104,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'LSEA has been providing Land Surveying services for our public and private clients in the Engineering, Transportation, and Construction industries in the following areas:' },
         { type: 'list', items: ['Transportation Design Surveys', 'Right-of-Way Surveys', 'Property Surveys', 'Construction Layout Surveys', 'Subdivision Surveys', 'ALTA/ACSM Land Title Surveys', 'Topographic Surveys', 'Environmental Surveys', 'Mapping Control Surveys'] }
       ] as ContentItem[],
-      image: '/public/images/survey0.jpg'
+      image: '/images/survey0.jpg'
     },
     {
       id: '9',
@@ -115,7 +115,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'Our engineers ensure safety programs meet required standards through detailed audits and on-site evaluations, serving state agencies, municipalities, and private clients.' },
         { type: 'text', text: 'In partnership with Y Bird Airways, we use drone technology to capture high-resolution images and 3D models, allowing safe, efficient inspection of hard-to-reach areas.' }
       ] as ContentItem[],
-      image: '/public/images/GSPAntenna2.jpg'
+      image: '/images/GSPAntenna2.jpg'
     },
     {
       id: '10',
@@ -124,7 +124,7 @@ const ServiceDetail = () => {
         { type: 'text', text: 'Most of the bridges that LSEA has provided the design and construction engineering supporting services, for new or replacement of them included:' },
         { type: 'list', items: ['Traffic engineering studies', 'Milling and resurfacing of adjacent roadways', 'Temporary detours layout', 'Design of new gas and water lines carried within the structures'] }
       ] as ContentItem[],
-      image: '/public/images/GWBtunnel.jpg'
+      image: '/images/GWBtunnel.jpg'
     }
   ];
 

@@ -19,7 +19,7 @@ const Footer = () => {
             >
               <div className="w-12 h-18 flex items-center justify-center p-1" style={{ position: 'relative', zIndex: 10 }}>
                 <img 
-                  src="/public/logo.png"
+                  src="/logo.png"
                   alt="LSEA Logo"
                   className="w-12 h-18 object-contain"
                   style={{ 

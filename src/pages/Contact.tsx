@@ -68,7 +68,7 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative h-[65vh]">
         <img
-          src="/public/images/towerclimb.png"
+          src="/images/towerclimb.png"
           alt="Contact Us"
           className="w-full h-full object-cover"
         />

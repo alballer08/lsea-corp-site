@@ -24,7 +24,7 @@ const ProjectDetail = () => {
         'Our team of engineers conducted detailed site visits and prepared comprehensive reports for each sign structure. These reports included observations on overall condition, structural components, and any visible damage or deterioration. As part of the process, LSEA also performed Pontis evaluations to help prioritize maintenance based on condition ratings and structural reliability.',
         'In addition to visual inspections, LSEA performed ultrasonic testing of anchor bolts on all 106 structures. This non-destructive method allowed us to assess the internal integrity of the bolts anchoring each sign to its foundation. These tests added a vital layer of assurance, helping NJDOT make informed decisions regarding maintenance and structural performance.'
       ],
-      image: '/public/images/overheadsign.jpg'
+      image: '/images/overheadsign.jpg'
     },
     {
       id: '2',
@@ -34,7 +34,7 @@ const ProjectDetail = () => {
         'For each bridge, our engineers conducted detailed Pontis evaluations, which included assessing structural components, identifying deficiencies, and assigning condition ratings. These evaluations were documented in thorough reports that outlined our findings and provided recommendations for maintenance and repair.',
         'As part of the project, LSEA also coordinated with the North Jersey District Water Supply Commission to inspect the West Brooke Bridge, which spans the Wanaque Reservoir. Due to the sensitive nature of the location, the inspection required careful planning and collaboration to ensure access and compliance with water supply protection protocols.'
       ],
-      image: '/public/images/njdot-bridge.jpg'
+      image: '/images/njdot-bridge.jpg'
     },
     {
       id: '3',
@@ -44,7 +44,7 @@ const ProjectDetail = () => {
         'Two years after the initial inspections, LSEA performed a second-cycle follow-up to verify the accuracy and consistency of the original findings. This follow-up helped identify any changes in condition, confirmed the effectiveness of recommended maintenance actions, and supported long-term asset management planning.',
         'As part of the overall assessment, our engineers also completed load rating calculations for all 46 bridges. These calculations were essential to determine whether the bridges met required safety thresholds and to establish appropriate load limits for ongoing use.'
       ],
-      image: '/public/images/wanaque-2.jpg'
+      image: '/images/wanaque-2.jpg'
     },
     {
       id: '4',
@@ -54,7 +54,7 @@ const ProjectDetail = () => {
         'As part of the project, our engineers conducted detailed assessments to determine whether each structure met the core responsibilities of safety inspections. These responsibilities included: (a) maintaining public safety, (b) protecting public investment, (c) supporting the federal inspection program, (d) producing accurate records, and (e) fulfilling legal requirements.',
         'By verifying compliance with these standards, LSEA helped NJDOT maintain a safe and efficient roadway network. Our findings also supported the agency’s asset management efforts by providing accurate, up-to-date documentation of each sign structure’s condition.'
       ],
-      image: '/public/images/njdot-bridge.jpg'
+      image: '/images/njdot-bridge.jpg'
     },
     {
       id: '5',
@@ -64,7 +64,7 @@ const ProjectDetail = () => {
         'As part of the inspection process, our engineers conducted comprehensive bridge condition evaluations to assess the structural health and identify any deterioration or maintenance needs. Each bridge was carefully examined to ensure compliance with safety standards and to support long-term infrastructure planning.',
         'In addition, Pontis evaluations were completed for all 42 structures. These evaluations provided standardized condition ratings and data-driven insights, enabling NJDOT to prioritize repairs, manage risk, and plan effectively for future rehabilitation efforts.'
       ],
-      image: '/public/images/njdot-bridge.jpg'
+      image: '/images/njdot-bridge.jpg'
     },
     {
       id: '6',
@@ -74,7 +74,7 @@ const ProjectDetail = () => {
         'As part of the project, LSEA provided professional engineering inspection services for all seven bridges. Our work included the preparation of plans, specifications, and cost estimates related to potential bridge replacements, ensuring that any recommended actions were well-documented and ready for implementation.',
         'The scope also involved the development of local and area-wide detour plans to accommodate future construction activities, as well as conducting traffic engineering studies to evaluate the impact on surrounding roadways. This comprehensive approach supported NJDOT’s planning and decision-making for the safe and efficient replacement of the FCM structures.'
       ],
-      image: '/public/images/wanaque-2.jpg'
+      image: '/images/wanaque-2.jpg'
     },
     {
       id: '7',
@@ -84,7 +84,7 @@ const ProjectDetail = () => {
         'LSEA’s team of engineers conducted thorough inspections of each bridge, carefully assessing structural components, identifying any deterioration, and evaluating overall safety. Each inspection was completed with meticulous attention to detail to ensure accurate findings.',
         'Following the inspections, LSEA prepared comprehensive inspection reports for every bridge, documenting conditions, highlighting areas requiring attention, and providing actionable recommendations for maintenance and repairs. These reports helped NJTA prioritize future bridge management and maintenance efforts.'
       ],
-      image: '/public/images/NJTA-89.3SR.jpg'
+      image: '/images/NJTA-89.3SR.jpg'
     },
     {
       id: '8',
@@ -94,7 +94,7 @@ const ProjectDetail = () => {
         'Our engineers thoroughly evaluated each tower, documenting their findings and identifying any areas of concern. This process included checking for signs of wear, corrosion, or other structural issues that could compromise the towers’ performance and safety.',
         'Following the inspections, LSEA provided detailed reports for each tower, which included a comprehensive outline of the findings and recommendations for necessary repairs. Additionally, we included cost estimates for each repair to help the client prioritize and budget for the required maintenance.'
       ],
-      image: '/public/images/GSPAntenna2.jpg'
+      image: '/images/GSPAntenna2.jpg'
     },
     {
       id: '9',
@@ -104,7 +104,7 @@ const ProjectDetail = () => {
         'Our team utilized the InspectTech software to streamline the inspection process and document findings efficiently. This allowed for precise data collection and consistent reporting across all assets.',
         'In addition to the inspections, LSEA assisted in report writing for each asset, providing detailed documentation of the evaluation results. The reports included condition assessments and recommendations for maintenance or repairs, supporting long-term asset management.'
       ],
-      image: '/public/images/NJTA-95.2S.jpg'
+      image: '/images/NJTA-95.2S.jpg'
     },
     {
       id: '10',
@@ -114,7 +114,7 @@ const ProjectDetail = () => {
         'The inspection process also included seven long-span fracture-critical (FCM) structures, which are particularly sensitive to failure due to the absence of redundancy in their design. Among these were two Laderman Bridge sign structures and several FCM box girder inspections, which required specialized assessment techniques.',
         'Our team meticulously documented the condition of each structure and provided detailed findings in comprehensive reports. These reports included recommendations for repairs, safety improvements, and long-term maintenance strategies to help NJTA prioritize necessary actions.'
       ],
-      image: '/public/images/NJTA-95.2S.jpg'
+      image: '/images/NJTA-95.2S.jpg'
     },
     {
       id: '11',
@@ -124,7 +124,7 @@ const ProjectDetail = () => {
         'Our engineers used the InspectTech software to streamline the data collection process, ensuring accurate and consistent documentation of findings across all bridges. This technology helped enhance the efficiency and precision of our inspections.',
         'In addition to the inspections, LSEA assisted in report writing for all 220 assets, providing detailed condition assessments and recommendations for any necessary repairs or maintenance. The reports supported effective decision-making for bridge management and future planning.'
       ],
-      image: '/public/images/NJTA-95.2S.jpg'
+      image: '/images/NJTA-95.2S.jpg'
     },
     {
       id: '12',
@@ -134,7 +134,7 @@ const ProjectDetail = () => {
         'Using InspectTech software, LSEA efficiently collected and documented data for each asset, ensuring that all findings were accurately recorded and easily accessible for analysis. This software streamlined the inspection process and enhanced the quality of the data collected.',
         'Following the inspections, LSEA prepared detailed reports for all inspected assets. These reports included comprehensive condition assessments, along with recommendations for repairs and maintenance, providing NJTA with valuable insights for future planning and asset management.'
       ],
-      image: '/public/images/NJTA-95.2S.jpg'
+      image: '/images/NJTA-95.2S.jpg'
     },
     {
       id: '13',
@@ -143,7 +143,7 @@ const ProjectDetail = () => {
         'LSEA conducted thorough inspections of 5 bridges located within the I-95 Extension, as well as 42 culverts across districts 4, 5, and 8. The inspections were aimed at assessing the overall condition, structural integrity, and safety of these vital assets, ensuring they met current standards and identifying any potential maintenance needs.',
         'Our engineers carefully examined each bridge and culvert, looking for signs of wear, deterioration, or any structural issues that could affect their performance. Detailed assessments were made for each structure to prioritize necessary repairs or improvements. This process provided essential data for effective asset management and long-term infrastructure planning.'
       ],
-      image: '/public/images/NJTA-95.2S.jpg'
+      image: '/images/NJTA-95.2S.jpg'
     },
     {
       id: '14',
@@ -152,7 +152,7 @@ const ProjectDetail = () => {
         'LSEA conducted a comprehensive threat and vulnerability assessment for the properties owned and operated by the Delaware River Port Authority (DRPA) - PATCO. The project employed scenario-based approaches to evaluate the potential risks and expected losses from a range of hazard events, including natural disasters, human-initiated incidents, and technological or infrastructure failures.',
         'Our team meticulously analyzed each scenario, considering the likelihood and impact of each event, and identified vulnerabilities within the DRPA-PATCO system. This assessment helped to determine critical areas where mitigation strategies could be implemented to minimize damage, protect assets, and ensure the continued safety and operation of the authority’s facilities.'
       ],
-      image: '/public/images/PATCOstation.jpg'
+      image: '/images/PATCOstation.jpg'
     },
     {
       id: '15',
@@ -161,7 +161,7 @@ const ProjectDetail = () => {
         'As a sub-consultant, LSEA performed a structural hardening assessment on the Benjamin Franklin Bridge and the Walt Whitman Bridge. Our engineers conducted detailed field inspections using a variety of access methods, including free climbing, man lifts, bucket trucks, and MPT (Mobile Platform Technology) vehicles, to thoroughly examine all structural components and assess potential vulnerabilities.',
         'The project’s primary goal was to develop and recommend effective protective measures for the Benjamin Franklin, Walt Whitman, and Commodore Barry Bridges. In addition to the inspections, LSEA provided the final design for the necessary structural hardening improvements, ensuring that these critical bridges would be better equipped to withstand external threats and environmental stressors, thereby enhancing their long-term durability and safety.'
       ],
-      image: '/public/images/PATCOstation.jpg'
+      image: '/images/PATCOstation.jpg'
     },
     {
       id: '16',
@@ -170,7 +170,7 @@ const ProjectDetail = () => {
         'As a sub-consultant, LSEA assisted the Delaware River Port Authority (DRPA) in conducting asset value studies to estimate potential replacement costs for critical infrastructure in the event of catastrophic incidents. Our role involved evaluating the current value of key assets and determining the financial impact of various hazard scenarios, such as natural disasters or unforeseen failures. ',
         'This analysis provided DRPA with a clearer understanding of the potential costs involved in replacing or repairing essential assets, allowing for more informed decision-making regarding risk management, insurance coverage, and emergency preparedness. The findings from these studies helped DRPA plan for the long-term financial sustainability and resilience of its infrastructure portfolio.'
       ],
-      image: '/public/images/PATCOstation.jpg'
+      image: '/images/PATCOstation.jpg'
     },
     {
       id: '17',
@@ -179,7 +179,7 @@ const ProjectDetail = () => {
         'As a sub-consultant, LSEA conducted the biennial inspection of the PATCO line bridges that span between Philadelphia, PA and Camden, NJ. Our engineers performed detailed assessments of the structural integrity and overall condition of each bridge along the line, examining key components for signs of wear, deterioration, or potential safety hazards.',
         'The inspections were carried out in accordance with industry standards to ensure the bridges continued to meet safety requirements and function efficiently. The findings from these inspections helped inform maintenance planning, providing valuable insights for any necessary repairs or upgrades to sustain the reliability and safety of the PATCO transit system.'
       ],
-      image: '/public/images/PATCOstation.jpg'
+      image: '/images/PATCOstation.jpg'
     },
     {
       id: '18',
@@ -188,7 +188,7 @@ const ProjectDetail = () => {
         'As a sub-consultant, LSEA provided safety review services for the State Oversight Agency by performing an on-site review of the implementation of the System Safety Program. The primary objective was to assess whether the System Safety & Security programs were being effectively executed to meet both Federal and State Safety Standards.',
         'Our team conducted a thorough evaluation of safety protocols, identifying any gaps or areas for improvement in the system’s implementation. This review helped ensure that all safety measures were not only in place but functioning as intended, ultimately supporting compliance with regulatory requirements and enhancing overall safety within the system.'
       ],
-      image: '/public/images/PATCOstation.jpg'
+      image: '/images/PATCOstation.jpg'
     },
     {
       id: '19',
@@ -197,7 +197,7 @@ const ProjectDetail = () => {
         'As a sub-consultant, LSEA conducted a biennial inspection of the Walt Whitman Bridge to assess its structural integrity and ensure its continued safety. The inspection focused on critical areas of the bridge, particularly fracture-critical members, which are essential for the bridge\'s stability, as well as collision-damaged members and pin hanger connections that are crucial to the overall load-bearing capacity of the structure.',
         'Our team performed non-destructive testing (NDT) on these key components to identify any hidden cracks, fatigue, or other issues that could affect the bridge’s safety. This approach allowed us to assess the structural health without causing any damage to the materials. The results of the inspection and testing were carefully documented and used to inform necessary maintenance and repair actions to prolong the life of the bridge and ensure its safe operation.'
       ],
-      image: '/public/images/WaltWhitmanBridge.jpg'
+      image: '/images/WaltWhitmanBridge.jpg'
     },
     {
       id: '20',
@@ -206,7 +206,7 @@ const ProjectDetail = () => {
         'As a sub-consultant, LSEA conducted a biennial inspection of the Benjamin Franklin Bridge, a critical structure that supports a high-speed PATCO rail line running along each fascia. This iconic bridge is one of four major bridges owned, operated, and maintained by the Delaware River Port Authority (DRPA), serving as a vital transportation link between Philadelphia, PA and Camden, NJ.',
         'The inspection focused on assessing the overall structural integrity of the bridge, including the rail line components and fascia areas, to ensure safety and operational efficiency. The findings from the inspection were documented and provided valuable insights for maintaining the bridge’s long-term performance and safety, supporting DRPA’s ongoing efforts to manage and preserve its infrastructure assets.'
       ],
-      image: '/public/images/WaltWhitmanBridge.jpg'
+      image: '/images/WaltWhitmanBridge.jpg'
     },
     {
       id: '21',
@@ -215,7 +215,7 @@ const ProjectDetail = () => {
         'LSEA conducted condition survey inspections of the World Trade Center (WTC) memorial site, encompassing both of the iconic reflection pools, the WTC Memorial Building, and the tunnels beneath the site. These inspections were integral to assessing the overall structural and environmental conditions of the site’s key components, ensuring that each element met the highest standards for safety and preservation.',
         'Our engineers worked closely with the Port Authority of New York and New Jersey (PANYNJ) throughout the process to ensure thoroughness and accuracy in the condition survey reports. This collaboration allowed us to address specific concerns and verify that the findings were aligned with PANYNJ’s requirements, helping to inform any necessary repairs, ongoing maintenance, and long-term preservation strategies for this historically significant site.'
       ],
-      image: '/public/images/wtc.jpg'
+      image: '/images/wtc.jpg'
     },
     {
       id: '22',
@@ -224,7 +224,7 @@ const ProjectDetail = () => {
         'LSEA conducted condition inspections of 4 buildings owned by the Port Authority of New York and New Jersey (PANYNJ) in Port Ivory, Staten Island. The inspections were comprehensive, covering all aspects of the buildings, including exterior elevations, interior floor structural framings and walls, and roof conditions, to ensure the structural integrity and safety of the facilities.',
         'During the inspections, LSEA’s engineers identified and documented any deficiencies or potential hazards. Detailed reports were generated, and recommendations for immediate action were made to address any unsafe conditions found during the evaluation. These recommendations helped prioritize repairs and maintenance, ensuring the buildings’ continued safe operation and longevity.'
       ],
-      image: '/public/images/wtc.jpg'
+      image: '/images/wtc.jpg'
     },
     {
       id: '23',
@@ -232,7 +232,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA conducted condition inspections of 14 buildings owned by the Port Authority of New York and New Jersey (PANYNJ) near the George Washington Bridge (GWB). These buildings included a variety of facilities such as the administrative building, upper and lower toll booths, PIP toll booths, paint storage building, salt dome, ticket center, hopper room, and the PIP police building.'
       ],
-      image: '/public/images/wtc.jpg'
+      image: '/images/wtc.jpg'
     },
     {
       id: '24',
@@ -241,7 +241,7 @@ const ProjectDetail = () => {
         'LSEA conducted condition inspections of several buildings owned by the Port Authority of New York and New Jersey (PANYNJ) in Port Ivory, Staten Island. The comprehensive inspections covered all aspects of each building, including the exterior elevations, interior floor structural framings and walls, and roof conditions, ensuring a thorough evaluation of the structures.',
         'Following the inspections, all findings were meticulously documented, and recommendations for immediate action were provided to address any unsafe conditions identified. These recommendations were aimed at mitigating potential risks and ensuring the buildings\' safety, guiding the necessary repairs or improvements for long-term structural integrity.',
       ],
-      image: '/public/images/wtc.jpg'
+      image: '/images/wtc.jpg'
     },
     {
       id: '25',
@@ -249,7 +249,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA provided the structural building condition survey for the Essex County Resource Recovery facility. LSEA reviewed previous inspection reports of the site, and compared them with the current field conditions. LSEA presented the field findings and wrote detailed reports in accordance with the format and structure requirements set by PANYNJ.'
       ],
-      image: '/public/images/EssexResourceCenter.jpg'
+      image: '/images/EssexResourceCenter.jpg'
     },
     {
       id: '26',
@@ -257,7 +257,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA provided structural building condition surveys for 5 warehouse buildings located in Brooklyn Pier owned by Port Authority of NY & NJ. The scope of work of these thorough building inspections included: all exterior elevations, interior floor structural framings and walls, and roof conditions. All inspection information was reported and recommendations of immediate action for unsafe conditions were made.'
       ],
-      image: '/public/images/EssexResourceCenter.jpg'
+      image: '/images/EssexResourceCenter.jpg'
     },
     {
       id: '27',
@@ -265,7 +265,7 @@ const ProjectDetail = () => {
       content: [
         'Designated as a "reliever" airport, Teterboro’s focus is on removing the smaller and slower aircraft from the regional air traffic that would cause major congestion at the Port Authority\'s commercial airports. LSEA performed condition inspection on 7 buildings within Teterboro Airport, including office buildings, hangers, the tower, and the museum.'
       ],
-      image: '/public/images/Hanger1.jpg'
+      image: '/images/Hanger1.jpg'
     },
     {
       id: '28',
@@ -274,7 +274,7 @@ const ProjectDetail = () => {
         'LSEA provided a team of three engineers for in-depth, hands-on underground bridge inspections across three separate projects. The team conducted thorough assessments, inspecting all structural components and identifying any potential issues that could affect the integrity of the bridges.',
         'In addition to the physical inspections, our engineers performed live load capacity calculations and load ratings based on the AREMA and NJ TRANSIT specifications and standards. These calculations were critical for determining the bridges\' ability to safely accommodate traffic and ensure compliance with established safety regulations. The findings and recommendations from the inspections were crucial in guiding maintenance and repair efforts to preserve the bridges\' long-term safety and functionality.'
       ],
-      image: '/public/images/transit-1.jpg'
+      image: '/images/transit-1.jpg'
     },
     {
       id: '29',
@@ -282,7 +282,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA was involved in the rehabilitation of the Raritan Drawbridge, which was severely damaged during Hurricane Sandy. The bridge is located at the North Jersey Coastal Line between Perth Amboy and South Amboy. This project involved the upgrade of the mechanical, electrical, and structural systems of the swing span.'
       ],
-      image: '/public/images/transit-db.jpg'
+      image: '/images/transit-db.jpg'
     },
     {
       id: '30',
@@ -290,7 +290,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA, as the Prime Consultant, performed inspections and structural rating analyses of 61 bridges carrying New Jersey Transit rail lines. The inspections and ratings were performed in accordance with the A.R.E.A. Manual of Railway Engineering and the specific requirements of N.J. Transit.'
       ],
-      image: '/public/images/transit-1.jpg'
+      image: '/images/transit-1.jpg'
     },
     {
       id: '31',
@@ -299,7 +299,7 @@ const ProjectDetail = () => {
         'LSEA was involved in the planning and study of the parking lot for the Aberdeen-Matawan station for NJ TRANSIT. The focus of the study was to assess the current capacity and determine how much additional parking-generated traffic could be accommodated in the station area.',
         'Our team evaluated the existing and planned roadway systems surrounding the station to determine their ability to handle increased traffic from additional parking. The study provided crucial insights into potential traffic flow improvements and helped inform decisions regarding infrastructure upgrades, ensuring that the station\'s capacity aligns with future commuter needs and minimizing congestion in the area.'
       ],
-      image: '/public/images/transit-3.jpg'
+      image: '/images/transit-3.jpg'
     },
     {
       id: '32',
@@ -307,7 +307,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA provided a team of 3 engineers, which performed inspections and structural rating analyses of two sets of bridges. These sets contained a total of 85 undergrade bridges. Our engineers also calculated live load capacities and ratings based on the AREMA and NJ TRANSIT specifications and standards.'
       ],
-      image: '/public/images/transit-1.jpg'
+      image: '/images/transit-1.jpg'
     },
     {
       id: '33',
@@ -315,7 +315,7 @@ const ProjectDetail = () => {
       content: [
         'LSEA, as a sub-consultant, provided safety review services for the State Oversight Agency, through performing an on-site review of the implementation of the System Safety Program. The purpose was to verify the successful implementation of the System Safety & Security programs, inorder to complying with Federal and State Safety Standards.'
       ],
-      image: '/public/images/transit-3.jpg'
+      image: '/images/transit-3.jpg'
     }
   ];
 

@@ -40,7 +40,7 @@ const Clients = () => {
       name: 'The Port Authority of New York and New Jersey',
       industry: 'Transportation',
       description: 'Bistate agency managing transportation infrastructure, including airports, bridges, tunnels, ports, and World Trade Center.',
-      image: '/public/images/port-authority-ny-nj.png',
+      image: '/images/port-authority-ny-nj.png',
       website: 'https://www.panynj.gov/'
     },
     {
@@ -48,7 +48,7 @@ const Clients = () => {
       name: 'New Jersey Department of Transportation',
       industry: 'Government',
       description: 'State agency overseeing New Jersey’s transportation systems, including planning, engineering, maintenance, and transit.',
-      image: '/public/images/njdot.jpg',
+      image: '/images/njdot.jpg',
       website: 'https://www.state.nj.us/transportation/'
     },
     {
@@ -56,7 +56,7 @@ const Clients = () => {
       name: 'New Jersey Turnpike Authority',
       industry: 'Government',
       description: 'Agency managing New Jersey Turnpike and GSP, overseeing toll collection, maintenance, and roadway improvements.',
-      image: '/public/images/njta.jpg',
+      image: '/images/njta.jpg',
       website: 'https://www.thruway.ny.gov/index.shtml?'
     },
     {
@@ -64,7 +64,7 @@ const Clients = () => {
       name: 'NJ Transit',
       industry: 'Transportation',
       description: 'Public transportation agency operating buses, trains, and light rail across New Jersey and into New York.',
-      image: '/public/images/njtransit.jpg',
+      image: '/images/njtransit.jpg',
       website: 'https://www.njtransit.com/'
     },
     {
@@ -72,7 +72,7 @@ const Clients = () => {
       name: 'Delaware River Port Authority',
       industry: 'Transportation',
       description: 'Bistate agency managing bridges and public transit between New Jersey and Pennsylvania across the Delaware River.',
-      image: '/public/images/drpa.jpg',
+      image: '/images/drpa.jpg',
       website: 'https://www.drpa.org/'
     },
     {
@@ -80,7 +80,7 @@ const Clients = () => {
       name: 'Counties and Municipalities',
       industry: 'Transportation',
       description: 'Local governments managing roads, traffic, planning, and transportation services within specific counties and municipalities in NJ.',
-      image: '/public/images/comu.jpg',
+      image: '/images/comu.jpg',
       website: 'https://www.nj.gov/nj/gov/county/'
     },
     {
@@ -88,7 +88,7 @@ const Clients = () => {
       name: 'HUD/Housing Authorities',
       industry: 'Transportation',
       description: 'Agencies providing affordable housing, community development, and assistance programs to low-income residents.',
-      image: '/public/images/ushud.jpg',
+      image: '/images/ushud.jpg',
       website: 'https://www.hud.gov/contactus/public-housing-contacts'
     }
   ];
@@ -98,7 +98,7 @@ const Clients = () => {
       {/* Hero Section */}
       <section className="relative h-[65vh]">
         <img
-          src="/public/images/JCCityHall.jpg"
+          src="/images/JCCityHall.jpg"
           alt="Our Clients"
           className="w-full h-full object-cover"
         />

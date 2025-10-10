@@ -18,52 +18,52 @@ const Services = () => {
     { 
       id: 1, 
       title: 'Bridge Inspection', 
-      image: '/public/images/bridge-inspection.jpg'
+      image: '/images/bridge-inspection.jpg'
     },
     { 
       id: 2, 
       title: 'Bridge Design and Rehabilitation', 
-      image: '/public/images/PatcongCreek.jpg'
+      image: '/images/PatcongCreek.jpg'
     },
     { 
       id: 3, 
       title: 'Building Assessment', 
-      image: '/public/images/wtc.jpg'
+      image: '/images/wtc.jpg'
     },
     { 
       id: 4, 
       title: 'Building Design and Rehabilitation', 
-      image: '/public/images/ParsonsBoulevard.jpg'
+      image: '/images/ParsonsBoulevard.jpg'
     },
     { 
       id: 5, 
       title: 'Architecture', 
-      image: '/public/images/chinahouse.jpg'
+      image: '/images/chinahouse.jpg'
     },
     { 
       id: 6, 
       title: 'MEP Engineering',
-      image: '/public/images/generatorupgrade.jpg'
+      image: '/images/generatorupgrade.jpg'
     },
     { 
       id: 7, 
       title: 'Site and Highway Engineering', 
-      image: '/public/images/cloverleaf-medium.jpg'
+      image: '/images/cloverleaf-medium.jpg'
     },
     { 
       id: 8, 
       title: 'Land Surveying', 
-      image: '/public/images/survey1.jpg'
+      image: '/images/survey1.jpg'
     },
     { 
       id: 9, 
       title: 'Structural Assessment and Design', 
-      image: '/public/images/GSPAntenna2.jpg'
+      image: '/images/GSPAntenna2.jpg'
     },
     { 
       id: 10, 
       title: 'Traffic Engineering', 
-      image: '/public/images/GWBtunnel.jpg'
+      image: '/images/GWBtunnel.jpg'
     },
   ];
 
@@ -72,7 +72,7 @@ const Services = () => {
       {/* Hero Section */}
       <section className="relative h-[65vh]">
         <img
-          src="/public/images/software.jpg"
+          src="/images/software.jpg"
           alt="Our Services"
           className="w-full h-full object-cover"
         />

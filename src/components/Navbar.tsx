@@ -72,7 +72,7 @@ const Navbar = () => {
             >
               <div className="w-12 h-18 sm:w-12 sm:h-18 md:w-12 md:h-18 lg:w-12 lg:h-18 bg-transparent rounded flex items-center justify-center p-1 flex-shrink-0">
                 <img 
-                  src="/public/logo.png"
+                  src="/logo.png"
                   alt="LSEA Logo"
                   className="w-full h-full object-contain"
                   style={{ 
