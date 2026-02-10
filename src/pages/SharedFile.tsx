@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
 import { Download, Clock, FileX } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { LoadingSkeleton } from '@/components/LoadingSkeleton';
@@ -23,69 +22,17 @@ const SharedFile = () => {
 
   useEffect(() => {
     document.title = "LSEA | Shared File";
-    if (token) {
-      fetchFileData();
-    }
+    // File sharing feature disabled - Supabase backend removed
+    setError('File sharing service is currently unavailable');
+    setLoading(false);
   }, [token]);
 
-  const fetchFileData = async () => {
-    try {
-      const { data, error } = await supabase
-        .rpc('get_shared_file_data', { link_token: token });
-
-      if (error) throw error;
-
-      if (!data || data.length === 0) {
-        setError('File not found or link has expired');
-        return;
-      }
-
-      const fileInfo = data[0];
-      setFileData({
-        id: fileInfo.file_id,
-        filename: fileInfo.filename,
-        original_name: fileInfo.original_name,
-        file_size: fileInfo.file_size,
-        storage_path: fileInfo.storage_path,
-        expires_at: fileInfo.expires_at
-      });
-    } catch (error: any) {
-      setError('File not found or link has expired');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const downloadFile = async () => {
-    if (!fileData) return;
-
-    try {
-      const { data, error } = await supabase.storage
-        .from('user-files')
-        .download(fileData.storage_path);
-
-      if (error) throw error;
-
-      const url = URL.createObjectURL(data);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = fileData.original_name;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-
-      toast({
-        title: "Download started",
-        description: `Downloading ${fileData.original_name}`,
-      });
-    } catch (error: any) {
-      toast({
-        title: "Download failed",
-        description: error.message,
-        variant: "destructive",
-      });
-    }
+    toast({
+      title: "Unavailable",
+      description: "File download service is currently unavailable",
+      variant: "destructive",
+    });
   };
 
   const formatFileSize = (bytes: number) => {

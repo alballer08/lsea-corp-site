@@ -41,17 +41,17 @@ FEATURES IMPLEMENTED:
 ✅ Partner information pages
 ✅ Contact form with toast notifications
 ✅ Sitemap with full site structure
+✅ Local search database with comprehensive terms and project names
 
-FEATURES REQUIRING SUPABASE CONNECTION:
-⏳ User authentication system
-⏳ Admin account management
-⏳ File upload and storage
-⏳ Search functionality with SQL database
-⏳ Secure file sharing with expiring links
-⏳ Employee access portal
+FEATURES REMOVED:
+❌ Supabase backend integration
+❌ User authentication system
+❌ Admin account management
+❌ File upload and storage
+❌ Database-backed search
 
-TO ENABLE BACKEND FEATURES:
-Connect this project to Supabase using the green Supabase button in the Lovable interface, then request implementation of the backend features.
+NOTES:
+All Supabase dependencies have been removed from the project. The website maintains its full visual and structural functionality. Features that previously required a backend (authentication, file sharing, contact form email notifications) are disabled but do not affect the appearance or usability of the main website pages.
 
 SUPPORT:
 For technical assistance, contact: it@lseacorp.com

@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,32 +29,22 @@ const Contact = () => {
     };
 
     try {
-      console.log('Sending contact form data:', contactData);
+      console.log('Contact form submitted:', contactData);
       
-      const { data, error } = await supabase.functions.invoke('send-contact-email', {
-        body: contactData,
-      });
-
-      if (error) {
-        console.error('Error sending email:', error);
-        throw error;
-      }
-
-      console.log('Email sent successfully:', data);
-      
+      // Backend email service disabled - Supabase removed
       toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for contacting us. We'll get back to you soon!",
+        title: "Thank you for your interest!",
+        description: "Please contact us directly via email or phone for immediate response.",
       });
 
       // Reset form
       (e.target as HTMLFormElement).reset();
       
     } catch (error) {
-      console.error('Failed to send contact email:', error);
+      console.error('Error submitting contact form:', error);
       toast({
-        title: "Error Sending Message",
-        description: "There was a problem sending your message. Please try again.",
+        title: "Note",
+        description: "Please contact us directly at your preferred method.",
         variant: "destructive",
       });
     } finally {

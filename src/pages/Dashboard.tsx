@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
 import { FileUpload } from '@/components/FileUpload';
 import { FileList } from '@/components/FileList';
 import { AdminPanel } from '@/components/AdminPanel';
@@ -19,39 +18,15 @@ const Dashboard = () => {
   useEffect(() => {
     document.title = "LSEA | Dashboard";
     
-    const fetchUserRole = async () => {
-      if (!user) {
-        navigate('/login');
-        return;
-      }
-
-      try {
-        const { data, error } = await supabase
-          .from('users')
-          .select('role')
-          .eq('id', user.id)
-          .single();
-
-        if (error) {
-          console.error('Error fetching user role:', error);
-          // If user doesn't exist in users table, sign them out for security
-          await signOut();
-          navigate('/login');
-          return;
-        }
-        
-        setUserRole(data?.role || 'user');
-      } catch (error) {
-        console.error('Error fetching user role:', error);
-        await signOut();
-        navigate('/login');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchUserRole();
-  }, [user, navigate, signOut]);
+    // Authentication disabled - Supabase backend removed
+    if (!user) {
+      navigate('/login');
+      return;
+    }
+    
+    setUserRole('user');
+    setLoading(false);
+  }, [user, navigate]);
 
   const handleSignOut = async () => {
     try {
